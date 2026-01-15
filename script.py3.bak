@@ -1,0 +1,52 @@
+import os
+import imaplib
+import winsound
+import configparser
+import logging
+import time
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+username = config['MAIL']['username']
+password = config['MAIL']['password']
+server = config['MAIL']['server']
+port = int(config['MAIL']['port'])
+
+sound_file = os.path.join(os.path.dirname(__file__), 'sound.wav')
+logging.basicConfig(filename='log.txt', level=logging.INFO)
+
+def connect_mail():
+    while True:
+        try:
+            mail = imaplib.IMAP4_SSL(server, port)
+            mail.login(username, password)
+            logging.info(f"Connected to {server}:{port} with user {username}")
+            return mail
+        except Exception as e:
+            logging.error(f"Failed to connect to {server}:{port} with user {username}. {e}")
+            time.sleep(30)
+
+def check_mail(mail):
+    last_unread_count = 0
+    while True:
+        try:
+            mail.select('inbox')
+            status, response = mail.search(None, 'UNSEEN')
+            unread_msg_nums = response[0].split()
+
+            if len(unread_msg_nums) != last_unread_count:
+                logging.info(f'New email received: {len(unread_msg_nums)}')
+                winsound.PlaySound(sound_file, winsound.SND_FILENAME)
+                last_unread_count = len(unread_msg_nums)
+
+            mail.noop()
+            time.sleep(10)
+        except Exception as e:
+            logging.error(f"Error while checking mail. {e}")
+            mail = connect_mail()
+
+if __name__ == "__main__":
+    mail = connect_mail()
+    check_mail(mail)
+

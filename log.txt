@@ -1,0 +1,8 @@
+INFO:root:Connected to mail.it-matika.pro:993 with user kibardin@it-matika.pro
+INFO:root:New email received: 445
+INFO:root:New email received: 442
+INFO:root:New email received: 441
+INFO:root:New email received: 439
+INFO:root:New email received: 436
+INFO:root:New email received: 430
+INFO:root:New email received: 427

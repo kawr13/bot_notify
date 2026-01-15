@@ -1,0 +1,3163 @@
+[2025-02-14 00:40:59] ic| main.py:253 in main2()- email_address: 'kibardin@it-matika.pro'
+[2025-02-14 00:41:00] ic| main.py:199 in check_new_emails()
+    status: 'OK'
+    msg_data: [b'205458 FETCH (FLAGS (\\Seen) RFC822 {14862}',
+               bytearray(b'Return-Path: <sd@it-matika.pro>\r
+              Delivered-To: kibardin@it-matik'
+                         b'a.pro\r
+              Received: from mail.it-matika.pro ([172.22.1.253])\r
+              \t'
+                         b'by f832bfbc5705 with LMTP\r
+              \tid OL0rB5OVrWdbqTEASqa7yw\r
+              \t(env'
+                         b'elope-from <sd@it-matika.pro>)\r
+              \tfor <kibardin@it-matika.pro'
+                         b'>; Thu, 13 Feb 2025 09:47:47 +0300\r
+              Received: from [127.0.0.1] ('
+                         b'localhost [127.0.0.1]) by localhost (Mailerdaemon) with ESMTPSA '
+                         b'id E6A975892DB0\r
+              \tfor <kibardin@it-matika.pro>; Thu, 13 Feb '
+                         b'2025 09:47:46 +0300 (MSK)\r
+              DKIM-Signature: v=1; a=rsa-sha256; c='
+                         b'relaxed/relaxed; d=it-matika.pro;\r
+              \ts=dkim; t=1739429267; h='
+                         b'from:subject:date:message-id:to:mime-version:content-type;\r
+              '
+                         b'\tbh=oB2mKR/mBQLm23/D15MVCK5DWELyslI50fDUUAJoMcE=;\r
+              \tb=LThxaY'
+                         b'FWbtNzD3ZtfFP6Gnr5rdOPWU++wSvfsu44mcK2uRaZKW/Jdr7fTk6Q6fu+6YmXjE'
+                         b'\r
+              \t0gfNotUna7ZUtssA3wP7Sj475j/dGbQb7AIB+6z380GJLuy41OqoafCpx'
+                         b'pv51bJXY9umQe\r
+              \tLUDYK3EYcMH8xknMGWLyusTrws0nMwU=\r
+              MIME-Versi'
+                         b'on: 1.0\r
+              Message-ID: <1739429303.711951.236425001@sd.it-matika.p'
+                         b'ro:33380>\r
+              X-Loop: yes\r
+              Date: Thu, 13 Feb 2025 09:48:23 +030'
+                         b'0\r
+              Precedence: bulk\r
+              Auto-Submitted: auto-generated\r
+              To: kib'
+                         b'ardin@it-matika.pro\r
+              Subject: [Ticket#2025021310000013] Ticket C'
+                         b'reated: =?UTF-8?Q?=D0=98=D0=B7?=-=?UTF-8?Q?=D0=B7=D0=B0=20?=\r
+               ='
+                         b'?UTF-8?Q?=D0=BF=D0=BB=D0=BE=D1=85=D0=BE=D0=B9=20?= =?UTF-8?Q?=D1'
+                         b'=80=D0=B0=D0=B1=D0=BE=D1=82=D1=8B=20?=\r
+               =?UTF-8?Q?=D0=B8=D0=BC='
+                         b'D0=B5=D0=BD=D0=BD=D0=BE=20?= =?UTF-8?Q?=D0=BD=D0=B0=D1=88=D0=B5='
+                         b'D0=B3=D0=BE=20?=\r
+               =?UTF-8?Q?=D1=82=D0=B5=D0=BB=D0=B5=D1=84=D0=B'
+                         b'E=D0=BD=D0=B0?=,\r
+               =?UTF-8?Q?=D0=BF=D0=BE=D1=81=D1=82=D0=BE=D1=8'
+                         b'F=D0=BD=D0=BD=D0=BE=20?=\r
+               =?UTF-8?Q?=D0=B2=D1=8B=D1=80=D1=83=D0'
+                         b'=B1=D0=B0=D0=B5=D1=82=D1=81=D1=8F=20?=\r
+               =?UTF-8?Q?=D0=B8=D0=BD='
+                         b'D1=82=D0=B5=D1=80=D0=BD=D0=B5=D1=82?=,\r
+               =?UTF-8?Q?=D1=81=D0=BE='
+                         b'D0=BE=D1=82=D0=B2=D0=B5=D1=82=D1=81=D1=82=20?=[...]\r
+              Organizatio'
+                         b'n: =?UTF-8?Q?=D0=90=D0=B9=D1=82=D0=B8=D0=BC=D0=B0=D1=82=D0=B8=D0'
+                         b'=BA=D0=B0?=\r
+              From: =?UTF-8?Q?=D0=A1=D0=BB=D1=83=D0=B6=D0=B1=D0=B'
+                         b'0=20?=\r
+               =?UTF-8?Q?=D0=BF=D0=BE=D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0'
+                         b'=BA=D0=B8=20?=\r
+               =?UTF-8?Q?=D0=BA=D0=BE=D0=BC=D0=BF=D0=B0=D0=BD='
+                         b'D0=B8=D0=B8=20?="=?UTF-8?Q?=D0=90=D0=B9=D1=82=D0=B8=D0=BC=D0=B0='
+                         b'D1=82=D0=B8=D0=BA=D0=B0?=" <sd@it-matika.pro>\r
+              X-Powered-BY: OTR'
+                         b'S (https://otrs.com/)\r
+              X-Mailer: OTRS Mail Service (5.0.17)\r'
+                         b'
+              Content-Type: multipart/alternative; boundary="----------=_1739'
+                         b'429303-18090-4"\r
+              X-Last-TLS-Session-Version: TLSv1.2\r
+              \r
+              This'
+                         b' is a multi-part message in MIME format...\r
+              \r
+              ------------=_'
+                         b'1739429303-18090-4\r
+              Content-Type: text/plain; charset="utf-8'
+                         b'"\r
+              Content-Disposition: inline\r
+              Content-Transfer-Encoding: 8'
+                         b'bit\r
+              \r
+                  [Ticket#2025021310000013] Ticket Created:'
+                         b' \xd0\x98\xd0\xb7-\xd0\xb7\xd0\xb0 \xd0\xbf\xd0\xbb\xd0'
+                         b'\xbe\xd1\x85\xd0\xbe\xd0\xb9 \xd1\x80\xd0\xb0\xd0\xb1\xd0\xbe'
+                         b'\xd1\x82\xd1\x8b \xd0\xb8\xd0\xbc\xd0\xb5\xd0\xbd\xd0\xbd\xd0'
+                         b'\xbe\r
+              \xd0\xbd\xd0\xb0\xd1\x88\xd0\xb5\xd0\xb3\xd0\xbe '
+                         b'\xd1\x82\xd0\xb5\xd0\xbb\xd0\xb5\xd1\x84\xd0\xbe\xd0\xbd\xd0\xb0'
+                         b', \xd0\xbf\xd0\xbe\xd1\x81\xd1\x82\xd0\xbe\xd1\x8f\xd0\xbd'
+                         b'\xd0\xbd\xd0\xbe \xd0\xb2\xd1\x8b\xd1\x80\xd1\x83\xd0\xb1\xd0'
+                         b'\xb0\xd0\xb5\xd1\x82\xd1\x81\xd1\x8f \xd0\xb8\xd0\xbd\xd1\x82'
+                         b'\xd0\xb5\xd1\x80\xd0\xbd\xd0\xb5\xd1\x82, \xd1\x81\xd0\xbe'
+                         b'\xd0\xbe\xd1\x82\xd0\xb2\xd0\xb5\xd1\x82\xd1\x81\xd1\x82 [...]    '
+                         b'\r
+              \r
+                 [Ticket#2025021310000013] Ticket Created: \xd0\x98\xd0'
+                         b'\xb7-\xd0\xb7\xd0\xb0 \xd0\xbf\xd0\xbb\xd0\xbe\xd1\x85\xd0'
+                         b'\xbe\xd0\xb9 \xd1\x80\xd0\xb0\xd0\xb1\xd0\xbe\xd1\x82\xd1\x8b'
+                         b' \xd0\xb8\xd0\xbc\xd0\xb5\xd0\xbd\xd0\xbd\xd0\xbe \xd0\xbd'
+                         b'\xd0\xb0\xd1\x88\xd0\xb5\xd0\xb3\xd0\xbe\r
+              \xd1\x82\xd0\xb5'
+                         b'\xd0\xbb\xd0\xb5\xd1\x84\xd0\xbe\xd0\xbd\xd0\xb0, \xd0\xbf'
+                         b'\xd0\xbe\xd1\x81\xd1\x82\xd0\xbe\xd1\x8f\xd0\xbd\xd0\xbd\xd0\xbe'
+                         b' \xd0\xb2\xd1\x8b\xd1\x80\xd1\x83\xd0\xb1\xd0\xb0\xd0\xb5\xd1'
+                         b'\x82\xd1\x81\xd1\x8f \xd0\xb8\xd0\xbd\xd1\x82\xd0\xb5\xd1\x80'
+                         b'\xd0\xbd\xd0\xb5\xd1\x82, \xd1\x81\xd0\xbe\xd0\xbe\xd1\x82'
+                         b'\xd0\xb2\xd0\xb5\xd1\x82\xd1\x81\xd1\x82 [...]   \r
+              \r
+                Hi '
+                         b'-,\r
+              \r
+              ticket [Ticket#2025021310000013] has been created in q'
+                         b'ueue customers::GKavto.\r
+              \r
+              \xd0\x90\xd0\xbd\xd0'
+                         b'\xb0\xd1\x81\xd1\x82\xd0\xb0\xd1\x81\xd0\xb8\xd1\x8f _ wrote:\r
+              '
+                         b'> \xd0\x94\xd0\xbe\xd0\xb1\xd1\x80\xd1\x8b\xd0\xb9 \xd0'
+                         b'\xb4\xd0\xb5\xd0\xbd\xd1\x8c!\r
+              > \xd0\xad\xd1\x82\xd0\xbe \xd1'
+                         b'\x83\xd0\xb6\xd0\xb5 \xd0\xbd\xd0\xb0 \xd0\xbf\xd0\xbe\xd1'
+                         b'\x81\xd1\x82\xd0\xbe\xd1\x8f\xd0\xbd\xd0\xbd\xd0\xbe\xd0\xb9 '
+                         b'\xd0\xbe\xd1\x81\xd0\xbd\xd0\xbe\xd0\xb2\xd0\xb5 \xd0\xbd\xd0'
+                         b'\xb0\xd1\x87\xd0\xb0\xd0\xbb\xd0\xbe\xd1\x81\xd1\x8c, \xd0'
+                         b'\xb2 \xd0\xb4\xd0\xb5\xd0\xbd\xd1\x8c \xd1\x80\xd0\xb0\xd0'
+                         b'\xb7 \xd0\xbf\xd0\xbe \xd0\xb4\xd0\xb5\xd1\x81\xd1\x8f\xd1'
+                         b'\x82\xd1\x8c \xd0\xbf\xd0\xb5\xd1\x80\xd0\xb5\xd0\xb7\xd0\xb0'
+                         b'\xd0\xb3\xd1\x80\xd1\x83\xd0\xb6\xd0\xb0\xd0\xb5\xd0\xbc\r
+              '
+                         b'> \xd1\x82\xd0\xb5\xd0\xbb\xd0\xb5\xd1\x84\xd0\xbe\xd0\xbd'
+                         b'. \xd0\xa1\xd0\xbf\xd0\xb0\xd1\x81\xd0\xb8\xd0\xb1\xd0\xbe'
+                         b' \xd0\xb7\xd0\xb0\xd1\x80\xd0\xb0\xd0\xbd\xd0\xb5\xd0\xb5. \r
+              >'
+                         b' \r
+              > \xd0\x93\xd0\x9a \xd0\x90\xd0\xb2\xd1\x82\xd0\xbe\xd0\xbc'
+                         b'\xd0\xbe\xd0\xb1\xd0\xb8\xd0\xbb\xd1\x8c\xd0\xbd\xd0\xbe\xd1\x81'
+                         b'\xd1\x82\xd1\x8c\r
+              > \xd0\x9e\xd1\x84\xd0\xb8\xd1\x86'
+                         b'\xd0\xb8\xd0\xb0\xd0\xbb\xd1\x8c\xd0\xbd\xd1\x8b\xd0\xb9 \xd0'
+                         b'\xb4\xd0\xb8\xd0\xbb\xd0\xb5\xd1\x80 ISUZU, Hyundai, Foton\r'
+                         b'
+              > \xd0\x9f\xd0\xbe\xd1\x87\xd1\x82\xd0\xbe\xd0\xb2\xd1'
+                         b'\x8b\xd0\xb9 \xd0\xb0\xd0\xb4\xd1\x80\xd0\xb5\xd1\x81:\r
+              > 19615'
+                         b'8, \xd0\xb3. \xd0\xa1\xd0\xb0\xd0\xbd\xd0\xba\xd1\x82-\xd0\x9f'
+                         b'\xd0\xb5\xd1\x82\xd0\xb5\xd1\x80\xd0\xb1\xd1\x83\xd1\x80\xd0\xb3'
+                         b', \xd0\x92\xd0\xbd.\xd1\x82\xd0\xb5\xd1\x80.\xd0\xb3. \xd0\xbc'
+                         b'\xd1\x83\xd0\xbd\xd0\xb8\xd1\x86\xd0\xb8\xd0\xbf\xd0\xb0\xd0\xbb'
+                         b'\xd1\x8c\xd0\xbd\xd1\x8b\xd0\xb9\xd0\xbe\xd0\xba\xd1\x80\xd1\x83'
+                         b'\xd0\xb3 \xd0\x97\xd0\xb2\xd0\xb5\xd0\xb7\xd0\xb4\xd0\xbd\xd0'
+                         b'\xbe\xd0\xb5,\r
+              > \xd0\x9c\xd0\xbe\xd1\x81\xd0\xba'
+                         b'\xd0\xbe\xd0\xb2\xd1\x81\xd0\xba\xd0\xbe\xd0\xb5 \xd1\x88\xd0'
+                         b'\xbe\xd1\x81\xd1\x81\xd0\xb5, \xd0\xb4. 13, \xd0\xba\xd0'
+                         b'\xbe\xd1\x80\xd0\xbf. 8, \xd0\xbb\xd0\xb8\xd1\x82\xd0\xb5\xd1\x80'
+                         b' \xd0\x98, \xd0\xbf\xd0\xbe\xd0\xbc. 1-\xd0\x9d, \xd0'
+                         b'\xba\xd0\xbe\xd0\xbc\xd0\xbd\xd0\xb0\xd1\x82\xd0\xb0 9\r
+              > \xd0'
+                         b'\xa2\xd0\xb5\xd0\xbb.: +7 (812) 301 35 35 (\xd0\xb4\xd0\xbe'
+                         b'\xd0\xb1.: 200)\r
+              > e-mail: kassa@commercial.am\r
+              > '
+                         b'\xd0\x9d\xd0\xb0\xd1\x88 \xd1\x81\xd0\xb0\xd0\xb9\xd1\x82: [1]www.'
+                         b'commercial.am\r
+              \r
+              \r
+              \r
+              [2]http://sd.it-matika.pro:33380/ot'
+                         b'rs/index.pl?Action=AgentTicketZoom;TicketID=19594\r
+              \r
+              -- '
+                         b'\xd0\xa1\xd0\xbb\xd1\x83\xd0\xb6\xd0\xb1\xd0\xb0 \xd0\xbf\xd0'
+                         b'\xbe\xd0\xb4\xd0\xb4\xd0\xb5\xd1\x80\xd0\xb6\xd0\xba\xd0\xb8 '
+                         b'\xd0\xba\xd0\xbe\xd0\xbc\xd0\xbf\xd0\xb0\xd0\xbd\xd0\xb8\xd0\xb8'
+                         b' "\xd0\x90\xd0\xb9\xd1\x82\xd0\xb8\xd0\xbc\xd0\xb0\xd1\x82'
+                         b'\xd0\xb8\xd0\xba\xd0\xb0"   \r
+              \r
+                 \xd0\x98\xd1'
+                         b'\x81\xd0\xbf\xd0\xbe\xd0\xbb\xd1\x8c\xd0\xb7\xd1\x83\xd0\xb5\xd1'
+                         b'\x82\xd1\x81\xd1\x8f OTRS 5 \r
+              \r
+                  \r
+              \r
+              \r
+              [1] http://ww'
+                         b'w.commercial.am\r
+              [2] http://sd.it-matika.pro:33380/otrs/index.pl'
+                         b'?Action=AgentTicketZoom;TicketID=19594\r
+              \r
+              ------------=_1739'
+                         b'429303-18090-4\r
+              Content-Type: text/html; charset="utf-8"\r
+              Co'
+                         b'ntent-Disposition: inline\r
+              Content-Transfer-Encoding: quoted-pri'
+                         b'ntable\r
+              \r
+              \r
+              <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Tra'
+                         b'nsitional//EN" "http://www.=\r
+              w3.org/TR/xhtml1/DTD/xhtml1-transi'
+                         b'tional.dtd">\r
+              <html>\r
+              <head>\r
+                  <meta http-equiv=3D"Conten'
+                         b't-Type" content=3D"text/html; charset=3DUTF-8=\r
+              ">\r
+                  <tit'
+                         b'le>[Ticket#2025021310000013] Ticket Created: =D0=98=D0=B7-=D0=B7'
+                         b'=D0=\r
+              =B0 =D0=BF=D0=BB=D0=BE=D1=85=D0=BE=D0=B9 =D1=80=D0=B0=D0=B'
+                         b'1=D0=BE=D1=82=D1=\r
+              =8B =D0=B8=D0=BC=D0=B5=D0=BD=D0=BD=D0=BE =D0='
+                         b'BD=D0=B0=D1=88=D0=B5=D0=B3=D0=\r
+              =BE =D1=82=D0=B5=D0=BB=D0=B5=D1='
+                         b'84=D0=BE=D0=BD=D0=B0, =D0=BF=D0=BE=D1=81=D1=\r
+              =82=D0=BE=D1=8F=D0'
+                         b'=BD=D0=BD=D0=BE =D0=B2=D1=8B=D1=80=D1=83=D0=B1=D0=B0=D0=\r
+              =B5=D1'
+                         b'=82=D1=81=D1=8F =D0=B8=D0=BD=D1=82=D0=B5=D1=80=D0=BD=D0=B5=D1=82'
+                         b', =D1=\r
+              =81=D0=BE=D0=BE=D1=82=D0=B2=D0=B5=D1=82=D1=81=D1=82 [...'
+                         b']</title>\r
+                  <style type=3D"text/css">\r
+                  body {\r
+                    '
+                         b'  width: 100% !important;\r
+                      -webkit-text-size-adjust: non'
+                         b'e;\r
+                      margin: 0px;\r
+                      padding: 0px;\r
+                  }\r
+              '
+                         b'\r
+                  table td {\r
+                      border-collapse: collapse;\r
+                '
+                         b'  }\r
+              \r
+                  #backgroundTable {\r
+                      height: 100% !importa'
+                         b'nt;\r
+                      margin: 0;\r
+                      padding: 0;\r
+                      width:'
+                         b' 100% !important;\r
+                  }\r
+              \r
+                  h1, h2, h3, h4, h5, h6 {'
+                         b'\r
+                      color:#202020;\r
+                      display:block;\r
+                      fo'
+                         b'nt-family:Arial;\r
+                      font-weight:bold;\r
+                      line-he'
+                         b'ight:100%;\r
+                      margin-top:0;\r
+                      margin-right:0;\r
+              '
+                         b'        margin-bottom:5px;\r
+                      margin-left:0;\r
+                      '
+                         b'text-align:left;\r
+                  }\r
+              \r
+                  h1 {\r
+                      font-size: '
+                         b'34px;\r
+                  }\r
+              \r
+                  h2, h3, h4, h5, h6 {\r
+                      margin'
+                         b'-top: 5px;\r
+                      margin-bottom: 5px;\r
+                  }\r
+              \r
+                  h2'
+                         b' {\r
+                      font-size: 28px;\r
+                  }\r
+              \r
+                  h3 {\r
+                     '
+                         b' font-size: 24px;\r
+                  }\r
+              \r
+                  h4 {\r
+                      font-size:'
+                         b' 22px;\r
+                  }\r
+              \r
+                  h5 {\r
+                      font-size: 18px;\r
+                 '
+                         b' }\r
+              \r
+                  h6 {\r
+                      font-size: 16px;\r
+                  }\r
+              \r
+               '
+                         b'   #templateContainer, .bodyContent{\r
+                      background-color: '
+                         b'#FFFFFF;\r
+                  }\r
+              \r
+                  .bodyContent, .bodyContent * {\r
+               '
+                         b'       color: #505050;\r
+                      font-family: Arial;\r
+                     '
+                         b' font-size: 13px;\r
+                      line-height: 150%;\r
+                      text-'
+                         b'align: left;\r
+                  }\r
+              \r
+                  .bodyContent div {\r
+                      p'
+                         b'adding-bottom: 5px;\r
+                  }\r
+              \r
+                  .bodyContent a:link,\r
+              '
+                         b'    .bodyContent a:visited,\r
+                  .footerContent div a:link,\r'
+                         b'
+                  .footerContent div a:visited {\r
+                      color: #f92;\r
+               '
+                         b'       font-weight: normal;\r
+                      text-decoration: none\r
+              '
+                         b'    }\r
+              \r
+                  #templateFooter {\r
+                      background-color: #F'
+                         b'FFFFF;\r
+                      border-top: 0px;\r
+                  }\r
+              \r
+                  .footerCo'
+                         b'ntent div {\r
+                      color:#707070;\r
+                      font-family:Ari'
+                         b'al;\r
+                      font-size:13px;\r
+                      line-height:125%;\r
+                 '
+                         b'     text-align:left;\r
+                  }\r
+              \r
+                  #links {\r
+                      ba'
+                         b'ckground-color: #FAFAFA;\r
+                      border: 0;\r
+                  }\r
+              \r
+               '
+                         b'   #links div {\r
+                      text-align: center;\r
+                  }\r
+              \r
+               '
+                         b'   .CallForAction:active,\r
+                  .CallForAction:hover {\r
+                   '
+                         b'   background-color: #e5e5e5;\r
+                      border-color: #999;\r
+              '
+                         b'    }\r
+              \r
+                  .bodyContent a {\r
+                      color: #f92 !importan'
+                         b't;\r
+                  }\r
+              \r
+                  .im {\r
+                      color: #555 !important;\r'
+                         b'
+                  }\r
+                  </style>\r
+              </head>\r
+              <body leftmargin=3D"0" ma'
+                         b'rginwidth=3D"0" topmargin=3D"0" marginheight=3D"0"=\r
+               offset=3D"'
+                         b'0">\r
+                  <center>\r
+                      <table border=3D"0" cellpadding=3'
+                         b'D"0" cellspacing=3D"0" height=3D"1=\r
+              00%" width=3D"100%" id=3D"b'
+                         b'ackgroundTable" style=3D"background-color:#FAFAF=\r
+              A">\r
+                  '
+                         b'        <tbody>\r
+                              <tr>\r
+                                  <'
+                         b'td align=3D"center" valign=3D"top">\r
+                                      <br'
+                         b' />\r
+                                      <table border=3D"0" cellpadding=3D"'
+                         b'0" cellspacing=\r
+              =3D"0" id=3D"templateContainer" style=3D"border'
+                         b': 1px solid #DDDDDD;">\r
+                                          <tbody>\r'
+                         b'
+                                              <tr>\r
+                                   '
+                         b'               <td align=3D"center" valign=3D"top">\r
+                         '
+                         b'                             <table border=3D"0" cellpadding=3D"'
+                         b'=\r
+              0" cellspacing=3D"0" id=3D"templateBody">\r
+                            '
+                         b'                              <tbody>\r
+                                       '
+                         b'                       <tr>\r
+                                                 '
+                         b'                 <td valign=3D"top" clas=\r
+              s=3D"bodyContent"'
+                         b'>\r
+                                                                      <h1 s'
+                         b'tyle=3D"backgr=\r
+              ound: #333333; border-bottom: 10px solid #FF992'
+                         b'2; padding: 20px; line-heigh=\r
+              t: 130%; color: #999; margin: 0px'
+                         b'; font-size: 20px;">\r
+                                                        '
+                         b'                  [Ticket#2025021=\r
+              310000013] Ticket Created: ='
+                         b'D0=98=D0=B7-=D0=B7=D0=B0 =D0=BF=D0=BB=D0=BE=D1=\r
+              =85=D0=BE=D0=B9'
+                         b' =D1=80=D0=B0=D0=B1=D0=BE=D1=82=D1=8B =D0=B8=D0=BC=D0=B5=D0=\r
+              =B'
+                         b'D=D0=BD=D0=BE =D0=BD=D0=B0=D1=88=D0=B5=D0=B3=D0=BE =D1=82=D0=B5='
+                         b'D0=BB=D0=\r
+              =B5=D1=84=D0=BE=D0=BD=D0=B0, =D0=BF=D0=BE=D1=81=D1=82'
+                         b'=D0=BE=D1=8F=D0=BD=D0=\r
+              =BD=D0=BE =D0=B2=D1=8B=D1=80=D1=83=D0=B1'
+                         b'=D0=B0=D0=B5=D1=82=D1=81=D1=8F =D0=\r
+              =B8=D0=BD=D1=82=D0=B5=D1=80'
+                         b'=D0=BD=D0=B5=D1=82, =D1=81=D0=BE=D0=BE=D1=82=D0=\r
+              =B2=D0=B5=D1=8'
+                         b'2=D1=81=D1=82 [...]\r
+                                                         '
+                         b'             </h1>\r
+                                                          '
+                         b'        </td>\r
+                                                              <'
+                         b'/tr>\r
+                                                              <tr>\r
+              '
+                         b'                                                    <td valign=3'
+                         b'D"top" clas=\r
+              s=3D"bodyContent" style=3D"border-bottom: 1px soli'
+                         b'd #eee; background-color:=\r
+               #fff; padding: 15px; font-size: 13p'
+                         b'x;">\r
+                                                                      Hi'
+                         b' -,<br /><br />ti=\r
+              cket [Ticket#2025021310000013] has been crea'
+                         b'ted in queue customers::GKavto.=\r
+              <br /><br />=D0=90=D0=BD=D0=B0'
+                         b'=D1=81=D1=82=D0=B0=D1=81=D0=B8=D1=8F _ wrote:=\r
+              <br /><div type='
+                         b'3D"cite" style=3D"background: #f5f5f5; border: 0px !importa=\r
+              nt'
+                         b'; color: #555; margin: 10px 0px 0px 0px; padding: 10px;">=D0=94='
+                         b'D0=BE=D0=\r
+              =B1=D1=80=D1=8B=D0=B9 =D0=B4=D0=B5=D0=BD=D1=8C!<br />'
+                         b'\r
+              =D0=AD=D1=82=D0=BE =D1=83=D0=B6=D0=B5 =D0=BD=D0=B0 =D0=BF=D0=B'
+                         b'E=D1=81=D1=82=\r
+              =D0=BE=D1=8F=D0=BD=D0=BD=D0=BE=D0=B9 =D0=BE=D1=8'
+                         b'1=D0=BD=D0=BE=D0=B2=D0=B5 =\r
+              =D0=BD=D0=B0=D1=87=D0=B0=D0=BB=D0=B'
+                         b'E=D1=81=D1=8C, =D0=B2 =D0=B4=D0=B5=D0=BD=\r
+              =D1=8C =D1=80=D0=B0=D'
+                         b'0=B7 =D0=BF=D0=BE =D0=B4=D0=B5=D1=81=D1=8F=D1=82=D1=8C=\r
+               =D0=BF'
+                         b'=D0=B5=D1=80=D0=B5=D0=B7=D0=B0=D0=B3=D1=80=D1=83=D0=B6=D0=B0=D0='
+                         b'B5=\r
+              =D0=BC<br />\r
+              =D1=82=D0=B5=D0=BB=D0=B5=D1=84=D0=BE=D0=B'
+                         b'D. =D0=A1=D0=BF=D0=B0=D1=81=D0=B8=\r
+              =D0=B1=D0=BE =D0=B7=D0=B0=D1'
+                         b'=80=D0=B0=D0=BD=D0=B5=D0=B5. <br />\r
+              <br />\r
+              =D0=93=D0=9A =D'
+                         b'0=90=D0=B2=D1=82=D0=BE=D0=BC=D0=BE=D0=B1=D0=B8=D0=BB=D1=8C=\r
+              =D0'
+                         b'=BD=D0=BE=D1=81=D1=82=D1=8C<br />\r
+              =D0=9E=D1=84=D0=B8=D1=86=D0=B'
+                         b'8=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9 =D0=B4=\r
+              =D0=B8=D0=BB=D0=B'
+                         b'5=D1=80 ISUZU, Hyundai, Foton<br />\r
+              =D0=9F=D0=BE=D1=87=D1=82=D0'
+                         b'=BE=D0=B2=D1=8B=D0=B9 =D0=B0=D0=B4=D1=80=D0=B5=\r
+              =D1=81:<br '
+                         b'/>\r
+              196158, =D0=B3. =D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5='
+                         b'D1=82=D0=B5=D1=\r
+              =80=D0=B1=D1=83=D1=80=D0=B3, =D0=92=D0=BD.=D1=8'
+                         b'2=D0=B5=D1=80.=D0=B3. =D0=BC=\r
+              =D1=83=D0=BD=D0=B8=D1=86=D0=B8=D0'
+                         b'=BF=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9=D0=\r
+              =BE=D0=BA=D1=80=D1='
+                         b'83=D0=B3 =D0=97=D0=B2=D0=B5=D0=B7=D0=B4=D0=BD=D0=BE=D0=\r
+              =B5,<br'
+                         b' />\r
+              =D0=9C=D0=BE=D1=81=D0=BA=D0=BE=D0=B2=D1=81=D0=BA=D0=BE=D0=B'
+                         b'5 =D1=88=D0=BE=\r
+              =D1=81=D1=81=D0=B5, =D0=B4. 13, =D0=BA=D0=BE=D1'
+                         b'=80=D0=BF. 8, =D0=BB=D0=B8=\r
+              =D1=82=D0=B5=D1=80 =D0=98, =D0=BF=D'
+                         b'0=BE=D0=BC. 1-=D0=9D, =D0=BA=D0=BE=D0=BC=\r
+              =D0=BD=D0=B0=D1=82=D0'
+                         b'=B0 9<br />\r
+              =D0=A2=D0=B5=D0=BB.: +7 (812) 301 35 35 (=D0=B4=D0='
+                         b'BE=D0=B1.: 200)<br />\r
+              e-mail: kassa@commercial.am<br />\r
+              =D'
+                         b'0=9D=D0=B0=D1=88 =D1=81=D0=B0=D0=B9=D1=82: <a href=3D"http://www'
+                         b'.commerci=\r
+              al.am" title=3D"http://www.commercial.am">www.commer'
+                         b'cial.am</a></div><br />=\r
+              <br /><a href=3D"http://sd.it-matika.p'
+                         b'ro:33380/otrs/index.pl?Action=3DAgent=\r
+              TicketZoom;TicketID=3D19'
+                         b'594" title=3D"http://sd.it-matika.pro:33380/otrs/in=\r
+              dex.pl?Act'
+                         b'ion=3DAgentTicketZoom;TicketID=3D19594">http://sd.it-matika.pro:'
+                         b'3=\r
+              3380/otrs/index.pl?Action=3DAgentTicketZoom;TicketID=3D19594'
+                         b'</a><br /><br /=\r
+              >-- =D0=A1=D0=BB=D1=83=D0=B6=D0=B1=D0=B0 =D0=B'
+                         b'F=D0=BE=D0=B4=D0=B4=D0=B5=D1=\r
+              =80=D0=B6=D0=BA=D0=B8 =D0=BA=D0=B'
+                         b'E=D0=BC=D0=BF=D0=B0=D0=BD=D0=B8=D0=B8 "=D0=\r
+              =90=D0=B9=D1=82=D0='
+                         b'B8=D0=BC=D0=B0=D1=82=D0=B8=D0=BA=D0=B0"\r
+                                     '
+                         b'                             </td>\r
+                                          '
+                         b'                    </tr>\r
+                                                   '
+                         b'       </tbody>\r
+                                                      </table'
+                         b'>\r
+                                                  </td>\r
+                            '
+                         b'                  </tr>\r
+                                              <tr'
+                         b'>\r
+                                                  <td align=3D"center" vali'
+                         b'gn=3D"top">\r
+                                                      <table bord'
+                         b'er=3D"0" cellpadding=3D"=\r
+              10" cellspacing=3D"0" id=3D"templateF'
+                         b'ooter">\r
+                                                          <tbody>'
+                         b'\r
+                                                              <tr>\r
+                  '
+                         b'                                                <td valign=3D"to'
+                         b'p" clas=\r
+              s=3D"footerContent">\r
+              =20=20=20=20=20=20=20=20=20='
+                         b'20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=\r
+              =20=20=20=20=2'
+                         b'0=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=\r
+              '
+                         b'=20=20\r
+                                                                      '
+                         b'<table border=3D"0"=\r
+               cellpadding=3D"10" cellspacing=3D"0" widt'
+                         b'h=3D"100%">\r
+                                                                 '
+                         b'         <tbody>\r
+                                                            '
+                         b'                  <tr>\r
+                                                      '
+                         b'                            <td col=\r
+              span=3D"2" valign=3D"middl'
+                         b'e">\r
+                                                                         '
+                         b'             <di=\r
+              v style=3D"color: #999; font-size: 11px; text'
+                         b'-align: center;">\r
+                                                           '
+                         b'                              =\r
+               =D0=98=D1=81=D0=BF=D0=BE=D0=BB'
+                         b'=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F O=\r
+              TRS 5\r
+                    '
+                         b'                                                                '
+                         b'  </d=\r
+              iv>\r
+                                                             '
+                         b'                     </td>\r
+                                                  '
+                         b'                            </tr>\r
+                                           '
+                         b'                               </tbody>\r
+                                     '
+                         b'                                 </table>\r
+              =20=20=20=20=20=20=20'
+                         b'=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=\r
+              =20=20='
+                         b'20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=2'
+                         b'0=20=\r
+              =20=20\r
+                                                           '
+                         b'       </td>\r
+                                                              </'
+                         b'tr>\r
+                                                          </tbody>\r
+               '
+                         b'                                       </table>\r
+                             '
+                         b'                     </td>\r
+                                              </tr'
+                         b'>\r
+                                          </tbody>\r
+                                 '
+                         b'     </table>\r
+                                      <br />\r
+                           '
+                         b'       </td>\r
+                              </tr>\r
+                          </tbody>\r
+               '
+                         b'       </table>\r
+                  </center>\r
+              </body>\r
+              \r
+              </html>\r
+              '
+                         b'\r
+              ------------=_1739429303-18090-4--\r
+              '),
+               b')',
+               b'Fetch completed (0.287 + 0.000 + 0.286 secs).']
+[2025-02-14 00:41:00] ic| main.py:218 in check_new_emails()
+    part.get_payload(): ('    [Ticket#2025021310000013] Ticket Created: Из-за плохой работы именно\r
+                        '
+                         'нашего телефона, постоянно вырубается интернет, соответст [...]    \r
+                        '
+                         '\r
+                        '
+                         '   [Ticket#2025021310000013] Ticket Created: Из-за плохой работы именно '
+                         'нашего\r
+                        '
+                         'телефона, постоянно вырубается интернет, соответст [...]   \r
+                        '
+                         '\r
+                        '
+                         '  Hi -,\r
+                        '
+                         '\r
+                        '
+                         'ticket [Ticket#2025021310000013] has been created in queue '
+                         'customers::GKavto.\r
+                        '
+                         '\r
+                        '
+                         'Анастасия _ wrote:\r
+                        '
+                         '> Добрый день!\r
+                        '
+                         '> Это уже на постоянной основе началось, в день раз по десять '
+                         'перезагружаем\r
+                        '
+                         '> телефон. Спасибо заранее. \r
+                        '
+                         '> \r
+                        '
+                         '> ГК Автомобильность\r
+                        '
+                         '> Официальный дилер ISUZU, Hyundai, Foton\r
+                        '
+                         '> Почтовый адрес:\r
+                        '
+                         '> 196158, г. Санкт-Петербург, Вн.тер.г. муниципальныйокруг Звездное,\r
+                        '
+                         '> Московское шоссе, д. 13, корп. 8, литер И, пом. 1-Н, комната 9\r
+                        '
+                         '> Тел.: +7 (812) 301 35 35 (доб.: 200)\r
+                        '
+                         '> e-mail: kassa@commercial.am\r
+                        '
+                         '> Наш сайт: [1]www.commercial.am\r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '[2]http://sd.it-matika.pro:33380/otrs/index.pl?Action=AgentTicketZoom;TicketID=19594\r
+                        '
+                         '\r
+                        '
+                         '-- Служба поддержки компании "Айтиматика"   \r
+                        '
+                         '\r
+                        '
+                         '   Используется OTRS 5 \r
+                        '
+                         '\r
+                        '
+                         '    \r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '[1] http://www.commercial.am\r
+                        '
+                         '[2] '
+                         'http://sd.it-matika.pro:33380/otrs/index.pl?Action=AgentTicketZoom;TicketID=19594\r
+                        ')
+[2025-02-14 00:41:01] [ERROR] list index out of range 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 112, in extract_url_from_email
+    url =  quopri.decodestring(str(urls[0]).encode('utf-8')).decode('utf-8', errors='ignore')
+                                   ~~~~^^^
+IndexError: list index out of range
+
+[2025-02-14 00:41:01] [ERROR] Error processing message 205458: cannot access local variable 'url' where it is not associated with a value 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+                        ^^^
+UnboundLocalError: cannot access local variable 'url' where it is not associated with a value
+
+[2025-02-14 00:41:01] [ERROR] Traceback: Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+                        ^^^
+UnboundLocalError: cannot access local variable 'url' where it is not associated with a value
+ 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+                        ^^^
+UnboundLocalError: cannot access local variable 'url' where it is not associated with a value
+
+[2025-02-14 00:41:01] ic| main.py:199 in check_new_emails()
+    status: 'OK'
+    msg_data: [b'205489 FETCH (FLAGS (\\Seen) RFC822 {15128}',
+               bytearray(b'Return-Path: <>\r
+              Delivered-To: kibardin@it-matika.pro\r
+              Recei'
+                         b'ved: from mail.it-matika.pro ([172.22.1.253])\r
+              \tby f832bfbc5'
+                         b'705 with LMTP\r
+              \tid oAY+Ktb0rWe+tDIASqa7yw\r
+              \t(envelope-from <'
+                         b'>)\r
+              \tfor <kibardin@it-matika.pro>; Thu, 13 Feb 2025 16:34:14'
+                         b' +0300\r
+              Received: from mail.seafishport.ru (mail.seafishport.ru '
+                         b'[83.68.35.1])\r
+              \t(using TLSv1.3 with cipher TLS_AES_256_GCM_S'
+                         b'HA384 (256/256 bits)\r
+              \t key-exchange X25519 server-signature'
+                         b' RSA-PSS (4096 bits))\r
+              \t(No client certificate requested)\r
+              \t'
+                         b'by mail.it-matika.pro (Postcow) with ESMTPS id 6DF495893089\r'
+                         b'
+              \tfor <kibardin@it-matika.pro>; Thu, 13 Feb 2025 16:34:14 +0300 '
+                         b'(MSK)\r
+              Authentication-Results: mail.it-matika.pro;\r
+              \tdkim=no'
+                         b'ne;\r
+              \tspf=none (mail.it-matika.pro: domain of mail.seafishpo'
+                         b'rt.ru has no SPF policy when checking 83.68.35.1) smtp.helo=mail'
+                         b'.seafishport.ru;\r
+              \tdmarc=fail reason="No valid SPF, No valid'
+                         b' DKIM" header.from=seafishport.ru (policy=none)\r
+              ARC-Seal: i=1; '
+                         b's=dkim; d=it-matika.pro; t=1739453654; a=rsa-sha256;\r
+              \tcv=no'
+                         b'ne;\r
+              \tb=TKQ/5Q7NxPr6XAmFGqIceQJFiHpiwd2KLNTbDsfoeo7iuR6fRyMh'
+                         b'+nEOWnNvh6opjCBtom\r
+              \t8xhCCn5/ZpN1UPzGnFmmN6SddHGFWxRUCpt/icS'
+                         b'pSstVF//BdRAKCktTx3oESTYchseExl\r
+              \t2CTUN+7uS2l1CT1xFXWQIuC4L6'
+                         b'Xb0eA=\r
+              ARC-Authentication-Results: i=1;\r
+              \tmail.it-matika.pr'
+                         b'o;\r
+              \tdkim=none;\r
+              \tspf=none (mail.it-matika.pro: domain of ma'
+                         b'il.seafishport.ru has no SPF policy when checking 83.68.35.1) sm'
+                         b'tp.helo=mail.seafishport.ru;\r
+              \tdmarc=fail reason="No valid S'
+                         b'PF, No valid DKIM" header.from=seafishport.ru (policy=none)\r
+              ARC'
+                         b'-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=it-m'
+                         b'atika.pro;\r
+              \ts=dkim; t=1739453654;\r
+              \th=from:from:reply-to:su'
+                         b'bject:subject:date:date:message-id:message-id:\r
+              \t to:to:cc:m'
+                         b'ime-version:mime-version:content-type:content-type;\r
+              \tbh=K5d'
+                         b'aqUg3Vpf4cvGo6kMYoAbKYZRA/b4ZXyfIAQAR/WQ=;\r
+              \tb=MhuF+xeZXpRL0'
+                         b'c/ErjNJBBUquhgA3yVtuWZ4OmDypkbmwYn35mWw6+UUlRZFgTR2cwzm1S\r
+              \t'
+                         b'IYsmz3M5jeyLdWdNbEBB7/j5sg7krLlq4me5f424/BMushpnZlR7Geu/GiSNxqjU'
+                         b'FyiP8m\r
+              \t8KqiNZVP79B9MZqCHT4LwRm4O3arc30=\r
+              Received: from [1'
+                         b'27.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) wi'
+                         b'th ESMTPSA id B27B28400FC\r
+              \tfor <kibardin@it-matika.pro>; Th'
+                         b'u, 13 Feb 2025 16:34:13 +0300 (MSK)\r
+              MIME-Version: 1.0\r
+              Auto'
+                         b'-Submitted: auto-generated\r
+              X-Mailer: OTRS Mail Service (6.0.26)'
+                         b'\r
+              Message-ID: <1739453593.418831.816247012@otrs.seafishport.ru:5'
+                         b'5501>\r
+              Subject: [Ticket#2025021363000441] =?UTF-8?Q?=D0=A0=D0=B5'
+                         b'=D0=BB=D0=B8=D0=B7=20?=\r
+               =?UTF-8?Q?=D0=BD=D0=B0=20?= =?UTF-8?Q?'
+                         b'=D0=B2=D1=8B=D0=B2=D0=BE=D0=B7=20?=20\r
+               =?UTF-8?Q?=D0=BF=D0=BE=D'
+                         b'1=80=D0=BE=D0=B6=D0=BD=D0=B8=D1=85=20?=\r
+               =?UTF-8?Q?=D0=BA=D0=BE'
+                         b'=D0=BD=D1=82=D0=B5=D0=B9=D0=BD=D0=B5=D1=80=D0=BE=D0=B2?=\r
+              X-Powe'
+                         b'red-BY: OTRS (https://otrs.com/)\r
+              Precedence: bulk\r
+              Date: Th'
+                         b'u, 13 Feb 2025 16:33:13 +0300\r
+              Organization: Terminal Sea Fish P'
+                         b'ort\r
+              To: kibardin@it-matika.pro\r
+              X-Loop: yes\r
+              From: OTRS Not'
+                         b'ifications <sd@seafishport.ru>\r
+              Content-Type: multipart/alternat'
+                         b'ive; boundary="----------=_1739453593-9972-2"\r
+              X-Last-TLS-Sessio'
+                         b'n-Version: TLSv1.2\r
+              X-Last-TLS-Session-Version: TLSv1.3\r
+              X-S'
+                         b'pamd-Result: default: False [-1004.91 / 15.00];\r
+              \tMAILCOW_WH'
+                         b'ITE(-999.00)[];\r
+              \tBAYES_HAM(-5.50)[99.99%];\r
+              \tIP_REPUTATION_'
+                         b'HAM(-1.41)[asn: 31444(-0.40), country: RU(-0.01), ip: 83.68.35.1'
+                         b'(-1.00)];\r
+              \tURI_COUNT_ODD(1.00)[5];\r
+              \tMIME_GOOD(-0.10)[multi'
+                         b'part/alternative,text/plain];\r
+              \tDMARC_POLICY_SOFTFAIL(0.10)['
+                         b'seafishport.ru : No valid SPF, No valid DKIM,none];\r
+              \tRCVD_V'
+                         b'IA_SMTP_AUTH(0.00)[];\r
+              \tRCPT_COUNT_ONE(0.00)[1];\r
+              \tASN(0.00)'
+                         b'[asn:31444, ipnet:83.68.32.0/20, country:RU];\r
+              \tMIME_TRACE(0'
+                         b'.00)[0:+,1:+,2:~];\r
+              \tBCC(0.00)[];\r
+              \tRCVD_COUNT_ONE(0.00)[1];'
+                         b'\r
+              \tHAS_ORG_HEADER(0.00)[];\r
+              \tRCPT_MAILCOW_DOMAIN(0.00)[it-ma'
+                         b'tika.pro];\r
+              \tRCVD_TLS_ALL(0.00)[];\r
+              \tR_DKIM_NA(0.00)[];\r'
+                         b'
+              \tR_SPF_NA(0.00)[no SPF record];\r
+              \tPRECEDENCE_BULK(0.00)[];\r'
+                         b'
+              \tFROM_HAS_DN(0.00)[];\r
+              \tARC_NA(0.00)[];\r
+              \tTO_DN_NONE(0.'
+                         b'00)[];\r
+              \tPREVIOUSLY_DELIVERED(0.00)[kibardin@it-matika.pro];'
+                         b'\r
+              \tTO_MATCH_ENVRCPT_ALL(0.00)[];\r
+              \tNEURAL_HAM(-0.00)[-1.000]'
+                         b';\r
+              \tARC_SIGNED(0.00)[it-matika.pro:s=dkim:i=1]\r
+              X-Rspamd-Que'
+                         b'ue-Id: 6DF495893089\r
+              \r
+              This is a multi-part message in MIME '
+                         b'format...\r
+              \r
+              ------------=_1739453593-9972-2\r
+              Content-Type: '
+                         b'text/plain; charset="utf-8"\r
+              Content-Disposition: inline\r
+              Co'
+                         b'ntent-Transfer-Encoding: quoted-printable\r
+              \r
+              \r
+                 [Ticket#20'
+                         b'25021363000441] =D0=A0=D0=B5=D0=BB=D0=B8=D0=B7 =D0=BD=D0=B0 =\r
+              ='
+                         b'D0=B2=D1=8B=D0=B2=D0=BE=D0=B7 20 =D0=BF=D0=BE=D1=80=D0=BE=D0=B6='
+                         b'D0=BD=D0=\r
+              =B8=D1=85 =D0=BA=D0=BE=D0=BD=D1=82=D0=B5=D0=B9=D0=BD='
+                         b'D0=B5=D1=80=D0=BE=D0=\r
+              =B2=20=20=20\r
+              \r
+                =D0=A2=D0=B5=D1=85='
+                         b'D0=BD=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=B0=D1=8F =D0=BF=\r
+              =D0=BE='
+                         b'D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0=BA=D0=B0 =D0=A2=D0=9C=D0=A0=D0='
+                         b'9F w=\r
+              rote:\r
+              >=20\r
+              > =D0=94=D0=BE=D0=B1=D1=80=D1=8B=D0=B9 ='
+                         b'D0=B4=D0=B5=D0=BD=D1=8C!\r
+              >=20\r
+              > =D0=9F=D1=80=D0=BE=D1=88=D'
+                         b'1=83 =D0=BE=D1=84=D0=BE=D1=80=D0=BC=D0=B8=D1=82=\r
+              =D1=8C =D1=80='
+                         b'D0=B5=D0=BB=D0=B8=D0=B7 =D0=BD=D0=B0 =D0=B2=D1=8B=D0=B2=D0=BE=\r
+              '
+                         b'=D0=B7 20 =D0=BF=D0=BE=D1=80=D0=BE=D0=B6=D0=BD=D0=B8=D1=85 =D0=B'
+                         b'D/=D1=83 =\r
+              =D0=BA=D0=BE=D0=BD=D1=82=D0=B5=D0=B9=D0=BD=D0=B5=D1='
+                         b'80=D0=BE=D0=B2 =D0=BD=\r
+              =D0=B0 =D1=8D=D0=BA=D1=81=D0=BF=D0=B5=D0'
+                         b'=B4=D0=B8=D1=82=D0=BE=D1=80=D1=81=\r
+              =D0=BA=D1=83=D1=8E\r
+              > =D'
+                         b'0=BA=D0=BE=D0=BC=D0=BF=D0=B0=D0=BD=D0=B8=D1=8E =D0=9E=D0=9E=D0=9'
+                         b'E "=D0=\r
+              =A4=D1=80=D0=B5=D0=B3=D0=B0=D1=82 =D0=9B=D0=BE=D0=B3=D0'
+                         b'=B8=D1=81=D1=82=D0=\r
+              =B8=D0=BA", =D0=98=D0=9D=D0=9D 78027615'
+                         b'17.\r
+              >=20\r
+              > --=20\r
+              > =D0=A1 =D0=A3=D0=B2=D0=B0=D0=B6=D0=B5='
+                         b'D0=BD=D0=B8=D0=B5=D0=BC,\r
+              > =D0=95=D0=BA=D0=B0=D1=82=D0=B5=D1=80'
+                         b'=D0=B8=D0=BD=D0=B0 =D0=9B=D0=B0=D1=82=\r
+              =D0=BA=D0=B8=D0=BD=D0=B0'
+                         b'\r
+              > =D0=9E=D0=9E=D0=9E "=D0=91=D0=B0=D0=BB=D1=82=D0=B8=D0=BA =D0'
+                         b'=A8=D0=B8=D0=\r
+              =BF=D0=BF=D0=B8=D0=BD=D0=B3 =D0=9A=D0=BE=D0=BD=D1'
+                         b'=82=D0=B5=D0=B9=D0=BD=D0=\r
+              =B5=D1=80=D1=81"\r
+              > =D1=82=D0=B5='
+                         b'D0=BB.: 7 (812) 740 57 57\r
+              > =D0=BC=D0=BE=D0=B1. =D1=82=D0=B5=D0'
+                         b'=BB.: 7 921 890 04 72\r
+              \r
+              \r
+              \r
+              [1]http://otrs.seafishport.'
+                         b'ru:55501/otrs/index.pl?Action=3DAgentTicketZoom;=\r
+              TicketID=3D19'
+                         b'8508\r
+              =20=20\r
+              \r
+                 =D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B'
+                         b'7=D1=83=D0=B5=D1=82=D1=81=D1=8F=\r
+               OTRS 6=20\r
+              \r
+              =20=20=20=20'
+                         b'\r
+              \r
+              \r
+              [1] http://otrs.seafishport.ru:55501/otrs/index.pl?Act'
+                         b'ion=3DAgentTicketZoom=\r
+              ;TicketID=3D198508\r
+              \r
+              ------------=_'
+                         b'1739453593-9972-2\r
+              Content-Type: text/html; charset="utf-8"\r'
+                         b'
+              Content-Disposition: inline\r
+              Content-Transfer-Encoding: quo'
+                         b'ted-printable\r
+              \r
+              \r
+              <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML '
+                         b'1.0 Transitional//EN" "http://www.=\r
+              w3.org/TR/xhtml1/DTD/xhtml1'
+                         b'-transitional.dtd">\r
+              <html>\r
+              <head>\r
+                  <meta http-equiv=3D'
+                         b'"Content-Type" content=3D"text/html; charset=3DUTF-8=\r
+              ">\r
+               '
+                         b'   <style type=3D"text/css">\r
+                  body {\r
+                      width: 100'
+                         b'% !important;\r
+                      -webkit-text-size-adjust: none;\r
+                  '
+                         b'    margin: 0px;\r
+                      padding: 0px;\r
+                  }\r
+              \r
+                  ta'
+                         b'ble td {\r
+                      border-collapse: collapse;\r
+                  }\r
+              \r
+               '
+                         b'   #backgroundTable {\r
+                      height: 100% !important;\r
+                 '
+                         b'     margin: 0;\r
+                      padding: 0;\r
+                      width: 100% !i'
+                         b'mportant;\r
+                  }\r
+              \r
+                  h1, h2, h3, h4, h5, h6 {\r
+                    '
+                         b'  color:#202020;\r
+                      display:block;\r
+                      font-famil'
+                         b'y:Arial;\r
+                      font-weight:bold;\r
+                      line-height:100'
+                         b'%;\r
+                      margin-top:0;\r
+                      margin-right:0;\r
+                      '
+                         b'margin-bottom:5px;\r
+                      margin-left:0;\r
+                      text-ali'
+                         b'gn:left;\r
+                  }\r
+              \r
+                  h1 {\r
+                      font-size: 34px;\r
+               '
+                         b'   }\r
+              \r
+                  h2, h3, h4, h5, h6 {\r
+                      margin-top: 5p'
+                         b'x;\r
+                      margin-bottom: 5px;\r
+                  }\r
+              \r
+                  h2 {\r
+                  '
+                         b'    font-size: 28px;\r
+                  }\r
+              \r
+                  h3 {\r
+                      font-si'
+                         b'ze: 24px;\r
+                  }\r
+              \r
+                  h4 {\r
+                      font-size: 22px;\r
+              '
+                         b'    }\r
+              \r
+                  h5 {\r
+                      font-size: 18px;\r
+                  }\r
+              '
+                         b'\r
+                  h6 {\r
+                      font-size: 16px;\r
+                  }\r
+              \r
+                  #temp'
+                         b'lateContainer, .bodyContent{\r
+                      background-color: #FFFFFF;'
+                         b'\r
+                  }\r
+              \r
+                  .bodyContent, .bodyContent * {\r
+                      c'
+                         b'olor: #505050;\r
+                      font-family: Arial;\r
+                      font-si'
+                         b'ze: 13px;\r
+                      line-height: 150%;\r
+                      text-align: l'
+                         b'eft;\r
+                  }\r
+              \r
+                  .bodyContent div {\r
+                      padding-b'
+                         b'ottom: 5px;\r
+                  }\r
+              \r
+                  .bodyContent a:link,\r
+                  .bod'
+                         b'yContent a:visited,\r
+                  .footerContent div a:link,\r
+                  .fo'
+                         b'oterContent div a:visited {\r
+                      color: #f92;\r
+                      f'
+                         b'ont-weight: normal;\r
+                      text-decoration: none\r
+                  '
+                         b'}\r
+              \r
+                  #templateFooter {\r
+                      background-color: #FFFFF'
+                         b'F;\r
+                      border-top: 0px;\r
+                  }\r
+              \r
+                  .footerConten'
+                         b't div {\r
+                      color:#707070;\r
+                      font-family:Arial;\r'
+                         b'
+                      font-size:13px;\r
+                      line-height:125%;\r
+                     '
+                         b' text-align:left;\r
+                  }\r
+              \r
+                  #links {\r
+                      backgr'
+                         b'ound-color: #FAFAFA;\r
+                      border: 0;\r
+                  }\r
+              \r
+                  #'
+                         b'links div {\r
+                      text-align: center;\r
+                  }\r
+              \r
+                  .'
+                         b'CallForAction:active,\r
+                  .CallForAction:hover {\r
+                      b'
+                         b'ackground-color: #e5e5e5;\r
+                      border-color: #999;\r
+                  '
+                         b'}\r
+              \r
+                  .bodyContent a {\r
+                      color: #f92 !importan'
+                         b't;\r
+                  }\r
+              \r
+                  .im {\r
+                      color: #555 !important;\r'
+                         b'
+                  }\r
+                  </style>\r
+              </head>\r
+              <body leftmargin=3D"0" ma'
+                         b'rginwidth=3D"0" topmargin=3D"0" marginheight=3D"0"=\r
+               offset=3D"'
+                         b'0">\r
+                  <center>\r
+                      <table border=3D"0" cellpadding=3'
+                         b'D"0" cellspacing=3D"0" height=3D"1=\r
+              00%" width=3D"100%" id=3D"b'
+                         b'ackgroundTable" style=3D"background-color:#FAFAF=\r
+              A">\r
+                  '
+                         b'        <tbody>\r
+                              <tr>\r
+                                  <'
+                         b'td align=3D"center" valign=3D"top">\r
+                                      <br'
+                         b' />\r
+                                      <table border=3D"0" cellpadding=3D"'
+                         b'0" cellspacing=\r
+              =3D"0" id=3D"templateContainer" style=3D"border'
+                         b': 1px solid #DDDDDD;">\r
+                                          <tbody>\r'
+                         b'
+                                              <tr>\r
+                                   '
+                         b'               <td align=3D"center" valign=3D"top">\r
+                         '
+                         b'                             <table border=3D"0" cellpadding=3D"'
+                         b'=\r
+              0" cellspacing=3D"0" id=3D"templateBody">\r
+                            '
+                         b'                              <tbody>\r
+                                       '
+                         b'                       <tr>\r
+                                                 '
+                         b'                 <td valign=3D"top" clas=\r
+              s=3D"bodyContent"'
+                         b'>\r
+                                                                      <h1 s'
+                         b'tyle=3D"backgr=\r
+              ound: #333333; border-bottom: 10px solid #FF992'
+                         b'2; padding: 20px; line-heigh=\r
+              t: 130%; color: #999; margin: 0px'
+                         b'; font-size: 20px;">\r
+                                                        '
+                         b'                  [Ticket#2025021=\r
+              363000441] =D0=A0=D0=B5=D0=B'
+                         b'B=D0=B8=D0=B7 =D0=BD=D0=B0 =D0=B2=D1=8B=D0=B2=\r
+              =D0=BE=D0=B7 20 '
+                         b'=D0=BF=D0=BE=D1=80=D0=BE=D0=B6=D0=BD=D0=B8=D1=85 =D0=BA=D0=\r
+              =BE'
+                         b'=D0=BD=D1=82=D0=B5=D0=B9=D0=BD=D0=B5=D1=80=D0=BE=D0=B2\r
+                      '
+                         b'                                                </h1>\r
+                       '
+                         b'                                           </td>\r
+                            '
+                         b'                                  </tr>\r
+                                     '
+                         b'                         <tr>\r
+                                               '
+                         b'                   <td valign=3D"top" clas=\r
+              s=3D"bodyContent" s'
+                         b'tyle=3D"border-bottom: 1px solid #eee; background-color:=\r
+               #fff'
+                         b'; padding: 15px; font-size: 13px;">\r
+                                         '
+                         b'                             =D0=A2=D0=B5=D1=85=\r
+              =D0=BD=D0=B8=D'
+                         b'1=87=D0=B5=D1=81=D0=BA=D0=B0=D1=8F =D0=BF=D0=BE=D0=B4=D0=B4=\r
+              =D'
+                         b'0=B5=D1=80=D0=B6=D0=BA=D0=B0 =D0=A2=D0=9C=D0=A0=D0=9F wrote:<br '
+                         b'/><div ty=\r
+              pe=3D"cite" style=3D"background: #f5f5f5; border: 0p'
+                         b'x !important; color: #5=\r
+              55; margin: 10px 0px 0px 0px; padding:'
+                         b' 10px;"><br />\r
+              =D0=94=D0=BE=D0=B1=D1=80=D1=8B=D0=B9 =D0=B4=D0=B'
+                         b'5=D0=BD=D1=8C!<br />\r
+              <br />\r
+              =D0=9F=D1=80=D0=BE=D1=88=D1=83'
+                         b' =D0=BE=D1=84=D0=BE=D1=80=D0=BC=D0=B8=D1=82=\r
+              =D1=8C =D1=80=D0=B'
+                         b'5=D0=BB=D0=B8=D0=B7 =D0=BD=D0=B0 =D0=B2=D1=8B=D0=B2=D0=BE=\r
+              =D0='
+                         b'B7 20 =D0=BF=D0=BE=D1=80=D0=BE=D0=B6=D0=BD=D0=B8=D1=85 =D0=BD/=D'
+                         b'1=83 =\r
+              =D0=BA=D0=BE=D0=BD=D1=82=D0=B5=D0=B9=D0=BD=D0=B5=D1=80=D'
+                         b'0=BE=D0=B2 =D0=BD=\r
+              =D0=B0 =D1=8D=D0=BA=D1=81=D0=BF=D0=B5=D0=B4='
+                         b'D0=B8=D1=82=D0=BE=D1=80=D1=81=\r
+              =D0=BA=D1=83=D1=8E<br />\r
+              =D'
+                         b'0=BA=D0=BE=D0=BC=D0=BF=D0=B0=D0=BD=D0=B8=D1=8E =D0=9E=D0=9E=D0=9'
+                         b'E &quot;=\r
+              =D0=A4=D1=80=D0=B5=D0=B3=D0=B0=D1=82 =D0=9B=D0=BE=D0='
+                         b'B3=D0=B8=D1=81=D1=82=\r
+              =D0=B8=D0=BA&quot;, =D0=98=D0=9D=D0=9D 78'
+                         b'02761517.<br />\r
+              <br />\r
+              -- <br />\r
+              =D0=A1 =D0=A3=D0=B2=D0=B'
+                         b'0=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC,<br />\r
+              =D0=95=D0=BA=D0=B0'
+                         b'=D1=82=D0=B5=D1=80=D0=B8=D0=BD=D0=B0 =D0=9B=D0=B0=D1=82=\r
+              =D0=BA'
+                         b'=D0=B8=D0=BD=D0=B0<br />\r
+              =D0=9E=D0=9E=D0=9E &quot;=D0=91=D0=B0='
+                         b'D0=BB=D1=82=D0=B8=D0=BA =D0=A8=D0=B8=\r
+              =D0=BF=D0=BF=D0=B8=D0=BD='
+                         b'D0=B3 =D0=9A=D0=BE=D0=BD=D1=82=D0=B5=D0=B9=D0=BD=\r
+              =D0=B5=D1=80='
+                         b'D1=81&quot;<br />\r
+              =D1=82=D0=B5=D0=BB.: 7 (812) 740 57 57<br'
+                         b' />\r
+              =D0=BC=D0=BE=D0=B1. =D1=82=D0=B5=D0=BB.: 7 921 890 04 72</d'
+                         b'iv><br /><br /><=\r
+              a href=3D"http://otrs.seafishport.ru:55501/ot'
+                         b'rs/index.pl?Action=3DAgentTick=\r
+              etZoom;TicketID=3D198508" title'
+                         b'=3D"http://otrs.seafishport.ru:55501/otrs/in=\r
+              dex.pl?Action=3DA'
+                         b'gentTicketZoom;TicketID=3D198508">http://otrs.seafishport.=\r
+              ru:'
+                         b'55501/otrs/index.pl?Action=3DAgentTicketZoom;TicketID=3D198508</'
+                         b'a>\r
+                                                                  </td'
+                         b'>\r
+                                                              </tr>\r
+                '
+                         b'                                          </tbody>\r
+                          '
+                         b'                            </table>\r
+                                        '
+                         b'          </td>\r
+                                              </tr>\r
+                  '
+                         b'                            <tr>\r
+                                            '
+                         b'      <td align=3D"center" valign=3D"top">\r
+                                  '
+                         b'                    <table border=3D"0" cellpadding=3D"=\r
+              10" ce'
+                         b'llspacing=3D"0" id=3D"templateFooter">\r
+                                      '
+                         b'                    <tbody>\r
+                                                 '
+                         b'             <tr>\r
+                                                           '
+                         b'       <td valign=3D"top" clas=\r
+              s=3D"footerContent">\r
+              =20=2'
+                         b'0=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20'
+                         b'=20=20=\r
+              =20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20='
+                         b'20=20=20=20=20=20=20=\r
+              =20=20\r
+                                           '
+                         b'                           <table border=3D"0"=\r
+               cellpadding=3D'
+                         b'"10" cellspacing=3D"0" width=3D"100%">\r
+                                      '
+                         b'                                    <tbody>\r
+                                 '
+                         b'                                             <tr>\r
+                           '
+                         b'                                                       <td col=\r'
+                         b'
+              span=3D"2" valign=3D"middle">\r
+                                          '
+                         b'                                            <di=\r
+              v style=3D"col'
+                         b'or: #999; font-size: 11px; text-align: center;">\r
+                            '
+                         b'                                                             =\r
+              '
+                         b' =D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1'
+                         b'=81=D1=8F O=\r
+              TRS 6\r
+                                                     '
+                         b'                                 </d=\r
+              iv>\r
+                              '
+                         b'                                                    </td>\r
+                   '
+                         b'                                                           </tr>'
+                         b'\r
+                                                                          </'
+                         b'tbody>\r
+                                                                      '
+                         b'</table>\r
+              =20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20'
+                         b'=20=20=20=20=20=20=20=\r
+              =20=20=20=20=20=20=20=20=20=20=20=20=20='
+                         b'20=20=20=20=20=20=20=20=20=20=20=20=\r
+              =20=20\r
+                            '
+                         b'                                      </td>\r
+                                 '
+                         b'                             </tr>\r
+                                          '
+                         b'                </tbody>\r
+                                                    '
+                         b'  </table>\r
+                                                  </td>\r
+                   '
+                         b'                           </tr>\r
+                                          </'
+                         b'tbody>\r
+                                      </table>\r
+                                '
+                         b'      <br />\r
+                                  </td>\r
+                              </t'
+                         b'r>\r
+                          </tbody>\r
+                      </table>\r
+                  </center'
+                         b'>\r
+              </body>\r
+              \r
+              </html>\r
+              \r
+              ------------=_1739453593-9972-2'
+                         b'--\r
+              '),
+               b')',
+               b'Fetch completed (0.046 + 0.000 + 0.045 secs).']
+[2025-02-14 00:41:01] ic| main.py:218 in check_new_emails()
+    part.get_payload(): ('\r
+                        '
+                         '   [Ticket#2025021363000441] =D0=A0=D0=B5=D0=BB=D0=B8=D0=B7 =D0=BD=D0=B0 '
+                         '=\r
+                        '
+                         '=D0=B2=D1=8B=D0=B2=D0=BE=D0=B7 20 '
+                         '=D0=BF=D0=BE=D1=80=D0=BE=D0=B6=D0=BD=D0=\r
+                        '
+                         '=B8=D1=85 '
+                         '=D0=BA=D0=BE=D0=BD=D1=82=D0=B5=D0=B9=D0=BD=D0=B5=D1=80=D0=BE=D0=\r
+                        '
+                         '=B2=20=20=20\r
+                        '
+                         '\r
+                        '
+                         '  =D0=A2=D0=B5=D1=85=D0=BD=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=B0=D1=8F '
+                         '=D0=BF=\r
+                        '
+                         '=D0=BE=D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0=BA=D0=B0 =D0=A2=D0=9C=D0=A0=D0=9F '
+                         'w=\r
+                        '
+                         'rote:\r
+                        '
+                         '>=20\r
+                        '
+                         '> =D0=94=D0=BE=D0=B1=D1=80=D1=8B=D0=B9 =D0=B4=D0=B5=D0=BD=D1=8C!\r
+                        '
+                         '>=20\r
+                        '
+                         '> =D0=9F=D1=80=D0=BE=D1=88=D1=83 '
+                         '=D0=BE=D1=84=D0=BE=D1=80=D0=BC=D0=B8=D1=82=\r
+                        '
+                         '=D1=8C =D1=80=D0=B5=D0=BB=D0=B8=D0=B7 =D0=BD=D0=B0 '
+                         '=D0=B2=D1=8B=D0=B2=D0=BE=\r
+                        '
+                         '=D0=B7 20 =D0=BF=D0=BE=D1=80=D0=BE=D0=B6=D0=BD=D0=B8=D1=85 =D0=BD/=D1=83 '
+                         '=\r
+                        '
+                         '=D0=BA=D0=BE=D0=BD=D1=82=D0=B5=D0=B9=D0=BD=D0=B5=D1=80=D0=BE=D0=B2 '
+                         '=D0=BD=\r
+                        '
+                         '=D0=B0 '
+                         '=D1=8D=D0=BA=D1=81=D0=BF=D0=B5=D0=B4=D0=B8=D1=82=D0=BE=D1=80=D1=81=\r
+                        '
+                         '=D0=BA=D1=83=D1=8E\r
+                        '
+                         '> =D0=BA=D0=BE=D0=BC=D0=BF=D0=B0=D0=BD=D0=B8=D1=8E =D0=9E=D0=9E=D0=9E '
+                         '"=D0=\r
+                        '
+                         '=A4=D1=80=D0=B5=D0=B3=D0=B0=D1=82 '
+                         '=D0=9B=D0=BE=D0=B3=D0=B8=D1=81=D1=82=D0=\r
+                        '
+                         '=B8=D0=BA", =D0=98=D0=9D=D0=9D 7802761517.\r
+                        '
+                         '>=20\r
+                        '
+                         '> --=20\r
+                        '
+                         '> =D0=A1 =D0=A3=D0=B2=D0=B0=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC,\r
+                        '
+                         '> =D0=95=D0=BA=D0=B0=D1=82=D0=B5=D1=80=D0=B8=D0=BD=D0=B0 '
+                         '=D0=9B=D0=B0=D1=82=\r
+                        '
+                         '=D0=BA=D0=B8=D0=BD=D0=B0\r
+                        '
+                         '> =D0=9E=D0=9E=D0=9E "=D0=91=D0=B0=D0=BB=D1=82=D0=B8=D0=BA '
+                         '=D0=A8=D0=B8=D0=\r
+                        '
+                         '=BF=D0=BF=D0=B8=D0=BD=D0=B3 '
+                         '=D0=9A=D0=BE=D0=BD=D1=82=D0=B5=D0=B9=D0=BD=D0=\r
+                        '
+                         '=B5=D1=80=D1=81"\r
+                        '
+                         '> =D1=82=D0=B5=D0=BB.: 7 (812) 740 57 57\r
+                        '
+                         '> =D0=BC=D0=BE=D0=B1. =D1=82=D0=B5=D0=BB.: 7 921 890 04 72\r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '[1]http://otrs.seafishport.ru:55501/otrs/index.pl?Action=3DAgentTicketZoom;=\r
+                        '
+                         'TicketID=3D198508\r
+                        '
+                         '=20=20\r
+                        '
+                         '\r
+                        '
+                         '   '
+                         '=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=\r
+                        '
+                         ' OTRS 6=20\r
+                        '
+                         '\r
+                        '
+                         '=20=20=20=20\r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '[1] '
+                         'http://otrs.seafishport.ru:55501/otrs/index.pl?Action=3DAgentTicketZoom=\r
+                        '
+                         ';TicketID=3D198508\r
+                        ')
+[2025-02-14 00:41:02] ic| main.py:119 in extract_url_from_email()
+    decoded_text: ('\r
+                  '
+                   '   [Ticket#2025021363000441] Релиз на вывоз 20 порожних контейнеров   \r
+                  '
+                   '\r
+                  '
+                   '  Техническая поддержка ТМРП wrote:\r
+                  '
+                   '> \r
+                  '
+                   '> Добрый день!\r
+                  '
+                   '> \r
+                  '
+                   '> Прошу оформить релиз на вывоз 20 порожних н/у контейнеров на '
+                   'экспедиторскую\r
+                  '
+                   '> компанию ООО "Фрегат Логистик", ИНН 7802761517.\r
+                  '
+                   '> \r
+                  '
+                   '> -- \r
+                  '
+                   '> С Уважением,\r
+                  '
+                   '> Екатерина Латкина\r
+                  '
+                   '> ООО "Балтик Шиппинг Контейнерс"\r
+                  '
+                   '> тел.: 7 (812) 740 57 57\r
+                  '
+                   '> моб. тел.: 7 921 890 04 72\r
+                  '
+                   '\r
+                  '
+                   '\r
+                  '
+                   '\r
+                  '
+                   '\r
+                  '
+                   '  \r
+                  '
+                   '\r
+                  '
+                   '   Используется OTRS 6 \r
+                  '
+                   '\r
+                  '
+                   '    \r
+                  '
+                   '\r
+                  '
+                   '\r
+                  '
+                   '[1] \r
+                  ')
+    encoded_url.replace('%', '='): 'TicketID=198508'
+    url_base: 'http://otrs.seafishport.ru:55501/otrs/index.pl?Action=AgentTicketZoom'
+[2025-02-14 00:41:02] ic| main.py:153 in play_notification_sound()
+    urls: 'http://otrs.seafishport.ru:55501/otrs/index.pl?Action=AgentTicketZoom;TicketID=198508'
+[2025-02-14 00:41:03] [ERROR] list index out of range 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 112, in extract_url_from_email
+    url =  quopri.decodestring(str(urls[0]).encode('utf-8')).decode('utf-8', errors='ignore')
+                                   ~~~~^^^
+IndexError: list index out of range
+
+[2025-02-14 00:41:03] [ERROR] Error processing message 205489: cannot access local variable 'url' where it is not associated with a value 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+                        ^^^
+UnboundLocalError: cannot access local variable 'url' where it is not associated with a value
+
+[2025-02-14 00:41:03] [ERROR] Traceback: Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+                        ^^^
+UnboundLocalError: cannot access local variable 'url' where it is not associated with a value
+ 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+                        ^^^
+UnboundLocalError: cannot access local variable 'url' where it is not associated with a value
+
+[2025-02-14 00:41:03] ic| main.py:199 in check_new_emails()
+    status: 'OK'
+    msg_data: [b'205500 FETCH (FLAGS (\\Seen) RFC822 {15757}',
+               bytearray(b'Return-Path: <>\r
+              Delivered-To: kibardin@it-matika.pro\r
+              Recei'
+                         b'ved: from mail.it-matika.pro ([172.22.1.253])\r
+              \tby f832bfbc5'
+                         b'705 with LMTP\r
+              \tid uJGiBFsArmf51DIASqa7yw\r
+              \t(envelope-from <'
+                         b'>)\r
+              \tfor <kibardin@it-matika.pro>; Thu, 13 Feb 2025 17:23:23'
+                         b' +0300\r
+              Received: from mail.seafishport.ru (mail.seafishport.ru '
+                         b'[83.68.35.1])\r
+              \t(using TLSv1.3 with cipher TLS_AES_256_GCM_S'
+                         b'HA384 (256/256 bits)\r
+              \t key-exchange X25519 server-signature'
+                         b' RSA-PSS (4096 bits))\r
+              \t(No client certificate requested)\r
+              \t'
+                         b'by mail.it-matika.pro (Postcow) with ESMTPS id 99060589302A\r'
+                         b'
+              \tfor <kibardin@it-matika.pro>; Thu, 13 Feb 2025 17:23:22 +0300 '
+                         b'(MSK)\r
+              Authentication-Results: mail.it-matika.pro;\r
+              \tdkim=no'
+                         b'ne;\r
+              \tspf=none (mail.it-matika.pro: domain of mail.seafishpo'
+                         b'rt.ru has no SPF policy when checking 83.68.35.1) smtp.helo=mail'
+                         b'.seafishport.ru;\r
+              \tdmarc=fail reason="No valid SPF, No valid'
+                         b' DKIM" header.from=seafishport.ru (policy=none)\r
+              ARC-Seal: i=1; '
+                         b's=dkim; d=it-matika.pro; t=1739456602; a=rsa-sha256;\r
+              \tcv=no'
+                         b'ne;\r
+              \tb=j3tsIp5ttNchlwyVfYHpEZaB6l8P6s+aIK5zeMbQJa9OojmFch2q'
+                         b'I6TPgXut4mgtz/8w4A\r
+              \tcAlrWx2oS0RBIEKO6xBHsLLf5CB881FHvmkX/jM'
+                         b'/J6SgVZeZZFSf7Lq2/Q7In9gtIJ9M6h\r
+              \tjPeW1xxnvhOhk7b3p2yxx6y1dm'
+                         b'R/H1c=\r
+              ARC-Authentication-Results: i=1;\r
+              \tmail.it-matika.pr'
+                         b'o;\r
+              \tdkim=none;\r
+              \tspf=none (mail.it-matika.pro: domain of ma'
+                         b'il.seafishport.ru has no SPF policy when checking 83.68.35.1) sm'
+                         b'tp.helo=mail.seafishport.ru;\r
+              \tdmarc=fail reason="No valid S'
+                         b'PF, No valid DKIM" header.from=seafishport.ru (policy=none)\r
+              ARC'
+                         b'-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=it-m'
+                         b'atika.pro;\r
+              \ts=dkim; t=1739456602;\r
+              \th=from:from:reply-to:su'
+                         b'bject:subject:date:date:message-id:message-id:\r
+              \t to:to:cc:m'
+                         b'ime-version:mime-version:content-type:content-type;\r
+              \tbh=7Mt'
+                         b'Fhp+ThLq0SgC6dCs8xUiV8MeXzT4hk9ERVlo4rb8=;\r
+              \tb=8orEalYC+06Ac'
+                         b'f0jHK4yHyCe/OSxR0YvL8JGtZI5YraktxV9G7KyAj8kMH3JZPOGOLd9Uj\r
+              \t'
+                         b'2yzXT8zIf1pwC2WKQt/cS0PCbBgF+5bq6X854TaqRSD9Hy6eFzIrUcltQXTtfhOj'
+                         b'0dyMkB\r
+              \tOifbCx+gR2P5kkaAB/99a2kdriffnNM=\r
+              Received: from [1'
+                         b'27.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) wi'
+                         b'th ESMTPSA id 548F38400F5\r
+              \tfor <kibardin@it-matika.pro>; Th'
+                         b'u, 13 Feb 2025 17:23:22 +0300 (MSK)\r
+              MIME-Version: 1.0\r
+              X-Po'
+                         b'wered-BY: OTRS (https://otrs.com/)\r
+              Precedence: bulk\r
+              Date: '
+                         b'Thu, 13 Feb 2025 17:22:20 +0300\r
+              Subject: [Ticket#20250213630005'
+                         b'58] =?UTF-8?Q?=D0=A1=D0=BB=D0=BE=D0=BC=D0=B0=D0=BB=D1=81=D1=8F=2'
+                         b'0?=\r
+               =?UTF-8?Q?=D0=BF=D1=80=D0=B8=D0=BD=D1=82=D0=B5=D1=80?='
+                         b'\r
+              Message-ID: <1739456540.78327.6177779391@otrs.seafishport.ru:5'
+                         b'5501>\r
+              X-Mailer: OTRS Mail Service (6.0.26)\r
+              Auto-Submitted:'
+                         b' auto-generated\r
+              X-Loop: yes\r
+              From: OTRS Notifications <sd@s'
+                         b'eafishport.ru>\r
+              To: kibardin@it-matika.pro\r
+              Organization: Te'
+                         b'rminal Sea Fish Port\r
+              Content-Type: multipart/alternative; bound'
+                         b'ary="----------=_1739456540-10467-2"\r
+              X-Last-TLS-Session-Version'
+                         b': TLSv1.2\r
+              X-Last-TLS-Session-Version: TLSv1.3\r
+              X-Spamd-Resu'
+                         b'lt: default: False [-1004.91 / 15.00];\r
+              \tMAILCOW_WHITE(-999.'
+                         b'00)[];\r
+              \tBAYES_HAM(-5.50)[100.00%];\r
+              \tIP_REPUTATION_HAM(-1.4'
+                         b'1)[asn: 31444(-0.40), country: RU(-0.01), ip: 83.68.35.1(-1.00)]'
+                         b';\r
+              \tURI_COUNT_ODD(1.00)[13];\r
+              \tMIME_GOOD(-0.10)[multipart/al'
+                         b'ternative,text/plain];\r
+              \tDMARC_POLICY_SOFTFAIL(0.10)[seafish'
+                         b'port.ru : No valid SPF, No valid DKIM,none];\r
+              \tRCVD_VIA_SMTP'
+                         b'_AUTH(0.00)[];\r
+              \tRCPT_COUNT_ONE(0.00)[1];\r
+              \tASN(0.00)[asn:31'
+                         b'444, ipnet:83.68.32.0/20, country:RU];\r
+              \tMIME_TRACE(0.00)[0:'
+                         b'+,1:+,2:~];\r
+              \tBCC(0.00)[];\r
+              \tRCVD_COUNT_ONE(0.00)[1];\r
+              \t'
+                         b'HAS_ORG_HEADER(0.00)[];\r
+              \tRCPT_MAILCOW_DOMAIN(0.00)[it-matik'
+                         b'a.pro];\r
+              \tRCVD_TLS_ALL(0.00)[];\r
+              \tR_DKIM_NA(0.00)[];\r
+              \tR'
+                         b'_SPF_NA(0.00)[no SPF record];\r
+              \tPRECEDENCE_BULK(0.00)[];\r
+              \tF'
+                         b'ROM_HAS_DN(0.00)[];\r
+              \tARC_NA(0.00)[];\r
+              \tTO_DN_NONE(0.00)'
+                         b'[];\r
+              \tPREVIOUSLY_DELIVERED(0.00)[kibardin@it-matika.pro];\r
+              \t'
+                         b'TO_MATCH_ENVRCPT_ALL(0.00)[];\r
+              \tNEURAL_HAM(-0.00)[-1.000];\r
+              '
+                         b'\tARC_SIGNED(0.00)[it-matika.pro:s=dkim:i=1]\r
+              X-Rspamd-Queue-'
+                         b'Id: 99060589302A\r
+              \r
+              This is a multi-part message in MIME for'
+                         b'mat...\r
+              \r
+              ------------=_1739456540-10467-2\r
+              Content-Type: te'
+                         b'xt/plain; charset="utf-8"\r
+              Content-Disposition: inline\r
+              Cont'
+                         b'ent-Transfer-Encoding: quoted-printable\r
+              \r
+              \r
+                 [Ticket#2025'
+                         b'021363000558] =D0=A1=D0=BB=D0=BE=D0=BC=D0=B0=D0=BB=D1=81=D1=\r
+              =8'
+                         b'F =D0=BF=D1=80=D0=B8=D0=BD=D1=82=D0=B5=D1=80=20=20=20\r
+              \r
+                ='
+                         b'D0=A2=D0=B5=D1=85=D0=BD=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=B0=D1=8'
+                         b'F =D0=BF=\r
+              =D0=BE=D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0=BA=D0=B0 =D0='
+                         b'A2=D0=9C=D0=A0=D0=9F w=\r
+              rote:\r
+              > =D0=9A=D0=BE=D0=BB=D0=BB=D'
+                         b'0=B5=D0=B3=D0=B8,=20\r
+              >=20\r
+              > =D0=B4=D0=BE=D0=B1=D1=80=D1=8B'
+                         b'=D0=B9 =D0=B4=D0=B5=D0=BD=D1=8C, =D1=83 =D0=\r
+              =BD=D0=B0=D1=81 =D'
+                         b'0=BF=D1=80=D0=BE=D0=B1=D0=BB=D0=B5=D0=BC=D1=8B =D1=81 =D0=\r
+              =BF='
+                         b'D1=80=D0=B8=D0=BD=D1=82=D0=B5=D1=80=D0=BE=D0=BC=20\r
+              >=20\r
+              > '
+                         b'=D0=BF=D0=B5=D1=87=D0=B0=D1=82=D0=B0=D0=B5=D1=82 =D0=B2=D0=BE=D1'
+                         b'=82 =D1=\r
+              =81 =D1=82=D0=B0=D0=BA=D0=BE=D0=B9 =D1=87=D0=B5=D1=80='
+                         b'D0=BD=D0=BE=D0=B9 =D0=\r
+              =BF=D0=BE=D0=BB=D0=BE=D1=81=D0=BE=D0=B9='
+                         b'20\r
+              >=20\r
+              > =D0=A1=D0=BC=D0=B5=D0=BD=D0=BD=D1=8B=D0=B9 =D0=B'
+                         b'D=D0=B0=D1=87=D0=B0=D0=BB=\r
+              =D1=8C=D0=BD=D0=B8=D0=BA =D1=81=D0=B'
+                         b'B=D1=83=D0=B6=D0=B1=D1=8B =D1=83=D1=87=\r
+              =D1=91=D1=82=D0=B0 =D0='
+                         b'B8 =D1=81=D0=BA=D0=BB=D0=B0=D0=B4=D0=B8=D1=80=D0=BE=\r
+              =D0=B2=D0='
+                         b'B0=D0=BD=D0=B8=D1=8F.\r
+              >=20\r
+              > =D0=93=D1=80=D1=83=D0=BF=D0=B'
+                         b'F=D0=B0 =D0=98=D0=BC=D0=BF=D0=BE=D1=80=D1=82=\r
+              =D0=B0.\r
+              >=20'
+                         b'\r
+              > =D0=9E=D0=9E=D0=9E <=D0=A2=D0=B5=D1=80=D0=BC=D0=B8=D0=BD=D0='
+                         b'B0=D0=BB =D0=\r
+              =9C=D0=BE=D1=80=D1=81=D0=BA=D0=BE=D0=B9 =D0=A0=D1'
+                         b'=8B=D0=B1=D0=BD=D1=8B=D0=\r
+              =B9 =D0=9F=D0=BE=D1=80=D1=82>\r
+              >='
+                         b'20\r
+              > =D0=B3.=D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=82=D'
+                         b'0=B5=D1=80=D0=\r
+              =B1=D1=83=D1=80=D0=B3, =D0=AD=D0=BB=D0=B5=D0=B2='
+                         b'D0=B0=D1=82=D0=BE=D1=80=D0=\r
+              =BD=D0=B0=D1=8F =D0=BF=D0=BB=D0=BE='
+                         b'D1=89=D0=B0=D0=B4=D0=BA=D0=B0,10\r
+              >=20\r
+              > =D1=82=D0=B5=D0=BB'
+                         b'.: +7 (812) 407-12-02\r
+              >=20\r
+              > =D0=BC=D0=BE=D0=B1. =D1=82=D0'
+                         b'=B5=D0=BB. +7 (901) 300-63-42\r
+              >=20\r
+              > E-mail: <mailto:sklad'
+                         b'@seafishport.ru> sklad@seafishport.ru\r
+              >=20\r
+              > <[1]http://ww'
+                         b'w.basisport.ru/> [2]www.basisport.ru\r
+              \r
+              \r
+              \r
+              [3]http://ot'
+                         b'rs.seafishport.ru:55501/otrs/index.pl?Action=3DAgentTicketZoom;='
+                         b'\r
+              TicketID=3D198519\r
+              =20=20\r
+              \r
+                 =D0=98=D1=81=D0=BF=D0='
+                         b'BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=\r
+               OTRS 6'
+                         b'=20\r
+              \r
+              =20=20=20=20\r
+              \r
+              \r
+              [1] http://www.basisport.ru'
+                         b'/\r
+              [2] http://www.basisport.ru\r
+              [3] http://otrs.seafishport.'
+                         b'ru:55501/otrs/index.pl?Action=3DAgentTicketZoom=\r
+              ;TicketID=3D19'
+                         b'8519\r
+              \r
+              ------------=_1739456540-10467-2\r
+              Content-Type: text'
+                         b'/html; charset="utf-8"\r
+              Content-Disposition: inline\r
+              Content'
+                         b'-Transfer-Encoding: quoted-printable\r
+              \r
+              \r
+              <!DOCTYPE html PUB'
+                         b'LIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=\r
+              w3.o'
+                         b'rg/TR/xhtml1/DTD/xhtml1-transitional.dtd">\r
+              <html>\r
+              <head>\r
+              '
+                         b'    <meta http-equiv=3D"Content-Type" content=3D"text/html; char'
+                         b'set=3DUTF-8=\r
+              ">\r
+                  <style type=3D"text/css">\r
+                  bod'
+                         b'y {\r
+                      width: 100% !important;\r
+                      -webkit-text-s'
+                         b'ize-adjust: none;\r
+                      margin: 0px;\r
+                      padding: 0p'
+                         b'x;\r
+                  }\r
+              \r
+                  table td {\r
+                      border-collapse: co'
+                         b'llapse;\r
+                  }\r
+              \r
+                  #backgroundTable {\r
+                      height'
+                         b': 100% !important;\r
+                      margin: 0;\r
+                      padding: 0;\r'
+                         b'
+                      width: 100% !important;\r
+                  }\r
+              \r
+                  h1, h2, h'
+                         b'3, h4, h5, h6 {\r
+                      color:#202020;\r
+                      display:blo'
+                         b'ck;\r
+                      font-family:Arial;\r
+                      font-weight:bold;\r
+              '
+                         b'        line-height:100%;\r
+                      margin-top:0;\r
+                      ma'
+                         b'rgin-right:0;\r
+                      margin-bottom:5px;\r
+                      margin-le'
+                         b'ft:0;\r
+                      text-align:left;\r
+                  }\r
+              \r
+                  h1 {\r
+                  '
+                         b'    font-size: 34px;\r
+                  }\r
+              \r
+                  h2, h3, h4, h5, h6 {\r'
+                         b'
+                      margin-top: 5px;\r
+                      margin-bottom: 5px;\r
+                  '
+                         b'}\r
+              \r
+                  h2 {\r
+                      font-size: 28px;\r
+                  }\r
+              \r
+                '
+                         b'  h3 {\r
+                      font-size: 24px;\r
+                  }\r
+              \r
+                  h4 {\r
+                 '
+                         b'     font-size: 22px;\r
+                  }\r
+              \r
+                  h5 {\r
+                      font-s'
+                         b'ize: 18px;\r
+                  }\r
+              \r
+                  h6 {\r
+                      font-size: 16px;\r'
+                         b'
+                  }\r
+              \r
+                  #templateContainer, .bodyContent{\r
+                     '
+                         b' background-color: #FFFFFF;\r
+                  }\r
+              \r
+                  .bodyContent, .bod'
+                         b'yContent * {\r
+                      color: #505050;\r
+                      font-family: '
+                         b'Arial;\r
+                      font-size: 13px;\r
+                      line-height: 150%;'
+                         b'\r
+                      text-align: left;\r
+                  }\r
+              \r
+                  .bodyContent d'
+                         b'iv {\r
+                      padding-bottom: 5px;\r
+                  }\r
+              \r
+                  .bodyCo'
+                         b'ntent a:link,\r
+                  .bodyContent a:visited,\r
+                  .footerConte'
+                         b'nt div a:link,\r
+                  .footerContent div a:visited {\r
+                      '
+                         b'color: #f92;\r
+                      font-weight: normal;\r
+                      text-dec'
+                         b'oration: none\r
+                  }\r
+              \r
+                  #templateFooter {\r
+                      b'
+                         b'ackground-color: #FFFFFF;\r
+                      border-top: 0px;\r
+                  }\r
+              '
+                         b'\r
+                  .footerContent div {\r
+                      color:#707070;\r
+                      '
+                         b'font-family:Arial;\r
+                      font-size:13px;\r
+                      line-he'
+                         b'ight:125%;\r
+                      text-align:left;\r
+                  }\r
+              \r
+                  #link'
+                         b's {\r
+                      background-color: #FAFAFA;\r
+                      border: 0;\r'
+                         b'
+                  }\r
+              \r
+                  #links div {\r
+                      text-align: center;\r'
+                         b'
+                  }\r
+              \r
+                  .CallForAction:active,\r
+                  .CallForAction'
+                         b':hover {\r
+                      background-color: #e5e5e5;\r
+                      border'
+                         b'-color: #999;\r
+                  }\r
+              \r
+                  .bodyContent a {\r
+                      co'
+                         b'lor: #f92 !important;\r
+                  }\r
+              \r
+                  .im {\r
+                      color'
+                         b': #555 !important;\r
+                  }\r
+                  </style>\r
+              </head>\r
+              <body '
+                         b'leftmargin=3D"0" marginwidth=3D"0" topmargin=3D"0" marginheight='
+                         b'3D"0"=\r
+               offset=3D"0">\r
+                  <center>\r
+                      <table border='
+                         b'3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"1=\r
+              00%" wid'
+                         b'th=3D"100%" id=3D"backgroundTable" style=3D"background-color:#FA'
+                         b'FAF=\r
+              A">\r
+                          <tbody>\r
+                              <tr>\r
+                '
+                         b'                  <td align=3D"center" valign=3D"top">\r
+                      '
+                         b'                <br />\r
+                                      <table border=3D'
+                         b'"0" cellpadding=3D"0" cellspacing=\r
+              =3D"0" id=3D"templateContain'
+                         b'er" style=3D"border: 1px solid #DDDDDD;">\r
+                                   '
+                         b'       <tbody>\r
+                                              <tr>\r
+                    '
+                         b'                              <td align=3D"center" valign=3D"top'
+                         b'">\r
+                                                      <table border=3D"0" '
+                         b'cellpadding=3D"=\r
+              0" cellspacing=3D"0" id=3D"templateBody">\r'
+                         b'
+                                                          <tbody>\r
+                    '
+                         b'                                          <tr>\r
+                              '
+                         b'                                    <td valign=3D"top" clas=\r
+              s='
+                         b'3D"bodyContent">\r
+                                                            '
+                         b'          <h1 style=3D"backgr=\r
+              ound: #333333; border-bottom: 10'
+                         b'px solid #FF9922; padding: 20px; line-heigh=\r
+              t: 130%; color: #9'
+                         b'99; margin: 0px; font-size: 20px;">\r
+                                         '
+                         b'                                 [Ticket#2025021=\r
+              363000558] =D'
+                         b'0=A1=D0=BB=D0=BE=D0=BC=D0=B0=D0=BB=D1=81=D1=8F =D0=BF=D1=80=D0=\r'
+                         b'
+              =B8=D0=BD=D1=82=D0=B5=D1=80\r
+                                            '
+                         b'                          </h1>\r
+                                             '
+                         b'                     </td>\r
+                                                  '
+                         b'            </tr>\r
+                                                           '
+                         b'   <tr>\r
+                                                                  <td'
+                         b' valign=3D"top" clas=\r
+              s=3D"bodyContent" style=3D"border-bottom:'
+                         b' 1px solid #eee; background-color:=\r
+               #fff; padding: 15px; font-'
+                         b'size: 13px;">\r
+                                                               '
+                         b'       =D0=A2=D0=B5=D1=85=\r
+              =D0=BD=D0=B8=D1=87=D0=B5=D1=81=D0=BA'
+                         b'=D0=B0=D1=8F =D0=BF=D0=BE=D0=B4=D0=B4=\r
+              =D0=B5=D1=80=D0=B6=D0=BA'
+                         b'=D0=B0 =D0=A2=D0=9C=D0=A0=D0=9F wrote:<br /><div ty=\r
+              pe=3D"cite'
+                         b'" style=3D"background: #f5f5f5; border: 0px !important; color: #'
+                         b'5=\r
+              55; margin: 10px 0px 0px 0px; padding: 10px;">=D0=9A=D0=BE=D'
+                         b'0=BB=D0=BB=D0=\r
+              =B5=D0=B3=D0=B8, <br />\r
+              <br />\r
+              =D0=B4=D0=B'
+                         b'E=D0=B1=D1=80=D1=8B=D0=B9 =D0=B4=D0=B5=D0=BD=D1=8C, =D1=83 =D0=\r'
+                         b'
+              =BD=D0=B0=D1=81 =D0=BF=D1=80=D0=BE=D0=B1=D0=BB=D0=B5=D0=BC=D1=8'
+                         b'B =D1=81 =D0=\r
+              =BF=D1=80=D0=B8=D0=BD=D1=82=D0=B5=D1=80=D0=BE=D0='
+                         b'BC <br />\r
+              <br />\r
+              =D0=BF=D0=B5=D1=87=D0=B0=D1=82=D0=B0=D0=B'
+                         b'5=D1=82 =D0=B2=D0=BE=D1=82 =D1=81 =\r
+              =D1=82=D0=B0=D0=BA=D0=BE=D0'
+                         b'=B9 =D1=87=D0=B5=D1=80=D0=BD=D0=BE=D0=B9 =D0=BF=\r
+              =D0=BE=D0=BB=D'
+                         b'0=BE=D1=81=D0=BE=D0=B9 <br />\r
+              <br />\r
+               <br />\r
+              <br />\r
+              '
+                         b'=D0=A1=D0=BC=D0=B5=D0=BD=D0=BD=D1=8B=D0=B9 =D0=BD=D0=B0=D1=87=D0'
+                         b'=B0=D0=BB=\r
+              =D1=8C=D0=BD=D0=B8=D0=BA =D1=81=D0=BB=D1=83=D0=B6=D0'
+                         b'=B1=D1=8B =D1=83=D1=87=\r
+              =D1=91=D1=82=D0=B0 =D0=B8 =D1=81=D0=BA='
+                         b'D0=BB=D0=B0=D0=B4=D0=B8=D1=80=D0=BE=\r
+              =D0=B2=D0=B0=D0=BD=D0=B8=D'
+                         b'1=8F.<br />\r
+              <br />\r
+              =D0=93=D1=80=D1=83=D0=BF=D0=BF=D0=B0 =D'
+                         b'0=98=D0=BC=D0=BF=D0=BE=D1=80=D1=82=\r
+              =D0=B0.<br />\r
+              <br />\r
+              '
+                         b' <br />\r
+              <br />\r
+              =D0=9E=D0=9E=D0=9E &lt;=D0=A2=D0=B5=D1=80=D'
+                         b'0=BC=D0=B8=D0=BD=D0=B0=D0=BB =D0=\r
+              =9C=D0=BE=D1=80=D1=81=D0=BA=D'
+                         b'0=BE=D0=B9 =D0=A0=D1=8B=D0=B1=D0=BD=D1=8B=D0=\r
+              =B9 =D0=9F=D0=BE='
+                         b'D1=80=D1=82&gt;<br />\r
+              <br />\r
+              =D0=B3.=D0=A1=D0=B0=D0=BD=D0='
+                         b'BA=D1=82-=D0=9F=D0=B5=D1=82=D0=B5=D1=80=D0=B1=\r
+              =D1=83=D1=80=D0='
+                         b'B3, =D0=AD=D0=BB=D0=B5=D0=B2=D0=B0=D1=82=D0=BE=D1=80=D0=BD=\r
+              =D0'
+                         b'=B0=D1=8F =D0=BF=D0=BB=D0=BE=D1=89=D0=B0=D0=B4=D0=BA=D0=B0,10<br'
+                         b' />\r
+              <br />\r
+              =D1=82=D0=B5=D0=BB.: +7 (812) 407-12-02<br />\r
+              '
+                         b'<br />\r
+              =D0=BC=D0=BE=D0=B1. =D1=82=D0=B5=D0=BB. +7 (901) 300-63-'
+                         b'42<br />\r
+              <br />\r
+              E-mail:  &lt;mailto:sklad@seafishport.ru&g'
+                         b't; sklad@seafishport.ru<br />\r
+              <br />\r
+               &lt;<a href=3D"http:'
+                         b'//www.basisport.ru/" title=3D"http://www.basisport.ru/=\r
+              ">http:'
+                         b'//www.basisport.ru/</a>&gt; <a href=3D"http://www.basisport.ru" '
+                         b'titl=\r
+              e=3D"http://www.basisport.ru">www.basisport.ru</a></div><'
+                         b'br /><br /><a href=\r
+              =3D"http://otrs.seafishport.ru:55501/otrs/i'
+                         b'ndex.pl?Action=3DAgentTicketZoom=\r
+              ;TicketID=3D198519" title=3D"'
+                         b'http://otrs.seafishport.ru:55501/otrs/index.pl=\r
+              ?Action=3DAgent'
+                         b'TicketZoom;TicketID=3D198519">http://otrs.seafishport.ru:555=\r
+              0'
+                         b'1/otrs/index.pl?Action=3DAgentTicketZoom;TicketID=3D198519</a>\r
+              '
+                         b'                                                    </td>\r
+                   '
+                         b'                                           </tr>\r
+                            '
+                         b'                              </tbody>\r
+                                      '
+                         b'                </table>\r
+                                                  </'
+                         b'td>\r
+                                              </tr>\r
+                              '
+                         b'                <tr>\r
+                                                  <td al'
+                         b'ign=3D"center" valign=3D"top">\r
+                                              '
+                         b'        <table border=3D"0" cellpadding=3D"=\r
+              10" cellspacing=3D'
+                         b'"0" id=3D"templateFooter">\r
+                                                  '
+                         b'        <tbody>\r
+                                                             '
+                         b' <tr>\r
+                                                                  <td v'
+                         b'align=3D"top" clas=\r
+              s=3D"footerContent">\r
+              =20=20=20=20=20=2'
+                         b'0=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=\r
+              =20'
+                         b'=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20='
+                         b'20=20=20=\r
+              =20=20\r
+                                                       '
+                         b'               <table border=3D"0"=\r
+               cellpadding=3D"10" cellspa'
+                         b'cing=3D"0" width=3D"100%">\r
+                                                  '
+                         b'                        <tbody>\r
+                                             '
+                         b'                                 <tr>\r
+                                       '
+                         b'                                           <td col=\r
+              span=3D"2" '
+                         b'valign=3D"middle">\r
+                                                          '
+                         b'                            <di=\r
+              v style=3D"color: #999; font-s'
+                         b'ize: 11px; text-align: center;">\r
+                                            '
+                         b'                                             =\r
+               =D0=98=D1=81=D0'
+                         b'=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F O=\r
+              TR'
+                         b'S 6\r
+                                                                         '
+                         b'             </d=\r
+              iv>\r
+                                                  '
+                         b'                                </td>\r
+                                       '
+                         b'                                       </tr>\r
+                                '
+                         b'                                          </tbody>\r
+                          '
+                         b'                                            </table>\r
+              =20=20=20='
+                         b'20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=2'
+                         b'0=\r
+              =20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20'
+                         b'=20=20=20=20=20=\r
+              =20=20\r
+                                                '
+                         b'                  </td>\r
+                                                     '
+                         b'         </tr>\r
+                                                          </tb'
+                         b'ody>\r
+                                                      </table>\r
+                  '
+                         b'                                </td>\r
+                                       '
+                         b'       </tr>\r
+                                          </tbody>\r
+                      '
+                         b'                </table>\r
+                                      <br />\r
+                '
+                         b'                  </td>\r
+                              </tr>\r
+                          '
+                         b'</tbody>\r
+                      </table>\r
+                  </center>\r
+              </body>\r
+              \r
+              </'
+                         b'html>\r
+              \r
+              ------------=_1739456540-10467-2--\r
+              '),
+               b')',
+               b'Fetch completed (0.046 + 0.000 + 0.045 secs).']
+[2025-02-14 00:41:03] ic| main.py:218 in check_new_emails()
+    part.get_payload(): ('\r
+                        '
+                         '   [Ticket#2025021363000558] '
+                         '=D0=A1=D0=BB=D0=BE=D0=BC=D0=B0=D0=BB=D1=81=D1=\r
+                        '
+                         '=8F =D0=BF=D1=80=D0=B8=D0=BD=D1=82=D0=B5=D1=80=20=20=20\r
+                        '
+                         '\r
+                        '
+                         '  =D0=A2=D0=B5=D1=85=D0=BD=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=B0=D1=8F '
+                         '=D0=BF=\r
+                        '
+                         '=D0=BE=D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0=BA=D0=B0 =D0=A2=D0=9C=D0=A0=D0=9F '
+                         'w=\r
+                        '
+                         'rote:\r
+                        '
+                         '> =D0=9A=D0=BE=D0=BB=D0=BB=D0=B5=D0=B3=D0=B8,=20\r
+                        '
+                         '>=20\r
+                        '
+                         '> =D0=B4=D0=BE=D0=B1=D1=80=D1=8B=D0=B9 =D0=B4=D0=B5=D0=BD=D1=8C, =D1=83 '
+                         '=D0=\r
+                        '
+                         '=BD=D0=B0=D1=81 =D0=BF=D1=80=D0=BE=D0=B1=D0=BB=D0=B5=D0=BC=D1=8B =D1=81 '
+                         '=D0=\r
+                        '
+                         '=BF=D1=80=D0=B8=D0=BD=D1=82=D0=B5=D1=80=D0=BE=D0=BC=20\r
+                        '
+                         '>=20\r
+                        '
+                         '> =D0=BF=D0=B5=D1=87=D0=B0=D1=82=D0=B0=D0=B5=D1=82 =D0=B2=D0=BE=D1=82 '
+                         '=D1=\r
+                        '
+                         '=81 =D1=82=D0=B0=D0=BA=D0=BE=D0=B9 =D1=87=D0=B5=D1=80=D0=BD=D0=BE=D0=B9 '
+                         '=D0=\r
+                        '
+                         '=BF=D0=BE=D0=BB=D0=BE=D1=81=D0=BE=D0=B9=20\r
+                        '
+                         '>=20\r
+                        '
+                         '> =D0=A1=D0=BC=D0=B5=D0=BD=D0=BD=D1=8B=D0=B9 '
+                         '=D0=BD=D0=B0=D1=87=D0=B0=D0=BB=\r
+                        '
+                         '=D1=8C=D0=BD=D0=B8=D0=BA =D1=81=D0=BB=D1=83=D0=B6=D0=B1=D1=8B '
+                         '=D1=83=D1=87=\r
+                        '
+                         '=D1=91=D1=82=D0=B0 =D0=B8 '
+                         '=D1=81=D0=BA=D0=BB=D0=B0=D0=B4=D0=B8=D1=80=D0=BE=\r
+                        '
+                         '=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F.\r
+                        '
+                         '>=20\r
+                        '
+                         '> =D0=93=D1=80=D1=83=D0=BF=D0=BF=D0=B0 '
+                         '=D0=98=D0=BC=D0=BF=D0=BE=D1=80=D1=82=\r
+                        '
+                         '=D0=B0.\r
+                        '
+                         '>=20\r
+                        '
+                         '> =D0=9E=D0=9E=D0=9E <=D0=A2=D0=B5=D1=80=D0=BC=D0=B8=D0=BD=D0=B0=D0=BB '
+                         '=D0=\r
+                        '
+                         '=9C=D0=BE=D1=80=D1=81=D0=BA=D0=BE=D0=B9 '
+                         '=D0=A0=D1=8B=D0=B1=D0=BD=D1=8B=D0=\r
+                        '
+                         '=B9 =D0=9F=D0=BE=D1=80=D1=82>\r
+                        '
+                         '>=20\r
+                        '
+                         '> '
+                         '=D0=B3.=D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=82=D0=B5=D1=80=D0=\r
+                        '
+                         '=B1=D1=83=D1=80=D0=B3, '
+                         '=D0=AD=D0=BB=D0=B5=D0=B2=D0=B0=D1=82=D0=BE=D1=80=D0=\r
+                        '
+                         '=BD=D0=B0=D1=8F =D0=BF=D0=BB=D0=BE=D1=89=D0=B0=D0=B4=D0=BA=D0=B0,10\r
+                        '
+                         '>=20\r
+                        '
+                         '> =D1=82=D0=B5=D0=BB.: +7 (812) 407-12-02\r
+                        '
+                         '>=20\r
+                        '
+                         '> =D0=BC=D0=BE=D0=B1. =D1=82=D0=B5=D0=BB. +7 (901) 300-63-42\r
+                        '
+                         '>=20\r
+                        '
+                         '> E-mail: <mailto:sklad@seafishport.ru> sklad@seafishport.ru\r
+                        '
+                         '>=20\r
+                        '
+                         '> <[1]http://www.basisport.ru/> [2]www.basisport.ru\r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '[3]http://otrs.seafishport.ru:55501/otrs/index.pl?Action=3DAgentTicketZoom;=\r
+                        '
+                         'TicketID=3D198519\r
+                        '
+                         '=20=20\r
+                        '
+                         '\r
+                        '
+                         '   '
+                         '=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=\r
+                        '
+                         ' OTRS 6=20\r
+                        '
+                         '\r
+                        '
+                         '=20=20=20=20\r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '[1] http://www.basisport.ru/\r
+                        '
+                         '[2] http://www.basisport.ru\r
+                        '
+                         '[3] '
+                         'http://otrs.seafishport.ru:55501/otrs/index.pl?Action=3DAgentTicketZoom=\r
+                        '
+                         ';TicketID=3D198519\r
+                        ')
+[2025-02-14 00:41:04] [ERROR] Error processing message 205500: not enough values to unpack (expected 2, got 1) 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+    ^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+[2025-02-14 00:41:04] [ERROR] Traceback: Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+    ^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+ 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+    ^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+[2025-02-14 00:41:04] ic| main.py:199 in check_new_emails()
+    status: 'OK'
+    msg_data: [b'205508 FETCH (FLAGS (\\Seen) RFC822 {12121}',
+               bytearray(b'Return-Path: <>\r
+              Delivered-To: kibardin@it-matika.pro\r
+              Recei'
+                         b'ved: from mail.it-matika.pro ([172.22.1.253])\r
+              \tby f832bfbc5'
+                         b'705 with LMTP\r
+              \tid IB1iM45ArmdYZjMASqa7yw\r
+              \t(envelope-from <'
+                         b'>)\r
+              \tfor <kibardin@it-matika.pro>; Thu, 13 Feb 2025 21:57:18'
+                         b' +0300\r
+              Received: from mail.seafishport.ru (mail.seafishport.ru '
+                         b'[83.68.35.1])\r
+              \t(using TLSv1.3 with cipher TLS_AES_256_GCM_S'
+                         b'HA384 (256/256 bits)\r
+              \t key-exchange X25519 server-signature'
+                         b' RSA-PSS (4096 bits))\r
+              \t(No client certificate requested)\r
+              \t'
+                         b'by mail.it-matika.pro (Postcow) with ESMTPS id 682AE5893194\r'
+                         b'
+              \tfor <kibardin@it-matika.pro>; Thu, 13 Feb 2025 21:57:18 +0300 '
+                         b'(MSK)\r
+              Authentication-Results: mail.it-matika.pro;\r
+              \tdkim=no'
+                         b'ne;\r
+              \tspf=none (mail.it-matika.pro: domain of mail.seafishpo'
+                         b'rt.ru has no SPF policy when checking 83.68.35.1) smtp.helo=mail'
+                         b'.seafishport.ru;\r
+              \tdmarc=fail reason="No valid SPF, No valid'
+                         b' DKIM" header.from=seafishport.ru (policy=none)\r
+              ARC-Seal: i=1; '
+                         b's=dkim; d=it-matika.pro; t=1739473038; a=rsa-sha256;\r
+              \tcv=no'
+                         b'ne;\r
+              \tb=stcd3bB4D5rEhj1B4Yv0FHZBmRRzYO8LshYRpZTjX8WkwtKvjNrB'
+                         b'JIpTG8vzh9zQyFIzMg\r
+              \tcv/K5fjx17h4yrK4MC0sNkyBIO1RsjkMf59lxb9'
+                         b'tlNrf++0AAtGAQabVeIdKCORJOpN6cB\r
+              \tO1s8ug5kbP1mJexgwQmhd9mny3'
+                         b'wy5pE=\r
+              ARC-Authentication-Results: i=1;\r
+              \tmail.it-matika.pr'
+                         b'o;\r
+              \tdkim=none;\r
+              \tspf=none (mail.it-matika.pro: domain of ma'
+                         b'il.seafishport.ru has no SPF policy when checking 83.68.35.1) sm'
+                         b'tp.helo=mail.seafishport.ru;\r
+              \tdmarc=fail reason="No valid S'
+                         b'PF, No valid DKIM" header.from=seafishport.ru (policy=none)\r
+              ARC'
+                         b'-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=it-m'
+                         b'atika.pro;\r
+              \ts=dkim; t=1739473038;\r
+              \th=from:from:reply-to:su'
+                         b'bject:subject:date:date:message-id:message-id:\r
+              \t to:to:cc:m'
+                         b'ime-version:mime-version:content-type:content-type;\r
+              \tbh=QWR'
+                         b'keMCdRFnRr8S6+qP+JZtwzO9j7jnP6hk3EH68SyE=;\r
+              \tb=igCWYQbRU81j2'
+                         b'95eVv7+tZ1Si7QBICoqP4xhe6HoAEmEHx41rfrwHOLYX5Kzkkdy2moANM\r
+              \t'
+                         b'MYdZiX1mUmbvDEbjNi8/7NVvcKn0D2zqr199g5X9I0CGnyDR3OoZ/LADEZXXiqiy'
+                         b'62+aV9\r
+              \tzdRldvhFlpdD33khnqJl/nUtJS5vLyM=\r
+              Received: from [1'
+                         b'27.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon) wi'
+                         b'th ESMTPSA id 1568D840B14\r
+              \tfor <kibardin@it-matika.pro>; Th'
+                         b'u, 13 Feb 2025 21:57:18 +0300 (MSK)\r
+              MIME-Version: 1.0\r
+              Orga'
+                         b'nization: Terminal Sea Fish Port\r
+              X-Loop: yes\r
+              From: OTRS No'
+                         b'tifications <sd@seafishport.ru>\r
+              To: kibardin@it-matika.pro\r'
+                         b'
+              Message-ID: <1739472977.720160.831287704@otrs.seafishport.ru:55'
+                         b'501>\r
+              X-Mailer: OTRS Mail Service (6.0.26)\r
+              Auto-Submitted: '
+                         b'auto-generated\r
+              Precedence: bulk\r
+              Date: Thu, 13 Feb 2025 21:'
+                         b'56:17 +0300\r
+              X-Powered-BY: OTRS (https://otrs.com/)\r
+              Subject'
+                         b': [Ticket#2025021363000638] test 13\r
+              Content-Type: multipart/alt'
+                         b'ernative; boundary="----------=_1739472977-12853-2"\r
+              X-Last-TLS-'
+                         b'Session-Version: TLSv1.2\r
+              X-Last-TLS-Session-Version: TLSv1.'
+                         b'3\r
+              X-Spamd-Result: default: False [-1004.89 / 15.00];\r
+              \tMAIL'
+                         b'COW_WHITE(-999.00)[];\r
+              \tBAYES_HAM(-5.48)[99.95%];\r
+              \tIP_REPUT'
+                         b'ATION_HAM(-1.41)[asn: 31444(-0.40), country: RU(-0.01), ip: 83.6'
+                         b'8.35.1(-1.00)];\r
+              \tURI_COUNT_ODD(1.00)[5];\r
+              \tMIME_GOOD(-0.10)'
+                         b'[multipart/alternative,text/plain];\r
+              \tDMARC_POLICY_SOFTFAIL('
+                         b'0.10)[seafishport.ru : No valid SPF, No valid DKIM,none];\r
+              \t'
+                         b'RCVD_VIA_SMTP_AUTH(0.00)[];\r
+              \tRCPT_COUNT_ONE(0.00)[1];\r
+              \tASN'
+                         b'(0.00)[asn:31444, ipnet:83.68.32.0/20, country:RU];\r
+              \tMIME_T'
+                         b'RACE(0.00)[0:+,1:+,2:~];\r
+              \tBCC(0.00)[];\r
+              \tRCVD_COUNT_ONE(0.0'
+                         b'0)[1];\r
+              \tHAS_ORG_HEADER(0.00)[];\r
+              \tRCPT_MAILCOW_DOMAIN(0.00)'
+                         b'[it-matika.pro];\r
+              \tRCVD_TLS_ALL(0.00)[];\r
+              \tR_DKIM_NA(0.00)[]'
+                         b';\r
+              \tR_SPF_NA(0.00)[no SPF record];\r
+              \tPRECEDENCE_BULK(0.00)[]'
+                         b';\r
+              \tFROM_HAS_DN(0.00)[];\r
+              \tARC_NA(0.00)[];\r
+              \tTO_DN_NONE('
+                         b'0.00)[];\r
+              \tPREVIOUSLY_DELIVERED(0.00)[kibardin@it-matika.pro'
+                         b'];\r
+              \tTO_MATCH_ENVRCPT_ALL(0.00)[];\r
+              \tNEURAL_HAM(-0.00)[-1.00'
+                         b'0];\r
+              \tARC_SIGNED(0.00)[it-matika.pro:s=dkim:i=1]\r
+              X-Rspamd-Q'
+                         b'ueue-Id: 682AE5893194\r
+              \r
+              This is a multi-part message in MIM'
+                         b'E format...\r
+              \r
+              ------------=_1739472977-12853-2\r
+              Content-Typ'
+                         b'e: text/plain; charset="utf-8"\r
+              Content-Disposition: inline\r'
+                         b'
+              Content-Transfer-Encoding: quoted-printable\r
+              \r
+              \r
+                 [Ti'
+                         b'cket#2025021363000638] test 13=20=20=20\r
+              \r
+                info24@seafishp'
+                         b'ort.ru wrote:\r
+              > dfgfdsfghdfsgdhdfg hdtdgfh=D0=9D=D0=B0 =D1=80=D'
+                         b'1=83=D1=81=D1=81=D0=BA=D0=\r
+              =BE=D0=BC =D1=82=D0=BE=D0=B6=D0=B5 !'
+                         b'\r
+              \r
+              \r
+              [1]http://otrs.seafishport.ru:55501/otrs/index.pl?Acti'
+                         b'on=3DAgentTicketZoom;=\r
+              TicketID=3D198527\r
+              =20=20\r
+              \r
+                 '
+                         b'=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1='
+                         b'81=D1=8F=\r
+               OTRS 6=20\r
+              \r
+              =20=20=20=20\r
+              \r
+              \r
+              [1] http:'
+                         b'//otrs.seafishport.ru:55501/otrs/index.pl?Action=3DAgentTicketZo'
+                         b'om=\r
+              ;TicketID=3D198527\r
+              \r
+              ------------=_1739472977-1285'
+                         b'3-2\r
+              Content-Type: text/html; charset="utf-8"\r
+              Content-Dispo'
+                         b'sition: inline\r
+              Content-Transfer-Encoding: quoted-printable\r'
+                         b'
+              \r
+              \r
+              <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transition'
+                         b'al//EN" "http://www.=\r
+              w3.org/TR/xhtml1/DTD/xhtml1-transitional.'
+                         b'dtd">\r
+              <html>\r
+              <head>\r
+                  <meta http-equiv=3D"Content-Type"'
+                         b' content=3D"text/html; charset=3DUTF-8=\r
+              ">\r
+                  <style type'
+                         b'=3D"text/css">\r
+                  body {\r
+                      width: 100% !important;\r'
+                         b'
+                      -webkit-text-size-adjust: none;\r
+                      margin: 0p'
+                         b'x;\r
+                      padding: 0px;\r
+                  }\r
+              \r
+                  table td {\r
+                  '
+                         b'    border-collapse: collapse;\r
+                  }\r
+              \r
+                  #backgroundTabl'
+                         b'e {\r
+                      height: 100% !important;\r
+                      margin: 0;\r
+               '
+                         b'       padding: 0;\r
+                      width: 100% !important;\r
+                  }\r
+              '
+                         b'\r
+                  h1, h2, h3, h4, h5, h6 {\r
+                      color:#202020;\r
+                  '
+                         b'    display:block;\r
+                      font-family:Arial;\r
+                      font'
+                         b'-weight:bold;\r
+                      line-height:100%;\r
+                      margin-top'
+                         b':0;\r
+                      margin-right:0;\r
+                      margin-bottom:5px;\r
+                '
+                         b'      margin-left:0;\r
+                      text-align:left;\r
+                  }\r
+              \r'
+                         b'
+                  h1 {\r
+                      font-size: 34px;\r
+                  }\r
+              \r
+                  h2, h3'
+                         b', h4, h5, h6 {\r
+                      margin-top: 5px;\r
+                      margin-bot'
+                         b'tom: 5px;\r
+                  }\r
+              \r
+                  h2 {\r
+                      font-size: 28px;\r
+              '
+                         b'    }\r
+              \r
+                  h3 {\r
+                      font-size: 24px;\r
+                  }\r
+              '
+                         b'\r
+                  h4 {\r
+                      font-size: 22px;\r
+                  }\r
+              \r
+                  h'
+                         b'5 {\r
+                      font-size: 18px;\r
+                  }\r
+              \r
+                  h6 {\r
+                    '
+                         b'  font-size: 16px;\r
+                  }\r
+              \r
+                  #templateContainer, .bodyCo'
+                         b'ntent{\r
+                      background-color: #FFFFFF;\r
+                  }\r
+              \r
+                 '
+                         b' .bodyContent, .bodyContent * {\r
+                      color: #505050;\r
+                '
+                         b'      font-family: Arial;\r
+                      font-size: 13px;\r
+                     '
+                         b' line-height: 150%;\r
+                      text-align: left;\r
+                  }\r
+              \r'
+                         b'
+                  .bodyContent div {\r
+                      padding-bottom: 5px;\r
+                  }'
+                         b'\r
+              \r
+                  .bodyContent a:link,\r
+                  .bodyContent a:visited'
+                         b',\r
+                  .footerContent div a:link,\r
+                  .footerContent div a:'
+                         b'visited {\r
+                      color: #f92;\r
+                      font-weight: normal'
+                         b';\r
+                      text-decoration: none\r
+                  }\r
+              \r
+                  #template'
+                         b'Footer {\r
+                      background-color: #FFFFFF;\r
+                      border'
+                         b'-top: 0px;\r
+                  }\r
+              \r
+                  .footerContent div {\r
+                      c'
+                         b'olor:#707070;\r
+                      font-family:Arial;\r
+                      font-size'
+                         b':13px;\r
+                      line-height:125%;\r
+                      text-align:left;\r'
+                         b'
+                  }\r
+              \r
+                  #links {\r
+                      background-color: #FAFAF'
+                         b'A;\r
+                      border: 0;\r
+                  }\r
+              \r
+                  #links div {\r
+                   '
+                         b'   text-align: center;\r
+                  }\r
+              \r
+                  .CallForAction:acti'
+                         b've,\r
+                  .CallForAction:hover {\r
+                      background-color: #'
+                         b'e5e5e5;\r
+                      border-color: #999;\r
+                  }\r
+              \r
+                  .body'
+                         b'Content a {\r
+                      color: #f92 !important;\r
+                  }\r
+              \r
+               '
+                         b'   .im {\r
+                      color: #555 !important;\r
+                  }\r
+                  </styl'
+                         b'e>\r
+              </head>\r
+              <body leftmargin=3D"0" marginwidth=3D"0" topmar'
+                         b'gin=3D"0" marginheight=3D"0"=\r
+               offset=3D"0">\r
+                  <center>\r'
+                         b'
+                      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"'
+                         b' height=3D"1=\r
+              00%" width=3D"100%" id=3D"backgroundTable" style='
+                         b'3D"background-color:#FAFAF=\r
+              A">\r
+                          <tbody>\r
+                   '
+                         b'           <tr>\r
+                                  <td align=3D"center" valign'
+                         b'=3D"top">\r
+                                      <br />\r
+                               '
+                         b'       <table border=3D"0" cellpadding=3D"0" cellspacing=\r
+              =3D"0'
+                         b'" id=3D"templateContainer" style=3D"border: 1px solid #DDDDDD;">'
+                         b'\r
+                                          <tbody>\r
+                                   '
+                         b'           <tr>\r
+                                                  <td align=3'
+                         b'D"center" valign=3D"top">\r
+                                                   '
+                         b'   <table border=3D"0" cellpadding=3D"=\r
+              0" cellspacing=3D"0" id'
+                         b'=3D"templateBody">\r
+                                                          '
+                         b'<tbody>\r
+                                                              <tr'
+                         b'>\r
+                                                                  <td valig'
+                         b'n=3D"top" clas=\r
+              s=3D"bodyContent">\r
+                                     '
+                         b'                                 <h1 style=3D"backgr=\r
+              ound: #33'
+                         b'3333; border-bottom: 10px solid #FF9922; padding: 20px; line-hei'
+                         b'gh=\r
+              t: 130%; color: #999; margin: 0px; font-size: 20px;">\r
+              '
+                         b'                                                            [Tic'
+                         b'ket#2025021=\r
+              363000638] test 13\r
+                                        '
+                         b'                              </h1>\r
+                                         '
+                         b'                         </td>\r
+                                              '
+                         b'                </tr>\r
+                                                       '
+                         b'       <tr>\r
+                                                                 '
+                         b' <td valign=3D"top" clas=\r
+              s=3D"bodyContent" style=3D"border-bot'
+                         b'tom: 1px solid #eee; background-color:=\r
+               #fff; padding: 15px; f'
+                         b'ont-size: 13px;">\r
+                                                           '
+                         b'           info24@seafishport.=\r
+              ru wrote:<br /><div type=3D"cit'
+                         b'e" style=3D"background: #f5f5f5; border: 0px=\r
+               !important; colo'
+                         b'r: #555; margin: 10px 0px 0px 0px; padding: 10px;">dfgfdsf=\r
+              ghd'
+                         b'fsgdhdfg hdtdgfh=D0=9D=D0=B0 =D1=80=D1=83=D1=81=D1=81=D0=BA=D0=B'
+                         b'E=D0=BC =\r
+              =D1=82=D0=BE=D0=B6=D0=B5 !</div><br /><br /><a href=3'
+                         b'D"http://otrs.seafishp=\r
+              ort.ru:55501/otrs/index.pl?Action=3DAge'
+                         b'ntTicketZoom;TicketID=3D198527" titl=\r
+              e=3D"http://otrs.seafishp'
+                         b'ort.ru:55501/otrs/index.pl?Action=3DAgentTicketZoo=\r
+              m;TicketID='
+                         b'3D198527">http://otrs.seafishport.ru:55501/otrs/index.pl?Action='
+                         b'\r
+              =3DAgentTicketZoom;TicketID=3D198527</a>\r
+                              '
+                         b'                                    </td>\r
+                                   '
+                         b'                           </tr>\r
+                                            '
+                         b'              </tbody>\r
+                                                      '
+                         b'</table>\r
+                                                  </td>\r
+                     '
+                         b'                         </tr>\r
+                                              '
+                         b'<tr>\r
+                                                  <td align=3D"center" v'
+                         b'align=3D"top">\r
+                                                      <table b'
+                         b'order=3D"0" cellpadding=3D"=\r
+              10" cellspacing=3D"0" id=3D"templa'
+                         b'teFooter">\r
+                                                          <tbo'
+                         b'dy>\r
+                                                              <tr>\r
+               '
+                         b'                                                   <td valign=3D'
+                         b'"top" clas=\r
+              s=3D"footerContent">\r
+              =20=20=20=20=20=20=20=20='
+                         b'20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=\r
+              =20=20=20=2'
+                         b'0=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20'
+                         b'=\r
+              =20=20\r
+                                                               '
+                         b'       <table border=3D"0"=\r
+               cellpadding=3D"10" cellspacing=3D"'
+                         b'0" width=3D"100%">\r
+                                                          '
+                         b'                <tbody>\r
+                                                     '
+                         b'                         <tr>\r
+                                               '
+                         b'                                   <td col=\r
+              span=3D"2" valign=3'
+                         b'D"middle">\r
+                                                                  '
+                         b'                    <di=\r
+              v style=3D"color: #999; font-size: 11p'
+                         b'x; text-align: center;">\r
+                                                    '
+                         b'                                     =\r
+               =D0=98=D1=81=D0=BF=D0=B'
+                         b'E=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F O=\r
+              TRS 6\r'
+                         b'
+                                                                             '
+                         b'         </d=\r
+              iv>\r
+                                                      '
+                         b'                            </td>\r
+                                           '
+                         b'                                   </tr>\r
+                                    '
+                         b'                                      </tbody>\r
+                              '
+                         b'                                        </table>\r
+              =20=20=20=20=2'
+                         b'0=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=\r
+              '
+                         b'=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20='
+                         b'20=20=20=20=\r
+              =20=20\r
+                                                    '
+                         b'              </td>\r
+                                                         '
+                         b'     </tr>\r
+                                                          </tbody>'
+                         b'\r
+                                                      </table>\r
+                      '
+                         b'                            </td>\r
+                                           '
+                         b'   </tr>\r
+                                          </tbody>\r
+                          '
+                         b'            </table>\r
+                                      <br />\r
+                    '
+                         b'              </td>\r
+                              </tr>\r
+                          </tb'
+                         b'ody>\r
+                      </table>\r
+                  </center>\r
+              </body>\r
+              \r
+              </html'
+                         b'>\r
+              \r
+              ------------=_1739472977-12853-2--\r
+              '),
+               b')',
+               b'Fetch completed (0.045 + 0.000 + 0.044 secs).']
+[2025-02-14 00:41:04] ic| main.py:218 in check_new_emails()
+    part.get_payload(): ('\r
+                        '
+                         '   [Ticket#2025021363000638] test 13=20=20=20\r
+                        '
+                         '\r
+                        '
+                         '  info24@seafishport.ru wrote:\r
+                        '
+                         '> dfgfdsfghdfsgdhdfg hdtdgfh=D0=9D=D0=B0 '
+                         '=D1=80=D1=83=D1=81=D1=81=D0=BA=D0=\r
+                        '
+                         '=BE=D0=BC =D1=82=D0=BE=D0=B6=D0=B5 !\r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '[1]http://otrs.seafishport.ru:55501/otrs/index.pl?Action=3DAgentTicketZoom;=\r
+                        '
+                         'TicketID=3D198527\r
+                        '
+                         '=20=20\r
+                        '
+                         '\r
+                        '
+                         '   '
+                         '=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=\r
+                        '
+                         ' OTRS 6=20\r
+                        '
+                         '\r
+                        '
+                         '=20=20=20=20\r
+                        '
+                         '\r
+                        '
+                         '\r
+                        '
+                         '[1] '
+                         'http://otrs.seafishport.ru:55501/otrs/index.pl?Action=3DAgentTicketZoom=\r
+                        '
+                         ';TicketID=3D198527\r
+                        ')
+[2025-02-14 00:41:05] ic| main.py:119 in extract_url_from_email()
+    decoded_text: ('\r
+                  '
+                   '   [Ticket#2025021363000638] test 13   \r
+                  '
+                   '\r
+                  '
+                   '  info24@seafishport.ru wrote:\r
+                  '
+                   '> dfgfdsfghdfsgdhdfg hdtdgfhНа русском тоже !\r
+                  '
+                   '\r
+                  '
+                   '\r
+                  '
+                   '\r
+                  '
+                   '  \r
+                  '
+                   '\r
+                  '
+                   '   Используется OTRS 6 \r
+                  '
+                   '\r
+                  '
+                   '    \r
+                  '
+                   '\r
+                  '
+                   '\r
+                  '
+                   '[1] \r
+                  ')
+    encoded_url.replace('%', '='): 'TicketID=198527'
+    url_base: 'http://otrs.seafishport.ru:55501/otrs/index.pl?Action=AgentTicketZoom'
+[2025-02-14 00:41:05] ic| main.py:153 in play_notification_sound()
+    urls: 'http://otrs.seafishport.ru:55501/otrs/index.pl?Action=AgentTicketZoom;TicketID=198527'
+[2025-02-14 00:41:05] [ERROR] list index out of range 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 112, in extract_url_from_email
+    url =  quopri.decodestring(str(urls[0]).encode('utf-8')).decode('utf-8', errors='ignore')
+                                   ~~~~^^^
+IndexError: list index out of range
+
+[2025-02-14 00:41:05] [ERROR] Error processing message 205508: cannot access local variable 'url' where it is not associated with a value 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+                        ^^^
+UnboundLocalError: cannot access local variable 'url' where it is not associated with a value
+
+[2025-02-14 00:41:05] [ERROR] Traceback: Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+                        ^^^
+UnboundLocalError: cannot access local variable 'url' where it is not associated with a value
+ 
+Traceback:
+ Traceback (most recent call last):
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 225, in check_new_emails
+    await play_notification_sound(msg_dek)
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 152, in play_notification_sound
+    urls, msg_dek = extract_url_from_email(msg_dek)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\Desktop\ScriptMail2\main.py", line 116, in extract_url_from_email
+    url_base, tiketid = url.split(';')
+                        ^^^
+UnboundLocalError: cannot access local variable 'url' where it is not associated with a value
+
+[2025-02-14 00:41:05] [INFO] До следующей проверки 40
+[2025-02-14 00:41:46] [INFO] До следующей проверки 71
+[2025-02-14 00:42:58] [INFO] До следующей проверки 69
+[2025-02-14 00:44:07] [INFO] До следующей проверки 36
+[2025-02-14 00:44:44] [INFO] До следующей проверки 50
+[2025-02-14 00:45:34] [INFO] До следующей проверки 43
+[2025-02-14 00:46:18] [INFO] До следующей проверки 54

@@ -1,0 +1,25 @@
+[0m[36m[2024-10-05 00:25:30][0m [35m🍦 [0mscript2.py:183 in main2()
+           email_address: [32m'kibardin@it-matika.pro'[0m
+[0m[36m[2024-10-05 00:25:31][0m [35m🍦 [0mscript2.py:144 in check_new_emails()- [32m'lalalala'[0m
+[0m[36m[2024-10-05 00:25:31][0m [35m🍦 [0mscript2.py:145 in check_new_emails()
+           email_address: [32m'kibardin@it-matika.pro'[0m
+           password: [32m'1331lostPass20!'[0m
+[0m[36m[2024-10-05 00:27:11][0m [35m🍦 [0mscript2.py:181 in main2()
+           email_address: [32m'kibardin@it-matika.pro'[0m
+[0m[36m[2024-10-05 00:27:12][0m [35m🍦 [0mscript2.py:187 in main2()
+           f'До следующей проверки {num}': [32m'До следующей проверки 44'[0m
+[0m[36m[2024-10-05 00:27:57][0m [35m🍦 [0mscript2.py:187 in main2()
+           f'До следующей проверки {num}': [32m'До следующей проверки 74'[0m
+[0m[36m[2024-10-05 00:28:24][0m [35m🍦 [0mscript2.py:81 in update_cookie()
+           message.text.replace("'", '"'): [32m'{
+                                               "PHPSESSID": "e64d7ed26d1bd1c6aca6aea85d704942",
+                                               "ChatBox": "true"
+                                           }'[0m
+[0m[36m[2024-10-05 00:29:12][0m [35m🍦 [0mscript2.py:187 in main2()
+           f'До следующей проверки {num}': [32m'До следующей проверки 73'[0m
+[0m[36m[2024-10-05 00:30:26][0m [35m🍦 [0mscript2.py:187 in main2()
+           f'До следующей проверки {num}': [32m'До следующей проверки 79'[0m
+[0m[36m[2024-10-05 00:31:46][0m [35m🍦 [0mscript2.py:187 in main2()
+           f'До следующей проверки {num}': [32m'До следующей проверки 66'[0m
+[0m[36m[2024-10-05 00:32:53][0m [35m🍦 [0mscript2.py:187 in main2()
+           f'До следующей проверки {num}': [32m'До следующей проверки 70'[0m

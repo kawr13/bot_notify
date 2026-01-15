@@ -1,0 +1,151 @@
+from aiogram import Bot, Dispatcher, types, F
+from aiogram.filters import CommandStart, Command
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove, Message, ContentType
+from aiogram.fsm.context import FSMContext
+from forms import Auth, starting_kb
+import imaplib
+import email
+import json
+import os
+import time
+import subprocess
+import winsound
+import asyncio
+import quopri
+from decoThreading import thread
+from random import randint
+from queue import Queue
+from bs4 import BeautifulSoup as bs
+from aiogram import Router
+import script2
+import re
+from aiogram.types import (
+    ReplyKeyboardMarkup,
+    KeyboardButton,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+)
+from aiogram.types.web_app_info import WebAppInfo
+
+
+CONFIG_PATH = "config.json"
+
+bot_token = '6157296966:AAHGpWhVqAi0IyvX4EkitVKEcP-lrebPa5Y'
+bot = Bot(token=bot_token, parse_mode='HTML')
+router = Router()
+USER_LIST = [453994951, 366182656,]
+
+
+@router.message(CommandStart())
+async def start(messages: Message, state: FSMContext):
+    print(messages.text)
+    if messages.from_user.id not in USER_LIST:
+        await messages.bot.send_message(453994951, f'Запрос на подключение к боту {messages.from_user.id} имя {messages.from_user.first_name}')
+        await messages.answer('Дождитесь добавления от администратора', reply_markup=starting_kb)
+    else:
+        web_app_kb = ReplyKeyboardMarkup(
+            keyboard=[
+                [
+                    WebAppInfo(url='https://lk.mango-office.ru/400074132/400124808/members/index/autoopen/12348127')
+                ]
+            ],
+            resize_keyboard=True
+        )
+        await messages.answer('Бот запущен')
+        await messages.answer('Добро пожаловать в бот уведомлятор', reply_markup=web_app_kb)
+
+
+async def play_notification_sound(msg_dek):
+    """Play notification sound when new email arrives."""
+    notification_sound_path = "sound.wav"
+    if os.path.exists(notification_sound_path):
+        # воспроизвести звуковой файл
+        winsound.PlaySound(notification_sound_path, winsound.SND_FILENAME)
+        text = msg_dek.split('\n')
+        for item in USER_LIST:
+            await bot.send_message(item, 'Новое письмо', parse_mode='HTML')
+            email_pattern = re.compile(r'<')
+            msg_dek = email_pattern.sub('', msg_dek)
+            await bot.send_message(item, msg_dek, parse_mode='HTML')
+
+
+
+async def filter_email_subject(subject, ignore_keywords):
+    """Filter email based on subject keywords to be ignored."""
+    for keyword in ignore_keywords:
+        if keyword.lower() in subject.lower():
+            print("Задача была пропущена")
+            await asyncio.sleep(0.4)
+            return True
+    return False
+
+
+
+async def decode_body(payload):
+    if payload["Content-Transfer-Encoding"] == "quoted-printable":
+        return quopri.decodestring(payload.get_payload(decode=True)).decode("utf-8")
+    else:
+        return payload.get_payload(decode=True).decode("utf-8")
+
+
+
+async def check_new_emails(imap, email_address, password, ignore_keywords):
+    """Check for new emails and notify with a sound when new email arrives."""
+    try:
+        imap.login(email_address, password)
+        imap.select("inbox")
+        status, messages = imap.search(None, "UNSEEN")
+        msg_dek = []
+        print(status)
+        if status == "OK":
+            for msg_num in messages[0].split():
+                _, msg_data = imap.fetch(msg_num, "(RFC822)")
+                email_msg = email.message_from_bytes(msg_data[0][1])
+                if email_msg.is_multipart():
+                    for part in email_msg.get_payload():
+                        if part.get_content_type() == "text/plain":
+                            msg_dek = await decode_body(part)
+                            break
+                if not await filter_email_subject(msg_dek, ignore_keywords):
+                    print(msg_dek)
+                    await play_notification_sound(msg_dek)
+                    
+        imap.close()
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        imap.logout()
+
+
+async def main2():
+    with open(CONFIG_PATH) as f:
+        config = json.load(f)
+
+    email_address = config["email_address"]
+    password = config["password"]
+    imap_server = config["imap_server"]
+    print(config.get("ignore_keywords", []))
+    ignore_keywords = config.get("ignore_keywords", [])
+
+    while True:
+        try:
+            imap = imaplib.IMAP4_SSL(imap_server)
+            thre = await check_new_emails(imap, email_address, password, ignore_keywords)
+            num = randint(30, 80)
+            await asyncio.sleep(num)
+        except Exception as e:
+            print(f"Error: {e}")
+            
+
+async def main():
+    dp = Dispatcher()
+    dp.include_router(script2.router)
+    await bot.send_message(453994951, 'Бот запущен', reply_markup=types.ReplyKeyboardRemove())
+    task = asyncio.create_task(main2())
+
+    await bot.delete_webhook(drop_pending_updates=True)
+    await dp.start_polling(bot)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

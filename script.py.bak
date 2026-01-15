@@ -1,0 +1,107 @@
+import imaplib
+import email
+import json
+import os
+import time
+import subprocess
+import winsound
+import quopri
+from decoThreading import thread
+from random import randint
+from queue import Queue
+from bs4 import BeautifulSoup as bs
+import asyncio
+
+result_queue = Queue()
+
+CONFIG_PATH = "config.json"
+
+
+async def thread(func):
+    def wrapper(*args, **kwargs):
+        print('Процесс начался', end=' ', flush=True)
+        my_thread = threading.Thread(target=func, args=args, kwargs=kwargs)
+        my_thread.start()
+        result = my_thread.join()
+        print(my_thread._name, end=' ', flush=True)
+        print('Процесс завершен', end=' ', flush=True)
+        return result
+
+    return wrapper
+
+
+async def play_notification_sound():
+    """Play notification sound when new email arrives."""
+    notification_sound_path = "sound.wav"
+    if os.path.exists(notification_sound_path):
+        # воспроизвести звуковой файл
+        winsound.PlaySound(notification_sound_path, winsound.SND_FILENAME)
+
+
+def filter_email_subject(subject, ignore_keywords):
+    """Filter email based on subject keywords to be ignored."""
+    for keyword in ignore_keywords:
+        if keyword.lower() in subject.lower():
+            print("Задача была пропущена")
+            return True
+    return False
+
+
+async def decode_body(payload):
+    if payload["Content-Transfer-Encoding"] == "quoted-printable":
+        return quopri.decodestring(payload.get_payload(decode=True)).decode("utf-8")
+    else:
+        return payload.get_payload(decode=True).decode("utf-8")
+
+
+async def check_new_emails(imap, email_address, password, ignore_keywords):
+    """Check for new emails and notify with a sound when new email arrives."""
+    try:
+        imap.login(email_address, password)
+        imap.select("inbox")
+        status, messages = imap.search(None, "UNSEEN")
+        msg_dek = []
+        if status == "OK":
+            for msg_num in messages[0].split():
+                _, msg_data = imap.fetch(msg_num, "(RFC822)")
+                email_msg = email.message_from_bytes(msg_data[0][1])
+                # time.sleep(.1)
+                if email_msg.is_multipart():
+                    for part in email_msg.get_payload():
+                        if part.get_content_type() == "text/plain":
+                            msg_dek = await decode_body(part)
+                            break
+                if not await filter_email_subject(msg_dek, ignore_keywords):
+                    await play_notification_sound()
+        imap.close()
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        imap.logout()
+
+
+async def awhile_proc(imap_server, email_address, password, ignore_keywords):
+    while True:
+            try:
+                imap = imaplib.IMAP4_SSL(imap_server)
+                await check_new_emails(imap, email_address, password, ignore_keywords)
+                num = randint(30, 80)
+                await asyncio.sleep(num)
+            except Exception as e:
+                print(f"Error: {e}")
+
+
+async def main():
+    with open(CONFIG_PATH) as f:
+        config = json.load(f)
+
+    email_address = config["email_address"]
+    password = config["password"]
+    imap_server = config["imap_server"]
+    print(config.get("ignore_keywords", []))
+    ignore_keywords = config.get("ignore_keywords", [])
+    task = await asyncio.create_task(awhile_proc(imap_server, email_address, password, ignore_keywords))
+    
+
+if __name__ == "__main__":
+    asyncio.run(main())

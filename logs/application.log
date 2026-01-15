@@ -1,0 +1,4 @@
+2025-02-13 17:38:14 [INFO] Application started
+Context: {'message': 'Application started', 'level': 'INFO', 'timestamp': '2025-02-13T17:38:14.760529', 'caller': {}, 'framework': {'framework': 'FastAPI', 'status': 'not_installed'}, 'system': {'python_version': '3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]', 'platform': 'win32', 'cwd': 'C:\\Users\\kawr\\Desktop\\ScriptMail2', 'pid': 2116, 'memory_usage': 'psutil not installed'}}
+2025-02-13 17:38:14 [DEBUG] Debug information
+Context: {'message': 'Debug information', 'level': 'DEBUG', 'timestamp': '2025-02-13T17:38:14.764529', 'caller': {}, 'framework': {'framework': 'FastAPI', 'status': 'not_installed'}, 'system': {'python_version': '3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]', 'platform': 'win32', 'cwd': 'C:\\Users\\kawr\\Desktop\\ScriptMail2', 'pid': 2116, 'memory_usage': 'psutil not installed'}}
