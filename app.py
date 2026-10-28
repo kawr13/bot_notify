@@ -1,9 +1,16 @@
-from aiogram import Bot, Dispatcher, types, F
-from aiogram.client.default import DefaultBotProperties
-from aiogram.enums.parse_mode import ParseMode
+from __future__ import annotations
+
+import os
+
+from dotenv import load_dotenv
 
 
+load_dotenv()
 
-bot_token = '6157296966:AAHGpWhVqAi0IyvX4EkitVKEcP-lrebPa5Y'
-bot = Bot(token=bot_token, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
-dp = Dispatcher()
+
+def get_vk_token() -> str | None:
+    return (
+        os.getenv("VK_GROUP_TOKEN")
+        or os.getenv("VK_ACCESS_TOKEN")
+        or None
+    )

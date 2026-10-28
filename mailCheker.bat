@@ -1,12 +1,11 @@
 @echo off
-REM Активируем виртуальное окружение
-call .\vnf\Scripts\activate.bat
+setlocal
 
-REM Запускаем скрипт Python
-python main.py&"
+if exist ".\env\Scripts\python.exe" (
+    ".\env\Scripts\python.exe" main.py
+) else (
+    echo Python virtual environment not found in .\env\Scripts\python.exe
+    exit /b 1
+)
 
-REM Ждем 10 секунд
-timeout /t 10
-
-REM Деактивируем виртуальное окружение (опционально)
-deactivate
+endlocal

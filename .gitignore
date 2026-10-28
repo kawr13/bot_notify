@@ -1,0 +1,25 @@
+.env
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+bot.log
+bot.log.*
+icecream_log.txt
+data/
+logs/*.log
+logs/*.txt
+build/
+dist/
+.cdp/
+
+# --- служебное, в репозиторий не надо ---
+.gigaide/
+.codex/
+scratch/
+release/
+dist.zip
+nul
+*.tmp
+.pytest_cache/

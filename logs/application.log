@@ -1,4 +1,692 @@
-2025-02-13 17:38:14 [INFO] Application started
-Context: {'message': 'Application started', 'level': 'INFO', 'timestamp': '2025-02-13T17:38:14.760529', 'caller': {}, 'framework': {'framework': 'FastAPI', 'status': 'not_installed'}, 'system': {'python_version': '3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]', 'platform': 'win32', 'cwd': 'C:\\Users\\kawr\\Desktop\\ScriptMail2', 'pid': 2116, 'memory_usage': 'psutil not installed'}}
-2025-02-13 17:38:14 [DEBUG] Debug information
-Context: {'message': 'Debug information', 'level': 'DEBUG', 'timestamp': '2025-02-13T17:38:14.764529', 'caller': {}, 'framework': {'framework': 'FastAPI', 'status': 'not_installed'}, 'system': {'python_version': '3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]', 'platform': 'win32', 'cwd': 'C:\\Users\\kawr\\Desktop\\ScriptMail2', 'pid': 2116, 'memory_usage': 'psutil not installed'}}
+2026-08-06 05:29:58,943 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:30:48,948 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:31:38,978 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:32:29,001 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:33:19,033 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:34:09,057 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:34:59,086 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:35:49,111 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:36:39,135 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:37:29,157 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:38:19,177 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:39:09,201 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:39:59,219 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:40:49,246 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:41:39,250 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:42:29,273 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:43:19,299 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:44:09,332 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:44:59,344 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:45:49,372 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:46:39,398 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:47:29,425 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:48:19,455 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:49:09,476 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:49:59,503 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:50:49,529 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:51:39,560 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:52:29,580 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:53:19,612 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:54:09,642 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:54:59,672 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:55:49,703 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:56:39,727 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:57:29,751 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:58:19,777 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:59:09,795 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 05:59:59,818 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:00:49,844 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:01:39,859 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:02:29,880 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:03:19,906 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:04:09,933 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:04:59,954 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:05:49,976 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:06:40,005 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:07:30,019 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:08:20,050 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:09:10,076 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:10:00,084 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:10:50,115 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:11:40,140 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:12:30,168 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:13:20,177 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:14:10,195 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:15:00,219 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:15:50,252 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:16:40,257 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:17:30,278 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:18:20,303 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:19:10,334 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:20:00,359 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:20:50,387 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:21:40,407 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:22:30,428 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:23:20,452 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:24:10,479 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:25:00,502 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:25:50,532 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:26:40,560 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:27:30,580 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:28:20,610 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:29:10,637 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:30:00,667 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:30:50,695 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:31:40,717 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:32:30,744 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:33:20,762 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:34:10,787 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:35:00,808 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:35:50,842 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:36:40,866 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:37:30,894 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:38:20,925 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:39:10,955 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:40:00,983 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:40:51,002 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:41:41,006 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:42:31,027 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:43:21,053 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:44:11,088 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:45:01,121 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:45:51,154 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:46:41,178 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:47:31,209 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:48:21,233 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:49:11,253 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:50:01,280 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:50:51,312 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:51:41,345 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:52:31,370 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:53:21,379 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:54:11,398 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:55:01,420 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:55:51,454 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:56:41,458 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:57:31,486 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:58:21,513 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 06:59:11,547 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:00:01,573 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:00:51,595 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:01:41,626 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:02:31,658 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:03:21,677 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:04:11,696 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:05:01,717 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:05:51,750 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:06:41,783 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:07:31,817 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:08:21,845 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:09:11,868 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:10:01,890 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:10:51,915 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:11:41,942 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:12:31,972 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:13:22,002 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:14:12,008 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:15:02,041 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:15:52,066 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:16:42,099 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:17:32,126 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:18:22,148 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:19:12,169 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:20:02,201 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:20:52,220 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:21:42,253 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:22:32,283 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:23:22,311 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:24:12,340 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:25:02,371 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:25:52,395 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:26:42,426 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:27:32,456 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:28:22,475 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:29:12,504 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:30:02,525 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:30:52,547 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:31:42,579 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:32:32,601 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:33:22,626 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:34:12,649 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:35:02,677 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:35:52,711 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:36:42,734 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:37:32,756 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:38:22,783 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:39:12,803 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:40:02,828 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:40:52,848 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:41:42,870 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:42:32,896 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:43:22,928 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:44:12,949 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:45:02,969 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:45:52,992 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:46:43,016 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:47:33,037 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:48:23,072 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:49:13,084 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:50:03,114 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:50:53,138 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:51:43,163 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:52:33,169 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:53:23,199 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:54:13,230 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:55:03,264 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:55:53,290 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:56:43,320 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:57:33,351 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:58:23,376 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 07:59:13,406 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:00:03,436 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:00:53,456 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:01:43,475 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:02:33,502 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:03:23,532 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:04:13,555 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:05:03,580 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:05:53,614 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:06:43,645 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:07:33,673 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:08:23,705 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:09:13,735 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:10:03,765 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:10:53,785 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:11:43,807 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:12:33,830 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:13:23,840 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:14:13,859 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:15:03,883 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:15:53,906 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:16:43,941 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:17:33,945 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:18:23,965 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:19:13,972 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:20:03,995 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:20:54,028 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:21:44,053 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:22:34,081 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:23:24,113 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:24:14,146 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:25:04,179 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:25:54,204 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:26:44,226 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:27:34,249 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:28:24,269 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:29:14,290 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:30:04,314 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:30:54,345 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:31:44,365 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:32:34,376 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:33:24,382 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:34:14,388 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:35:04,419 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:35:54,437 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:36:44,442 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:37:34,450 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:38:24,479 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:39:14,500 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:40:04,529 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:40:54,545 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:41:44,571 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:42:34,605 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:43:24,636 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:44:14,657 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:45:04,672 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:45:54,684 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:46:44,709 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:47:34,731 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:48:24,754 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:49:14,782 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:50:04,803 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:50:54,814 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:51:44,834 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:52:34,864 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:53:24,886 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:54:14,913 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:55:04,944 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:55:54,965 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:56:44,988 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:57:35,013 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:58:25,043 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 08:59:15,072 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:00:05,078 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:00:55,110 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:01:45,123 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:02:35,154 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:03:25,186 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:04:15,205 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:05:05,221 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:05:55,239 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:06:45,268 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:07:35,286 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:08:25,295 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:09:15,323 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:10:05,346 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:10:55,369 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:11:45,390 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:12:35,422 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:13:25,447 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:14:15,482 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:15:05,514 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:15:55,538 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:16:45,565 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:17:35,585 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:18:25,602 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:19:15,620 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:20:05,638 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:20:55,658 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:21:45,681 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:22:35,706 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:23:25,738 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:24:15,769 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:25:05,801 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:25:55,814 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:26:45,845 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:27:35,868 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:28:25,891 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:29:15,911 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:30:05,940 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:30:55,965 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:31:45,985 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:32:36,014 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:33:26,043 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:34:16,068 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:35:06,089 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:35:56,109 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:36:46,114 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:37:36,129 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:38:26,149 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:39:16,178 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:40:06,210 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:40:56,229 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:41:46,257 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:42:36,274 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:43:26,307 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:44:16,338 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:45:06,362 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:45:56,393 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:46:46,421 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:47:36,451 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:48:26,480 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:49:16,485 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:50:06,514 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:50:56,542 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:51:46,573 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:52:36,600 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:53:26,613 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:54:16,641 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:55:06,674 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:55:56,695 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:56:46,722 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:57:36,748 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:58:26,768 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 09:59:16,802 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:00:06,823 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:00:56,852 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:01:46,886 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:02:36,893 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:03:26,925 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:04:16,954 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:05:06,962 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:05:56,972 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:06:46,993 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:07:37,018 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:08:27,036 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:09:17,063 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:10:07,091 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:10:57,122 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:11:47,147 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:12:37,167 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:13:27,197 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:14:17,229 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:15:07,246 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:15:57,278 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:16:47,305 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:17:37,326 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:18:27,345 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:19:17,352 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:20:07,377 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:20:57,397 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:21:47,429 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:22:37,463 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:23:27,473 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:24:17,483 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:25:07,514 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:25:57,540 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:26:47,557 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:27:37,576 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:28:27,590 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:29:17,618 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:30:07,638 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:30:57,664 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:31:47,688 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:32:37,716 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:33:27,745 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:34:17,758 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:35:07,781 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:35:57,803 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:36:47,820 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:37:37,841 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:38:27,860 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:39:17,886 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:40:07,918 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:40:57,945 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:41:47,971 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:42:37,991 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:43:28,024 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:44:18,057 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:45:08,065 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:45:58,083 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:46:48,116 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:47:38,140 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:48:28,163 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:49:18,180 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:50:08,197 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:50:58,211 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:51:48,230 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:52:38,252 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:53:28,286 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:54:18,318 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:55:08,339 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:55:58,348 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:56:48,382 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:57:38,399 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:58:28,427 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 10:59:18,431 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:00:08,450 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:00:58,469 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:01:48,491 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:02:38,510 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:03:28,540 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:04:18,561 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:05:08,579 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:05:58,607 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:06:48,630 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:07:38,658 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:08:28,686 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:09:18,691 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:10:08,716 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:10:58,730 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-06 11:11:48,764 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-08-31 13:39:37,976 | INFO | MainThread | Автоматически найден локальный HTTP proxy: http://127.0.0.1:7890
+2026-08-31 13:39:37,977 | INFO | MainThread | Запуск приложения для lexkaw902@gmail.com через imap.gmail.com:993
+2026-08-31 13:39:38,158 | INFO | imap-monitor | IMAP монитор запущен для lexkaw902@gmail.com
+2026-08-31 13:45:46,567 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 13:45:47,066 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 13:45:47,095 | INFO | imap-monitor | Уведомление: [GLPI #0001024] Новый комментарий по заявке «В/камеры»
+2026-08-31 13:45:47,391 | INFO | vk-send | VK: найдено участников: 2
+2026-08-31 13:48:05,305 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 13:48:05,751 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 13:48:05,777 | INFO | imap-monitor | Уведомление: [GLPI #0001039] Новый комментарий по заявке «НЕ РАБОТАЮТ ПЛАНШЕТЫ НА РИЧСТАКЕРАХ: 1, 2, 3 , 4»
+2026-08-31 13:58:19,132 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 13:58:19,529 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 13:58:19,554 | INFO | imap-monitor | Уведомление: [GLPI #0001039] Новый комментарий по заявке «НЕ РАБОТАЮТ ПЛАНШЕТЫ НА РИЧСТАКЕРАХ: 1, 2, 3 , 4»
+2026-08-31 14:00:37,726 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 14:00:38,401 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001057
+2026-08-31 14:00:38,425 | INFO | imap-monitor | Уведомление: [GLPI #0001057] 
+2026-08-31 14:02:56,352 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 14:02:57,341 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 14:02:57,364 | INFO | imap-monitor | Уведомление: [GLPI #0001039] Новый комментарий по заявке «НЕ РАБОТАЮТ ПЛАНШЕТЫ НА РИЧСТАКЕРАХ: 1, 2, 3 , 4»
+2026-08-31 14:10:43,949 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 14:10:44,939 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 14:10:44,972 | INFO | imap-monitor | Уведомление: [GLPI #0001039] Новый комментарий по заявке «НЕ РАБОТАЮТ ПЛАНШЕТЫ НА РИЧСТАКЕРАХ: 1, 2, 3 , 4»
+2026-08-31 14:14:35,616 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 14:14:36,633 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001058
+2026-08-31 14:14:36,657 | INFO | imap-monitor | Уведомление: [GLPI #0001058] 
+2026-08-31 14:24:36,205 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 14:24:37,183 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001059
+2026-08-31 14:24:37,205 | INFO | imap-monitor | Уведомление: [GLPI #0001059] 
+2026-08-31 14:32:17,230 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 14:32:18,184 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001060
+2026-08-31 14:32:18,207 | INFO | imap-monitor | Уведомление: [GLPI #0001060] 
+2026-08-31 15:00:18,564 | WARNING | imap-monitor | Не удалось подключиться к IMAP: The read operation timed out
+2026-08-31 15:30:16,864 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 15:30:17,725 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001061
+2026-08-31 15:30:17,751 | INFO | imap-monitor | Уведомление: [GLPI #0001061] 
+2026-08-31 15:44:05,605 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 15:44:06,276 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001062
+2026-08-31 15:44:06,300 | INFO | imap-monitor | Уведомление: [GLPI #0001062] 
+2026-08-31 15:45:37,585 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 15:45:38,014 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001063
+2026-08-31 15:45:38,038 | INFO | imap-monitor | Уведомление: [GLPI #0001063] 
+2026-08-31 15:54:51,695 | ERROR | imap-monitor | Ошибка IMAP монитора: command: SELECT => System Error
+Traceback (most recent call last):
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 1056, in _command_complete
+    typ, data = self._get_tagged_response(tag, expect_bye=logout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 1174, in _get_tagged_response
+    self._check_bye()
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 970, in _check_bye
+    raise self.abort(bye[-1].decode(self._encoding, 'replace'))
+imaplib.IMAP4.abort: System Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\bot_notify\imap_monitor.py", line 687, in _check_emails
+    imap.select("INBOX", readonly=False)
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 765, in select
+    typ, dat = self._simple_command(name, mailbox)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 1239, in _simple_command
+    return self._command_complete(name, self._command(name, *args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 1058, in _command_complete
+    raise self.abort('command: %s => %s' % (name, val))
+imaplib.IMAP4.abort: command: SELECT => System Error
+2026-08-31 16:12:32,651 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 16:12:34,264 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001064
+2026-08-31 16:12:34,287 | INFO | imap-monitor | Уведомление: [GLPI #0001064] 
+2026-08-31 16:18:42,587 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 16:18:44,027 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001065
+2026-08-31 16:18:44,050 | INFO | imap-monitor | Уведомление: [GLPI #0001065] 
+2026-08-31 16:33:28,168 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 16:33:28,815 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001066
+2026-08-31 16:33:28,837 | INFO | imap-monitor | Уведомление: [GLPI #0001066] 
+2026-08-31 16:46:48,079 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 16:46:48,536 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001067
+2026-08-31 16:46:48,561 | INFO | imap-monitor | Уведомление: [GLPI #0001067] 
+2026-08-31 16:58:15,904 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 16:58:16,654 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001068
+2026-08-31 16:58:16,677 | INFO | imap-monitor | Уведомление: [GLPI #0001068] 
+2026-08-31 17:01:19,896 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 17:01:20,365 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 17:01:20,388 | INFO | imap-monitor | Уведомление: [GLPI #0001068] Новый комментарий по заявке «RE: [GLPI #0000959] Новый комментарий по заявке «релиз 10*40HC»»
+2026-08-31 18:05:46,171 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 18:05:46,929 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001069
+2026-08-31 18:05:46,957 | INFO | imap-monitor | Уведомление: [GLPI #0001069] 
+2026-08-31 18:21:28,360 | WARNING | imap-monitor | Не удалось подключиться к IMAP: The read operation timed out
+2026-08-31 19:02:26,142 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 19:02:26,640 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 19:02:26,664 | INFO | imap-monitor | Уведомление: [GLPI #0001067] Новый комментарий по заявке «Очистка диска С»
+2026-08-31 19:05:29,959 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 19:05:30,455 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 19:05:30,480 | INFO | imap-monitor | Уведомление: [GLPI #0001064] Новый комментарий по заявке «Планшеты»
+2026-08-31 19:07:02,622 | INFO | imap-monitor | Найдено 2 непрочитанных писем
+2026-08-31 19:07:05,550 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 19:07:05,574 | INFO | imap-monitor | Уведомление: [GLPI #0000870] Новый комментарий по заявке «Восстановление доступа к Такском-Файлер»
+2026-08-31 19:07:05,595 | INFO | imap-monitor | Уведомление: [GLPI #0000896] Новый комментарий по заявке «Зависает приложение WORD при обращении к вкладке Печать»
+2026-08-31 19:10:16,649 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 19:10:17,532 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001070
+2026-08-31 19:10:17,556 | INFO | imap-monitor | Уведомление: [GLPI #0001070] 
+2026-08-31 19:15:40,579 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 19:15:42,137 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001071
+2026-08-31 19:15:42,161 | INFO | imap-monitor | Уведомление: [GLPI #0001071] 
+2026-08-31 19:27:12,826 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 19:27:14,141 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 19:27:14,166 | INFO | imap-monitor | Уведомление: [GLPI #0001071] Новый комментарий по заявке «Не оформить мат. пропуск»
+2026-08-31 19:33:23,128 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-08-31 19:33:24,416 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-08-31 19:33:24,439 | INFO | imap-monitor | Уведомление: [GLPI #0001071] Новый комментарий по заявке «Не оформить мат. пропуск»
+2026-08-31 21:03:49,097 | WARNING | imap-monitor | Не удалось подключиться к IMAP: The read operation timed out
+2026-08-31 23:15:52,968 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:16:40,022 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:17:27,090 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:18:14,161 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:19:01,197 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:19:48,246 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:20:35,304 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:21:22,343 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:22:09,416 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:22:56,469 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:23:43,510 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:24:30,561 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:25:17,605 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-08-31 23:26:04,654 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 00:02:16,717 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 00:02:17,392 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001072
+2026-09-01 00:02:17,421 | INFO | imap-monitor | Уведомление: [GLPI #0001072] 
+2026-09-01 00:50:32,425 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 00:50:32,845 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001073
+2026-09-01 00:50:32,870 | INFO | imap-monitor | Уведомление: [GLPI #0001073] 
+2026-09-01 01:09:49,940 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 01:09:50,346 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001074
+2026-09-01 01:09:50,370 | INFO | imap-monitor | Уведомление: [GLPI #0001074] 
+2026-09-01 02:58:33,111 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)
+2026-09-01 03:03:06,977 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 03:03:07,353 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001075
+2026-09-01 03:03:07,380 | INFO | imap-monitor | Уведомление: [GLPI #0001075] 
+2026-09-01 04:52:53,389 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 04:52:54,899 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001076
+2026-09-01 04:52:54,924 | INFO | imap-monitor | Уведомление: [GLPI #0001076] 
+2026-09-01 07:29:24,183 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 07:29:24,939 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001077
+2026-09-01 07:29:24,963 | INFO | imap-monitor | Уведомление: [GLPI #0001077] 
+2026-09-01 08:02:29,818 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 08:02:30,338 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001078
+2026-09-01 08:02:30,362 | INFO | imap-monitor | Уведомление: [GLPI #0001078] 
+2026-09-01 08:03:20,286 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 08:03:21,495 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001079
+2026-09-01 08:03:21,520 | INFO | imap-monitor | Уведомление: [GLPI #0001079] 
+2026-09-01 08:58:57,360 | WARNING | imap-monitor | Не удалось подключиться к IMAP: The read operation timed out
+2026-09-01 09:19:58,947 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:20:46,009 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:21:33,052 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:22:20,119 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:23:07,176 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:23:54,239 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:24:41,311 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:25:28,356 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:26:15,414 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:27:02,473 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:27:49,547 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:28:36,586 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:29:23,638 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:30:10,694 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:30:57,768 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:31:44,813 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:32:31,859 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:33:18,914 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:34:05,964 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:34:53,038 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:35:40,093 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:36:27,155 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:37:14,225 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:38:01,297 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:38:48,355 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 09:39:35,404 | WARNING | imap-monitor | Не удалось подключиться к IMAP: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2026-09-01 10:01:46,652 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 10:01:47,259 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001080
+2026-09-01 10:01:47,286 | INFO | imap-monitor | Уведомление: [GLPI #0001080] 
+2026-09-01 10:12:35,624 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 10:12:36,556 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001081
+2026-09-01 10:12:36,583 | INFO | imap-monitor | Уведомление: [GLPI #0001081] 
+2026-09-01 10:25:50,854 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 10:25:51,825 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001082
+2026-09-01 10:25:51,848 | INFO | imap-monitor | Уведомление: [GLPI #0001082] 
+2026-09-01 10:53:14,588 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 10:53:15,340 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001083
+2026-09-01 10:53:15,365 | INFO | imap-monitor | Уведомление: [GLPI #0001083] 
+2026-09-01 11:18:10,187 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 11:18:10,618 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001084
+2026-09-01 11:18:10,641 | INFO | imap-monitor | Уведомление: [GLPI #0001084] 
+2026-09-01 11:25:07,969 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 11:25:08,464 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001085
+2026-09-01 11:25:08,486 | INFO | imap-monitor | Уведомление: [GLPI #0001085] 
+2026-09-01 11:34:10,913 | INFO | imap-monitor | Найдено 2 непрочитанных писем
+2026-09-01 11:34:14,986 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001086
+2026-09-01 11:34:17,363 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001087
+2026-09-01 11:34:17,391 | INFO | imap-monitor | Уведомление: [GLPI #0001086] 
+2026-09-01 11:34:17,445 | INFO | imap-monitor | Уведомление: [GLPI #0001087] 
+2026-09-01 11:35:06,057 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 11:35:06,514 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-09-01 11:35:06,539 | INFO | imap-monitor | Уведомление: [GLPI #0001086] Новый комментарий по заявке «Не удается доставить: БазисПорт прием экспорта»
+2026-09-01 11:45:07,495 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 11:45:07,979 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001088
+2026-09-01 11:45:08,001 | INFO | imap-monitor | Уведомление: [GLPI #0001088] 
+2026-09-01 11:47:26,151 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 11:47:26,777 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001089
+2026-09-01 11:47:26,802 | INFO | imap-monitor | Уведомление: [GLPI #0001089] 
+2026-09-01 11:49:48,324 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 11:49:50,127 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-09-01 11:49:50,151 | INFO | imap-monitor | Уведомление: [GLPI #0001088] Новый комментарий по заявке «Рации на тепловозах»
+2026-09-01 11:52:08,843 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 11:52:09,327 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-09-01 11:52:09,352 | INFO | imap-monitor | Уведомление: [GLPI #0001088] Новый комментарий по заявке «Рации на тепловозах»
+2026-09-01 11:55:14,016 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 11:55:14,685 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-09-01 11:55:14,710 | INFO | imap-monitor | Уведомление: [GLPI #0001087] Новый комментарий по заявке «Не находится автомобиль в Киоске»
+2026-09-01 11:56:47,076 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 11:56:48,252 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001090
+2026-09-01 11:56:48,276 | INFO | imap-monitor | Уведомление: [GLPI #0001090] 
+2026-09-01 12:10:37,915 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 12:10:38,632 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001091
+2026-09-01 12:10:38,657 | INFO | imap-monitor | Уведомление: [GLPI #0001091] 
+2026-09-01 12:30:05,215 | ERROR | imap-monitor | Ошибка IMAP монитора: command: SELECT => socket error: EOF
+Traceback (most recent call last):
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 1056, in _command_complete
+    typ, data = self._get_tagged_response(tag, expect_bye=logout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 1182, in _get_tagged_response
+    self._get_response()
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 1084, in _get_response
+    resp = self._get_line()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 1194, in _get_line
+    raise self.abort('socket error: EOF')
+imaplib.IMAP4.abort: socket error: EOF
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\bot_notify\imap_monitor.py", line 687, in _check_emails
+    imap.select("INBOX", readonly=False)
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 765, in select
+    typ, dat = self._simple_command(name, mailbox)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 1239, in _simple_command
+    return self._command_complete(name, self._command(name, *args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kawr\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\imaplib.py", line 1058, in _command_complete
+    raise self.abort('command: %s => %s' % (name, val))
+imaplib.IMAP4.abort: command: SELECT => socket error: EOF
+2026-09-01 12:30:51,000 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 12:30:51,738 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001092
+2026-09-01 12:30:51,762 | INFO | imap-monitor | Уведомление: [GLPI #0001092] 
+2026-09-01 12:31:38,319 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 12:31:39,906 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001093
+2026-09-01 12:31:39,932 | INFO | imap-monitor | Уведомление: [GLPI #0001093] 
+2026-09-01 12:36:16,122 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 12:36:16,607 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-09-01 12:36:16,630 | INFO | imap-monitor | Уведомление: [GLPI #0001088] Новый комментарий по заявке «Рации на тепловозах»
+2026-09-01 12:43:11,373 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 12:43:11,932 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001094
+2026-09-01 12:43:11,955 | INFO | imap-monitor | Уведомление: [GLPI #0001094] 
+2026-09-01 12:48:32,468 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 12:48:32,951 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001095
+2026-09-01 12:48:32,977 | INFO | imap-monitor | Уведомление: [GLPI #0001095] 
+2026-09-01 13:01:43,795 | INFO | imap-monitor | Найдено 2 непрочитанных писем
+2026-09-01 13:01:45,224 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001096
+2026-09-01 13:01:52,426 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001097
+2026-09-01 13:01:52,450 | INFO | imap-monitor | Уведомление: [GLPI #0001096] 
+2026-09-01 13:01:52,475 | INFO | imap-monitor | Уведомление: [GLPI #0001097] 
+2026-09-01 13:06:45,972 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 13:06:46,472 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-09-01 13:06:46,497 | INFO | imap-monitor | Уведомление: [GLPI #0001039] Новый комментарий по заявке «НЕ РАБОТАЮТ ПЛАНШЕТЫ НА РИЧСТАКЕРАХ: 1, 2, 3 , 4»
+2026-09-01 13:22:19,542 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 13:22:20,227 | INFO | imap-monitor | Обнаружен шаблон helpdesk: 0001098
+2026-09-01 13:22:20,254 | INFO | imap-monitor | Уведомление: [GLPI #0001098] 
+2026-09-01 13:39:11,248 | INFO | imap-monitor | Найдено 1 непрочитанных писем
+2026-09-01 13:39:11,724 | INFO | imap-monitor | Обнаружен шаблон helpdesk: unknown
+2026-09-01 13:39:11,748 | INFO | imap-monitor | Уведомление: [GLPI #0001093] Новый комментарий по заявке «Временный переезд в каб 310»
