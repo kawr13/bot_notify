@@ -110,7 +110,13 @@ def build_message(ticket: Ticket, base_url: str, mention: str = "") -> str:
         for item in files[:6]:
             mark = "🖼" if item.get("is_image") else "📎"
             size = f" ({item['size']})" if item.get("size") else ""
-            lines.append(f"  {mark} {item.get('name') or 'файл'}{size}")
+            name = str(item.get("name") or "файл")
+            href = str(item.get("href") or "")
+            # ссылку кладём всегда: файл в GLPI закрыт входом, но у
+            # исполнителя этот вход тоже есть — и картинка открывается
+            # одним тапом, даже когда загрузка в чат недоступна
+            tail = f" — {base_url.rstrip('/')}/{href.lstrip('/')}" if href else ""
+            lines.append(f"  {mark} {name}{size}{tail}")
         if len(files) > 6:
             lines.append(f"  … и ещё {len(files) - 6}")
     if mention:

@@ -759,7 +759,11 @@ class GlpiClient:
                 continue
             seen.add(doc_id)
             alt = re.search(r'alt="([^"]*)"', html_tag)
-            name = (alt.group(1).strip() if alt else "") or f"картинка_{doc_id}"
+            name = (alt.group(1).strip() if alt else "")
+            # GLPI подписывает вставленные картинки UUID'ом без расширения —
+            # в чате такое читать невозможно, зовём понятнее
+            if not re.search(r"\.[A-Za-z0-9]{2,5}$", name or ""):
+                name = f"картинка #{doc_id}"
             out.append({
                 "doc_id": doc_id,
                 "name": name,
