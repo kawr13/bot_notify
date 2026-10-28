@@ -104,6 +104,7 @@ class GlpiWindow(tk.Toplevel):
                            values=[text for text, _ in self._dialog_opts],
                            state="readonly", width=20)
         box.bind("<<ComboboxSelected>>", lambda e: self._pick_dialog())
+        self.dialog_box = box
         box.pack(side="left", padx=(4, 10))
         self.team_hint = label(self._team_text())
         self.team_hint.pack(side="left", padx=(6, 0))
@@ -201,13 +202,19 @@ class GlpiWindow(tk.Toplevel):
         depth = int(self.cfg.row_limit) * max(1, int(self.cfg.list_pages))
         return f"смотрим по {depth} последним, знаю {total}"
 
-    @staticmethod
-    def _dialog_label(value: str) -> str:
-        return f"общий чат ({value})" if value.startswith("chat") \
-            else f"мой диалог ({value})"
+    # имена групповых чатов догружаются фоном; кэш общий, окно одно
+    _chat_names: dict[str, str] = {}
+    _titles_busy = False
+
+    def _dialog_label(self, value: str) -> str:
+        """Подпись адресата: настоящее имя чата вместо технического id."""
+        if not str(value).startswith("chat"):
+            return f"мой диалог ({value})"
+        name = self._chat_names.get(value, "")
+        return f"{name} ({value})" if name else f"общий чат ({value})"
 
     def _dialog_choices(self) -> tuple[list[tuple[str, str]], str]:
-        """Куда слать: личный диалог и/или общий чат (BITRIX_DIALOG_ID[_ALT])."""
+        """Куда слать: личный диалог и/или групповой чат (BITRIX_DIALOG_ID[_ALT])."""
         cfg = getattr(self.bridge, "b24_config", None)
         ids: list[str] = []
         for value in (getattr(cfg, "dialog_id", ""), getattr(cfg, "dialog_alt", "")):
@@ -216,7 +223,44 @@ class GlpiWindow(tk.Toplevel):
                 ids.append(value)
         opts = [(self._dialog_label(value), value) for value in ids]
         current = (getattr(cfg, "dialog_id", "") or "").strip()
+        self._lookup_chat_titles(ids)
         return opts, (self._dialog_label(current) if current else "")
+
+    def _lookup_chat_titles(self, ids: list[str]) -> None:
+        """Имена чатов тянем фоном: синхронный запрос повесил бы окно."""
+        missing = [v for v in ids if v.startswith("chat") and v not in self._chat_names]
+        if not missing or self._titles_busy:
+            return
+        self._titles_busy = True
+        client = getattr(self.bridge, "bitrix", None)
+
+        def work() -> None:
+            for value in missing:
+                try:
+                    self._chat_names[value] = str(client.chat_title(value) or "")
+                except Exception:
+                    # сеть, право, мёртвый чат: подпись остаётся «общий чат»,
+                    # но значение попадает в кэш, чтобы поток не гонялся по кругу
+                    LOGGER.warning("не удалось узнать имя чата %s", value, exc_info=True)
+                    self._chat_names[value] = ""
+            self._titles_busy = False
+            self._ui(self._apply_chat_titles)
+
+        threading.Thread(target=work, daemon=True, name="glpi-chat-titles").start()
+
+    def _apply_chat_titles(self) -> None:
+        """Переклеить подписи адресатов, когда имена пришли из фона."""
+        opts, current = self._dialog_choices()
+        self._dialog_opts = opts
+        box = getattr(self, "dialog_box", None)
+        if box is None:
+            return
+        try:
+            box.configure(values=[text for text, _ in opts])
+            if current:
+                self.dialog_var.set(current)
+        except tk.TclError:
+            pass
 
     def _pick_dialog(self) -> None:
         chosen = self.dialog_var.get()

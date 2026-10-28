@@ -63,6 +63,7 @@ class Bitrix24Client:
         self.session.verify = config.verify_ssl
         self._lock = threading.Lock()
         self._email_cache: dict[str, int | None] = {}
+        self._title_cache: dict[str, str] = {}
 
     # ---------------- low level ----------------
     def call(self, method: str, **params: Any) -> dict[str, Any]:
@@ -215,6 +216,28 @@ class Bitrix24Client:
         with self._lock:
             cache[email] = found
         return found
+
+    def chat_title(self, dialog_id: str) -> str:
+        """Название группового чата по `dialogId`, чтобы подписывать адресата именем.
+
+        Личный диалог (числовой `dialogId`) проходит мимо: имени там нет, и
+        подпись остаётся прежней. Значение кэшируется, в том числе пустое —
+        иначе на каждый перерисованный список ушёл бы новый запрос.
+        """
+        value = str(dialog_id or "").strip()
+        if not value.startswith("chat"):
+            return ""
+        with self._lock:
+            if value in self._title_cache:
+                return self._title_cache[value]
+        result = self.call("im.v2.Chat.get", chatId=value[4:])
+        body = result.get("result")
+        chat = body.get("chat") if isinstance(body, dict) else None
+        name = str((chat or {}).get("name") or "").strip()
+        with self._lock:
+            self._title_cache[value] = name
+        return name
+
 
     def ping(self) -> tuple[bool, str]:
         """Проверка транспорта: список ботов портала."""
