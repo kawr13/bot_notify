@@ -9,9 +9,8 @@
 """
 from __future__ import annotations
 
-import io
+import base64
 import logging
-import mimetypes
 import threading
 from dataclasses import dataclass
 from typing import Any, Callable
@@ -115,48 +114,70 @@ class Bitrix24Client:
         LOGGER.info("Bitrix24: сообщение отправлено в %s (id %s)", dialog, chat_id)
         return True, str(chat_id)
 
+
+    def call_json(self, method: str, body: dict[str, Any]) -> dict[str, Any]:
+        """Вызов с телом JSON: загрузка файла принимает только так."""
+        if not self.config.webhook:
+            return {"error": "BITRIX_WEBHOOK не задан"}
+        try:
+            resp = self.session.post(
+                f"{self.config.webhook.rstrip('/')}/{method}.json",
+                json=body, timeout=max(self.config.timeout, 120))
+        except requests.RequestException as exc:
+            return {"error": f"сеть: {exc}"}
+        try:
+            return resp.json()
+        except ValueError:
+            return {"error": f"не JSON (HTTP {resp.status_code}): {resp.text[:200]}"}
+
     def send_file(self, blob: bytes, filename: str, text: str = "",
                   dialog_id: str | None = None) -> tuple[bool, str]:
-        """Отправить в чат ФАЙЛ (картинку, документ).
+        """Загрузить файл в чат — методом `im.v2.File.upload`.
 
-        Файл уходит multipart-частью `files[0]`: REST-слой Битрикса складывает
-        загруженные части в $files метода. Обычным POST-полем файл передать
-        нельзя — нужен именно multipart/form-data.
+        Multipart-частью файл НЕ уходит: портал молча игнорирует незнакомые
+        поля и присылает сообщение без вложения (проверено на проде).
+        Метод сам делает три шага: загрузка на диск, прикрепление к чату,
+        отправка сообщения. Содержимое — base64 в fields.content, до 100 МБ.
+
+        Scope — `im`, работает под владельцем вебхука, поэтому в чате файл
+        появляется ОТ ИМЕНИ ПОЛЬЗОВАТЕЛЯ, а не бота: иначе коробка не умеет.
         """
         dialog = str(dialog_id or self.config.dialog_id or "")
         if not self.config.ready:
             return False, "Bitrix24 не настроен"
         if not dialog:
             return False, "не указан dialogId"
-        data = {
-            "botToken": self.config.bot_token,
-            "botId": self.config.bot_id,
+        if len(blob) > 100 * 1024 * 1024:
+            return False, "файл больше 100 МБ (лимит метода)"
+        body = {
             "dialogId": dialog,
-            "fields[message]": text or filename,
-            "fields[urlPreview]": "N",
+            "fields": {
+                "name": filename,
+                "content": base64.b64encode(blob).decode("ascii"),
+                "message": (text or filename)[:2000],
+            },
         }
-        mime = mimetypes.guess_type(filename)[0] or "application/octet-stream"
-        files = {"files[0]": (filename, io.BytesIO(blob), mime)}
         with self._lock:
-            try:
-                resp = self.session.post(
-                    f"{self.config.webhook.rstrip('/')}/imbot.v2.Chat.Message.send.json",
-                    data=data, files=files,
-                    timeout=max(self.config.timeout, 120))
-                result = resp.json()
-            except (requests.RequestException, ValueError) as exc:
-                LOGGER.warning("Bitrix24: файл %s не отправлен: %s", filename, exc)
-                return False, f"файл не отправлен: {exc}"
+            result = self.call_json("im.v2.File.upload", body)
         if result.get("error") or result.get("error_description"):
-            message = str(result.get("error_description") or result.get("error"))
-            LOGGER.warning("Bitrix24: файл %s не принят: %s", filename, message)
+            code = str(result.get("error") or "")
+            message = str(result.get("error_description") or code)
+            if "scope" in message.lower() or code == "insufficient_scope":
+                message = ('вебхуку не разрешены «Чаты» (scope im) — включите '
+                           'это право в настройках входящего вебхука')
+            LOGGER.warning("Bitrix24: файл %s не загружен: %s", filename, message)
             return False, message
         res = result.get("result")
-        mid = res.get("id") if isinstance(res, dict) else res
-        if not mid:
+        mid = ""
+        if isinstance(res, dict):
+            mid = str(res.get("messageId") or res.get("id") or "")
+        elif isinstance(res, (int, str)):
+            mid = str(res)
+        if not mid and not res:
             return False, f"портал ответил: {str(result)[:120]}"
-        LOGGER.info("Bitrix24: файл %s отправлен в %s (id %s)", filename, dialog, mid)
-        return True, str(mid)
+        LOGGER.info("Bitrix24: файл %s загружен в %s (message %s)",
+                    filename, dialog, mid or "—")
+        return True, mid or "ok"
 
     def send_async(self, text: str, dialog_id: str | None = None,
                    on_done: Callable[[bool, str], None] | None = None) -> None:

@@ -705,36 +705,68 @@ class GlpiClient:
         return []
 
     # ---------------- вложения и удаление ----------------
-    # Ссылка на файл в карточке: /front/document.send.php?docid=N&tickets_id=M.
-    # Аватарки людей тоже идут через document.send.php, но с file=_pictures/...
-    # — по ним мы не идём, требуем tickets_id.
+    # GLPI отдаёт ссылки на файлы через front/document.send.php, ДВУМЯ видами:
+    #   прикреплённый файл  <a href="...?docid=N&tickets_id=M">имя файла</a>
+    #   картинка в описании <img src="...?docid=N&itemtype=Ticket&items_id=M">
+    # В HTML эти `&` и `=` приходят ЗАКОДИРОВАННЫМИ (&#61;, &amp;), поэтому
+    # страницу перед разбором обязательно раскрываем — иначе картинки в тексте
+    # просто не находятся глазом regex.
+    # Аватарки людей идут тем же скриптом, но с file=_pictures/... и внутри
+    # style="background-image: url(...)" — по <img> мы на них не попадаем.
     DOC_HREF_RE = re.compile(
         r'<a[^>]*href="(?P<href>[^"]*document\.send\.php\?docid=(?P<id>\d+)'
-        r'&amp;tickets_id=(?P<tid>\d+)[^"]*)"[^>]*>(?P<body>.*?)</a>', re.S | re.I)
+        r'&tickets_id=(?P<tid>\d+)[^"]*)"[^>]*>(?P<body>.*?)</a>', re.S | re.I)
+    IMG_TAG_RE = re.compile(r'<img\b[^>]*>', re.I)
+    IMG_SRC_RE = re.compile(r'src="([^"]*document\.send\.php\?docid=(\d+)[^"]*)"', re.I)
     SIZE_RE = re.compile(r'([\d][\d.,\s]*\s*(?:KiB|MiB|GiB|TiB|B))')
 
     def _parse_attachments(self, page: str, ticket_id: int) -> list[dict[str, Any]]:
-        """Файлы, прикреплённые к заявке: имя, размер, ссылка для скачивания."""
+        """Что лежит в заявке: и прикреплённые файлы, и картинки из описания."""
+        markup = html.unescape(page)
         out: list[dict[str, Any]] = []
         seen: set[str] = set()
-        for m in self.DOC_HREF_RE.finditer(page):
+        # 1) прикреплённые файлы (секция «Файлы»)
+        for m in self.DOC_HREF_RE.finditer(markup):
             doc_id = m.group("id")
             if doc_id in seen:
                 continue
             seen.add(doc_id)
             text = re.sub(r"<[^>]+>", "\n", m.group("body") or "")
             lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
-            name = html.unescape(lines[-1]) if lines else f"document_{doc_id}"
+            name = lines[-1] if lines else f"document_{doc_id}"
             size = ""
-            tail = self.SIZE_RE.search(page[m.end():m.end() + 600])
+            tail = self.SIZE_RE.search(markup[m.end():m.end() + 600])
             if tail:
                 size = tail.group(1).strip()
             out.append({
                 "doc_id": doc_id,
                 "name": name,
                 "size": size,
-                "href": html.unescape(m.group("href")),
+                "href": m.group("href"),
                 "is_image": name.rsplit(".", 1)[-1].lower() in _IMAGE_EXT,
+                "inline": False,
+            })
+        # 2) картинки, вставленные прямо в описание/комментарии
+        for tag in self.IMG_TAG_RE.finditer(markup):
+            html_tag = tag.group(0)
+            m = self.IMG_SRC_RE.search(html_tag)
+            if not m:
+                continue
+            href, doc_id = m.group(1), m.group(2)
+            # только файлы ЭТОЙ заявки — иначе соберём чужие картинки из
+            # связанных документов
+            if f"items_id={ticket_id}" not in href or doc_id in seen:
+                continue
+            seen.add(doc_id)
+            alt = re.search(r'alt="([^"]*)"', html_tag)
+            name = (alt.group(1).strip() if alt else "") or f"картинка_{doc_id}"
+            out.append({
+                "doc_id": doc_id,
+                "name": name,
+                "size": "",
+                "href": href,
+                "is_image": True,
+                "inline": True,
             })
         return out
 
