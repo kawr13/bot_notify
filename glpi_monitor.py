@@ -103,6 +103,16 @@ def build_message(ticket: Ticket, base_url: str, mention: str = "") -> str:
             author = note.get("author") or "—"
             lines.append(f"  • {author}: {str(note['text'])[:400]}")
     lines += ["", link]
+    files = list(getattr(ticket, "attachments", []) or [])
+    if files:
+        lines.append("")
+        lines.append("Вложения:")
+        for item in files[:6]:
+            mark = "🖼" if item.get("is_image") else "📎"
+            size = f" ({item['size']})" if item.get("size") else ""
+            lines.append(f"  {mark} {item.get('name') or 'файл'}{size}")
+        if len(files) > 6:
+            lines.append(f"  … и ещё {len(files) - 6}")
     if mention:
         lines.append(mention)
     return "\n".join(lines)

@@ -9,7 +9,9 @@
 """
 from __future__ import annotations
 
+import io
 import logging
+import mimetypes
 import threading
 from dataclasses import dataclass
 from typing import Any, Callable
@@ -112,6 +114,49 @@ class Bitrix24Client:
             return False, f"портал ответил: {str(result)[:120]}"
         LOGGER.info("Bitrix24: сообщение отправлено в %s (id %s)", dialog, chat_id)
         return True, str(chat_id)
+
+    def send_file(self, blob: bytes, filename: str, text: str = "",
+                  dialog_id: str | None = None) -> tuple[bool, str]:
+        """Отправить в чат ФАЙЛ (картинку, документ).
+
+        Файл уходит multipart-частью `files[0]`: REST-слой Битрикса складывает
+        загруженные части в $files метода. Обычным POST-полем файл передать
+        нельзя — нужен именно multipart/form-data.
+        """
+        dialog = str(dialog_id or self.config.dialog_id or "")
+        if not self.config.ready:
+            return False, "Bitrix24 не настроен"
+        if not dialog:
+            return False, "не указан dialogId"
+        data = {
+            "botToken": self.config.bot_token,
+            "botId": self.config.bot_id,
+            "dialogId": dialog,
+            "fields[message]": text or filename,
+            "fields[urlPreview]": "N",
+        }
+        mime = mimetypes.guess_type(filename)[0] or "application/octet-stream"
+        files = {"files[0]": (filename, io.BytesIO(blob), mime)}
+        with self._lock:
+            try:
+                resp = self.session.post(
+                    f"{self.config.webhook.rstrip('/')}/imbot.v2.Chat.Message.send.json",
+                    data=data, files=files,
+                    timeout=max(self.config.timeout, 120))
+                result = resp.json()
+            except (requests.RequestException, ValueError) as exc:
+                LOGGER.warning("Bitrix24: файл %s не отправлен: %s", filename, exc)
+                return False, f"файл не отправлен: {exc}"
+        if result.get("error") or result.get("error_description"):
+            message = str(result.get("error_description") or result.get("error"))
+            LOGGER.warning("Bitrix24: файл %s не принят: %s", filename, message)
+            return False, message
+        res = result.get("result")
+        mid = res.get("id") if isinstance(res, dict) else res
+        if not mid:
+            return False, f"портал ответил: {str(result)[:120]}"
+        LOGGER.info("Bitrix24: файл %s отправлен в %s (id %s)", filename, dialog, mid)
+        return True, str(mid)
 
     def send_async(self, text: str, dialog_id: str | None = None,
                    on_done: Callable[[bool, str], None] | None = None) -> None:

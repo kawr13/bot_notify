@@ -171,6 +171,19 @@ class GlpiWindow(tk.Toplevel):
                                     font=("Segoe UI", 9))
         self.assign_note.pack(side="left", padx=12)
 
+        # строка с вложениями и опасной кнопкой — отдельно, чтобы не путались
+        extra = tk.Frame(right, bg="#ffffff")
+        extra.pack(fill="x", padx=12, pady=(0, 10))
+        self.files_var = tk.BooleanVar(value=True)
+        tk.Checkbutton(extra, text="вложения в чат", variable=self.files_var,
+                       bg="#ffffff", fg="#374151", activebackground="#ffffff",
+                       font=("Segoe UI", 9)).pack(side="left")
+        self.files_note = tk.Label(extra, text="", bg="#ffffff", fg="#6b7280",
+                                   font=("Segoe UI", 9))
+        self.files_note.pack(side="left", padx=10)
+        ttk.Button(extra, text="Удалить заявку",
+                   command=self.delete_now).pack(side="right")
+
         status = tk.Label(self, textvariable=self.status_var, anchor="w",
                           bg="#e9edf5", fg="#374151", font=("Segoe UI", 9), padx=12,
                           pady=6)
@@ -398,6 +411,15 @@ class GlpiWindow(tk.Toplevel):
     def _render(self, ticket: Any) -> None:
         self._set_text(build_message(ticket, self.bridge.base_url,
                                      self.bridge.monitor.mention_text(ticket)))
+        files = list(getattr(ticket, "attachments", []) or [])
+        if files:
+            total = sum(1 for f in files if f.get("is_image"))
+            self.files_note.config(
+                text=f"{len(files)} шт." + (f", картинок {total}" if total else "")
+                     + " — " + ", ".join(str(f.get("name", ""))[:24] for f in files[:3])
+                     + (" …" if len(files) > 3 else ""))
+        else:
+            self.files_note.config(text="вложений нет")
 
     def _load_detail(self, ticket_id: int) -> None:
         """Карточка заявки дотягивается отдельно: список без неё читается за
@@ -529,9 +551,12 @@ class GlpiWindow(tk.Toplevel):
         self._busy = True
         self.chat_btn.state(["disabled"])
         self.status_var.set(f"#{ticket.ticket_id}: отправляем…")
-        # страховка: ответ из Bitrix24 мог и не прийти — кнопка не должна
-        # оставаться выключенной до перезапуска окна
-        self.after(60_000, self._unstick)
+        # страховка: ответ из Битрикс24 мог и не прийти — кнопка не должна
+        # оставаться выключенной. На вложения времени нужно больше (каждый
+        # файл — отдельная выгрузка из GLPI и отдельное сообщение в чат).
+        pending = list(getattr(ticket, "attachments", []) or []) if self.files_var.get() else []
+        want_files = bool(self.files_var.get())
+        self.after(60_000 * (1 + len(pending)), self._unstick)
 
         def done(saved: bool, info: str) -> None:
             def ui() -> None:
@@ -539,8 +564,9 @@ class GlpiWindow(tk.Toplevel):
                 self.chat_btn.state(["!disabled"])
                 if ok_send[0]:
                     self.assign_note.config(
-                        text=(f"исполнитель сохранён: {pick['label']}" if saved
-                              else "в чат ушло, но GLPI не сохранил исполнитель"))
+                        text=((f"исполнитель сохранён: {pick['label']}" if saved
+                                else "в чат ушло, но GLPI не сохранил исполнитель")
+                              ) + (f" · {note[0]}" if note[0] else ""))
                     self.status_var.set(f"#{ticket.ticket_id}: отправлено в чат")
                 else:
                     self.assign_note.config(text="")
@@ -552,6 +578,7 @@ class GlpiWindow(tk.Toplevel):
             self._ui(ui)
 
         ok_send = [False]
+        note = [""]
 
         def work() -> None:
             try:
@@ -561,17 +588,120 @@ class GlpiWindow(tk.Toplevel):
                 saved = True if already else self._save_assignee(ticket, pick)
                 text = build_message(ticket, self.bridge.base_url,
                                      self.bridge.mention_for(pick))
-
-                def on_sent(ok: bool, info: str) -> None:
-                    ok_send[0] = ok
-                    done(saved, info)
-
-                self.bridge.bitrix.send_async(text, on_done=on_sent)
+                # здесь мы уже в рабочем потоке, поэтому ждём спокойно:
+                # вложения шлются ПОСЛЕ текста, иначе в чате был бы файл
+                # без подписи
+                ok, info = self.bridge.bitrix.send(text)
+                if ok:
+                    sent, failed = self._send_attachments(ticket, want_files)
+                    if sent or failed:
+                        note[0] = f"вложений отправлено {sent}"
+                        if failed:
+                            note[0] += f", не ушло {len(failed)}"
+                    if failed and not sent and not ok_send[0]:
+                        ok, info = False, "; ".join(failed)[:180]
+                ok_send[0] = ok
+                done(saved, info)
             except Exception as exc:
                 LOGGER.exception("отправка #%s не состоялась", ticket.ticket_id)
                 # без done() кнопка осталась бы «занята» до перезапуска окна
                 done(False, f"ошибка: {exc}")
         self._run(work, "отправляем…")
+
+    def _send_attachments(self, ticket: Any, want: bool = True) -> tuple[int, list[str]]:
+        """Переслать вложения заявки в чат: каждый файл — отдельным сообщением.
+
+        Файлы в GLPI закрыты входом, поэтому качаем их СВОЕЙ сессией и только
+        потом отдаём боту. `want` считается в ГЛАВНОМ потоке: tk-переменная из
+        рабочего потока — это «RuntimeError: main thread is not in main loop».
+        """
+        files = list(getattr(ticket, "attachments", []) or [])
+        if not files or not want:
+            return 0, []
+        self._ui(lambda: self.status_var.set(
+            f"#{ticket.ticket_id}: пересылаю вложения ({len(files)})…"))
+        sent, failed = 0, []
+        for item in files:
+            name = str(item.get("name") or f"document_{item.get('doc_id')}")
+            try:
+                blob, real_name = self.bridge.client.download_document(item["href"])
+            except Exception as exc:
+                LOGGER.warning("GLPI: вложение %s не скачан: %s", name, exc)
+                failed.append(f"{name}: {exc}")
+                continue
+            ok, info = self.bridge.bitrix.send_file(
+                blob, real_name or name,
+                text=f"#{ticket.ticket_id} · {name}")
+            if ok:
+                sent += 1
+            else:
+                failed.append(f"{name}: {info}")
+        if failed:
+            LOGGER.warning("Bitrix24: не все вложения ушли: %s", "; ".join(failed))
+        return sent, failed
+
+    def delete_now(self) -> None:
+        """«Удалить заявку» — то же действие, что кнопка в карточке GLPI.
+
+        Без права PURGE GLPI делает мягкое удаление (is_deleted=1), но из окна
+        это всё равно не откатить — поэтому без подтверждения не обходимся.
+        """
+        ticket = self._selected()
+        if ticket is None:
+            messagebox.showinfo("Выбери заявку", "Сначала выбери заявку в списке.")
+            return
+        if self._busy:
+            self.status_var.set("Подожди: предыдущая операция ещё идёт")
+            return
+        if not messagebox.askyesno(
+                "Удалить заявку?",
+                f"#{ticket.ticket_id} {ticket.name}\n\n"
+                "Заявка будет удалена из GLPI, из окна это не отменить.\nУдалить?"):
+            return
+        self._busy = True
+        self.chat_btn.state(["disabled"])
+
+        def work() -> None:
+            err = ""
+            try:
+                ok = self.bridge.client.delete_ticket(int(ticket.ticket_id))
+            except Exception as exc:
+                LOGGER.exception("GLPI: не удалось удалить #%s", ticket.ticket_id)
+                ok, err = False, str(exc)
+
+            def ui() -> None:
+                self._idle()
+                if ok:
+                    self.forget_ticket(ticket.ticket_id)
+                    self.status_var.set(f"#{ticket.ticket_id}: заявка удалена из GLPI")
+                else:
+                    self.status_var.set(f"#{ticket.ticket_id}: GLPI не удалил")
+                    messagebox.showerror(
+                        "Не удалено",
+                        f"Заявка #{ticket.ticket_id}: "
+                        f"{err or 'GLPI не принял удаление (не хватает прав?)'}")
+            self._ui(ui)
+        self._run(work, f"удаляем #{ticket.ticket_id}…")
+        self.after(60_000, self._unstick)
+
+    def forget_ticket(self, ticket_id: int) -> None:
+        """Заявки больше нет — убираем её из окна и из состояния монитора."""
+        self.records.pop(ticket_id, None)
+        if ticket_id in self.order:
+            self.order.remove(ticket_id)
+        if self._selected_id == ticket_id:
+            self._selected_id = None
+        key = str(ticket_id)
+        self.bridge.monitor.seen.pop(key, None)
+        self.bridge.monitor.refreshed.pop(key, None)
+        self._refresh_list()
+        self.ticket_var.set("")
+        self._set_text("")
+        self.assign_box.set("")
+        self.assign_box["values"] = []
+        self.files_note.config(text="")
+        for btn in (self.chat_btn, self.link_btn, self.bot_btn):
+            btn.state(["disabled"])
 
     def assign_now(self) -> None:
         """«Назначить в GLPI» — записать выбранного исполнителя, в чат НЕ пишем.

@@ -25,7 +25,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from typing import Any, Iterable
-from urllib.parse import urljoin
+from urllib.parse import unquote, urljoin
 
 import requests
 import urllib3
@@ -48,6 +48,9 @@ COL = {"id": 2, "name": 1, "status": 12, "updated": 19, "created": 15,
 # попадают в «активные».
 _HOMOGLYPH = str.maketrans({"p": "р", "c": "с", "o": "о", "e": "е", "a": "а",
                             "x": "х", "y": "у", "k": "к", "m": "м", "t": "т"})
+
+# что считать картинкой (важно для подписи в чате: картинку бот шлёт как фото)
+_IMAGE_EXT = {"png", "jpg", "jpeg", "gif", "webp", "bmp", "svg"}
 
 
 # --------------------------------------------------------------------------
@@ -237,6 +240,7 @@ class Ticket:
     assign_users: list[dict[str, Any]] = field(default_factory=list)
     assign_groups: list[dict[str, Any]] = field(default_factory=list)
     raw_item: dict[str, Any] = field(default_factory=dict)
+    attachments: list[dict[str, Any]] = field(default_factory=list)
 
     @property
     def is_active(self) -> bool:
@@ -516,6 +520,7 @@ class GlpiClient:
         )
         ticket.description = self._timeline_description(page)
         ticket.comments = self._timeline_comments(page)
+        ticket.attachments = self._parse_attachments(page, ticket_id)
         # The JS "actors" blob has no display names; the actor <select> options do.
         opts = self._actor_options(page, "select-assign")
         if opts:
@@ -698,6 +703,79 @@ class GlpiClient:
             return payload.get("results", []) or []
         LOGGER.warning("actors.php: ни один IDOR-токен не вернул данных")
         return []
+
+    # ---------------- вложения и удаление ----------------
+    # Ссылка на файл в карточке: /front/document.send.php?docid=N&tickets_id=M.
+    # Аватарки людей тоже идут через document.send.php, но с file=_pictures/...
+    # — по ним мы не идём, требуем tickets_id.
+    DOC_HREF_RE = re.compile(
+        r'<a[^>]*href="(?P<href>[^"]*document\.send\.php\?docid=(?P<id>\d+)'
+        r'&amp;tickets_id=(?P<tid>\d+)[^"]*)"[^>]*>(?P<body>.*?)</a>', re.S | re.I)
+    SIZE_RE = re.compile(r'([\d][\d.,\s]*\s*(?:KiB|MiB|GiB|TiB|B))')
+
+    def _parse_attachments(self, page: str, ticket_id: int) -> list[dict[str, Any]]:
+        """Файлы, прикреплённые к заявке: имя, размер, ссылка для скачивания."""
+        out: list[dict[str, Any]] = []
+        seen: set[str] = set()
+        for m in self.DOC_HREF_RE.finditer(page):
+            doc_id = m.group("id")
+            if doc_id in seen:
+                continue
+            seen.add(doc_id)
+            text = re.sub(r"<[^>]+>", "\n", m.group("body") or "")
+            lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+            name = html.unescape(lines[-1]) if lines else f"document_{doc_id}"
+            size = ""
+            tail = self.SIZE_RE.search(page[m.end():m.end() + 600])
+            if tail:
+                size = tail.group(1).strip()
+            out.append({
+                "doc_id": doc_id,
+                "name": name,
+                "size": size,
+                "href": html.unescape(m.group("href")),
+                "is_image": name.rsplit(".", 1)[-1].lower() in _IMAGE_EXT,
+            })
+        return out
+
+    def download_document(self, href: str, limit: int = 25 * 1024 * 1024) -> tuple[bytes, str]:
+        """Скачать вложение СВОЕЙ сессией GLPI (файлы закрыты паролем)."""
+        self.login()
+        resp = self.session.get(urljoin(self.config.base_url + "/", href.lstrip("/")),
+                                timeout=max(self.config.timeout, 90))
+        self._ensure(resp)
+        blob = resp.content
+        if len(blob) > limit:
+            raise RuntimeError(f"файл больше {limit // (1024 * 1024)} МБ")
+        name = ""
+        match = re.search(r"filename\*?=(?:UTF-8'')?\"?([^\";]+)",
+                          resp.headers.get("Content-Disposition") or "")
+        if match:
+            name = unquote(match.group(1).strip().strip('"'))
+        return blob, html.unescape(name)
+
+    def delete_ticket(self, ticket_id: int) -> bool:
+        """Удалить заявку. Без права PURGE GLPI делает мягкое удаление
+        (is_deleted=1) — восстановить его может только админ из базы.
+        """
+        referer = self._url(f"/front/ticket.form.php?id={ticket_id}")
+        resp = self._post("/front/ticket.form.php",
+                          {"id": ticket_id, "delete": "Удалить"}, referer=referer)
+        if resp.status_code >= 400 or "Действие недоступно" in resp.text:
+            LOGGER.warning("GLPI: удаление #%s не принято (http %s)",
+                           ticket_id, resp.status_code)
+            return False
+        self.forget(ticket_id)
+        try:
+            page = self._tabs_html(ticket_id, refresh=True)
+        except Exception:                      # карточка вовсе пропала — значит удалена
+            LOGGER.info("GLPI: #%s больше не читается — удалена", ticket_id)
+            return True
+        item = extract_js_object(page, r"[,{\s]item:\s*(?=\{)") or {}
+        if not item or bool(int(item.get("is_deleted") or 0)):
+            return True
+        LOGGER.warning("GLPI: #%s после удаления всё видна", ticket_id)
+        return False
 
     ACTOR_TYPES = ("requester", "assign", "observer")
     CACHE_TTL = 30
