@@ -630,8 +630,14 @@ class GlpiWindow(tk.Toplevel):
                     note[0] = f"вложений отправлено {sent}"
                     if failed:
                         note[0] += f", не ушло {len(failed)}"
+                if ok and failed:
+                    # файлы не легли — вторым сообщением уходят ссылки, чтобы
+                    # исполнитель не остался с заявкой без вложений
+                    self.bridge.bitrix.send(self.links_fallback(ticket, failed))
                 ok_send[0] = ok
-                done(saved, "; ".join(failed)[:200] if failed else info,
+                done(saved,
+                     "; ".join(f"{f['name']}: {f['reason']}" for f in failed)[:200]
+                     if failed else info,
                      partial=bool(ok and failed))
             except Exception as exc:
                 LOGGER.exception("отправка #%s не состоялась", ticket.ticket_id)
@@ -657,7 +663,8 @@ class GlpiWindow(tk.Toplevel):
                 blob, real_name = self.bridge.client.download_document(item["href"])
             except Exception as exc:
                 LOGGER.warning("GLPI: вложение %s не скачан: %s", name, exc)
-                failed.append(f"{name}: {exc}")
+                failed.append({"name": name, "reason": str(exc),
+                               "href": str(item.get("href") or "")})
                 continue
             ok, info = self.bridge.bitrix.send_file(
                 blob, real_name or name,
@@ -665,10 +672,28 @@ class GlpiWindow(tk.Toplevel):
             if ok:
                 sent += 1
             else:
-                failed.append(f"{name}: {info}")
+                failed.append({"name": name, "reason": str(info),
+                               "href": str(item.get("href") or "")})
         if failed:
-            LOGGER.warning("Bitrix24: не все вложения ушли: %s", "; ".join(failed))
+            LOGGER.warning("Bitrix24: не все вложения ушли: %s",
+                           "; ".join(f"{f['name']}: {f['reason']}" for f in failed))
         return sent, failed
+
+    def links_fallback(self, ticket: Any, failed: list[dict[str, Any]]) -> str:
+        """Запасное сообщение: файлы не легли — пусть будут ссылки.
+
+        Файлы в GLPI закрыты входом, но у исполнителя этот вход есть, и
+        картинка открывается одним тапом. Так что заявка не остаётся вовсе
+        без вложений, даже когда портал отбил загрузку.
+        """
+        base = self.bridge.base_url.rstrip("/")
+        lines = [f"#{ticket.ticket_id}: файлы не ушли в чат — вот они ссылками:"]
+        for item in failed:
+            href = item.get("href") or ""
+            mark = "🖼" if str(item.get("name", "")).startswith("картинка") else "📎"
+            tail = f" — {base}/{href.lstrip('/')}" if href else f" ({item.get('reason')})"
+            lines.append(f"  {mark} {item.get('name') or 'файл'}{tail}")
+        return "\n".join(lines)
 
     def delete_now(self) -> None:
         """«Удалить заявку» — то же действие, что кнопка в карточке GLPI.

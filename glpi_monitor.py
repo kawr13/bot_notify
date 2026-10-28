@@ -83,8 +83,15 @@ class MonitorConfig:
         return bool(self.team_emails or self.team_groups)
 
 
-def build_message(ticket: Ticket, base_url: str, mention: str = "") -> str:
-    """Текст для чата: заявка + последние комментарии + ссылка + исполнитель."""
+def build_message(ticket: Ticket, base_url: str, mention: str = "",
+                  links: bool = False) -> str:
+    """Текст для чата: заявка + последние комментарии + ссылка + исполнитель.
+
+    `links` — приписать к вложениям прямые ссылки GLPI. По умолчанию НЕ
+    приписывается: файлы уходят в чат настоящими вложениями, а простыня
+    ссылок только засоряет сообщение. Ссылки пригодятся, если загрузка не
+    удалась — их отдельным сообщением шлёт панель.
+    """
     link = ticket.url or f"{base_url}/front/ticket.form.php?id={ticket.ticket_id}"
     lines = [f"Заявка #{ticket.ticket_id} — {ticket.name}",
              f"Статус: {ticket.status_name or ticket.status}"]
@@ -112,10 +119,10 @@ def build_message(ticket: Ticket, base_url: str, mention: str = "") -> str:
             size = f" ({item['size']})" if item.get("size") else ""
             name = str(item.get("name") or "файл")
             href = str(item.get("href") or "")
-            # ссылку кладём всегда: файл в GLPI закрыт входом, но у
-            # исполнителя этот вход тоже есть — и картинка открывается
-            # одним тапом, даже когда загрузка в чат недоступна
-            tail = f" — {base_url.rstrip('/')}/{href.lstrip('/')}" if href else ""
+            # ссылки — только по просьбе: обычно файл лежит в чате, и тыкать
+            # исполнителя в GLPI незачем
+            tail = (f" — {base_url.rstrip('/')}/{href.lstrip('/')}"
+                    if (links and href) else "")
             lines.append(f"  {mark} {name}{size}{tail}")
         if len(files) > 6:
             lines.append(f"  … и ещё {len(files) - 6}")
