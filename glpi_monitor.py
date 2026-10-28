@@ -45,6 +45,7 @@ class MonitorConfig:
     announce_first: bool = True       # при пустом состоянии показать текущие в GUI
     announce_active_only: bool = True  # решённые/закрытые не считать «новыми»
     show_limit: int = 40              # сколько текущих заявок выводить списком
+    attachment_min_kb: int = 40       # файлы мельче этого веса снимать по умолчанию
     team_emails: list[str] = field(default_factory=list)
     team_groups: list[str] = field(default_factory=list)
     state_path: Path | None = None
@@ -62,6 +63,7 @@ class MonitorConfig:
             row_limit=int(num("GLPI_ROW_LIMIT", 60)),
             refresh_limit=int(num("GLPI_REFRESH_LIMIT", 10)),
             refresh_pace=num("GLPI_REFRESH_PACE", 60.0),
+            attachment_min_kb=max(0, int(num("GLPI_ATTACHMENT_MIN_KB", 40))),
             category_filter=(env.get("GLPI_REFRESH_CATEGORY")
                              or env.get("GLPI_CATEGORY_FILTER") or "").strip(),
             queue_groups=[g.strip() for g in (env.get("GLPI_REFRESH_QUEUE_GROUPS", "")

@@ -742,6 +742,7 @@ class GlpiClient:
                 "doc_id": doc_id,
                 "name": name,
                 "size": size,
+                "size_bytes": self.human_to_bytes(size),
                 "href": m.group("href"),
                 "is_image": name.rsplit(".", 1)[-1].lower() in _IMAGE_EXT,
                 "inline": False,
@@ -768,6 +769,7 @@ class GlpiClient:
                 "doc_id": doc_id,
                 "name": name,
                 "size": "",
+                "size_bytes": 0,   # у вставленных картинок GLPI размера не даёт
                 "href": href,
                 "is_image": True,
                 "inline": True,
@@ -789,6 +791,83 @@ class GlpiClient:
         if match:
             name = unquote(match.group(1).strip().strip('"'))
         return blob, html.unescape(name)
+
+    SIZE_UNITS = {"Б": 1, "B": 1,
+                "КБ": 1024, "KB": 1024, "KIB": 1024,
+                "МБ": 1024 ** 2, "MB": 1024 ** 2, "MIB": 1024 ** 2,
+                "ГБ": 1024 ** 3, "GB": 1024 ** 3}
+
+    @classmethod
+    def human_to_bytes(cls, value: Any) -> int:
+        """Размер «как человек» → байты: «1,5 МБ» → 1572864.
+
+        Неизвестное даёт 0: фильтр по нулям молча срезал бы нужные файлы,
+        поэтому ноль значит «размера не знаем, не трогаем».
+        """
+        text = str(value or "")
+        m = re.search(r"(\d+(?:[.,]\d+)?)\s*([A-Za-zА-Яа-я]{1,3})", text)
+        if not m:
+            digits = re.search(r"\d+", text)
+            return int(digits.group()) if digits else 0
+        unit = m.group(2).upper()
+        return int(float(m.group(1).replace(",", ".")) * cls.SIZE_UNITS.get(unit, 1))
+
+    @staticmethod
+    def human_size(size: int) -> str:
+        """Байты → «240 КБ» для подписи чекбокса."""
+        value = float(size or 0)
+        for unit in ("Б", "КБ", "МБ", "ГБ"):
+            if value < 1024 or unit == "ГБ":
+                return f"{value:.0f} {unit}"
+            value /= 1024.0
+        return "0 Б"
+
+    def document_size(self, href: str) -> int:
+        """Размер вложения заголовком Content-Length, не скачивая сам файл.
+
+        Работает не со всем: `document.send.php` отдаёт вставленные в описание
+        картинки потоком без `Content-Length`, и HEAD возвращает пустоту — для
+        них размер узнаёт `fill_sizes`.
+        """
+        self.login()
+        try:
+            resp = self.session.head(
+                urljoin(self.config.base_url + "/", str(href or "").lstrip("/")),
+                timeout=max(self.config.timeout, 20), allow_redirects=True)
+        except requests.RequestException:
+            return 0
+        length = str(resp.headers.get("Content-Length") or "")
+        return int(length) if length.isdigit() else 0
+
+    def fill_sizes(self, attachments: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        """Добить размеры там, где GLPI их не показал (вставленные картинки).
+
+        Единственный честный способ узнать вес такой картинки — скачать её.
+        Поэтому качаем ОДИН раз и кладём тело в сам пункт: отправке нужно
+        ровно оно, второго запроса к GLPI не будет. Файлы с известным размером
+        (секция «Файлы») не трогаем совсем.
+        """
+        for item in attachments:
+            if item.get("size_bytes"):
+                continue
+            size = self.document_size(str(item.get("href") or ""))
+            if size:
+                item["size_bytes"] = size
+                item["size"] = self.human_size(size)
+            elif item.get("is_image"):
+                try:
+                    blob, name = self.download_document(str(item.get("href") or ""))
+                except Exception:
+                    LOGGER.debug("не удалось померить вложение %s",
+                                 item.get("doc_id"), exc_info=True)
+                    continue
+                item["size_bytes"] = len(blob)
+                item["size"] = self.human_size(len(blob))
+                item["_blob"] = blob
+                if name:
+                    item["real_name"] = name
+        return attachments
+
 
     def delete_ticket(self, ticket_id: int) -> bool:
         """Удалить заявку. Без права PURGE GLPI делает мягкое удаление

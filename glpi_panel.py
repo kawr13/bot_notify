@@ -462,28 +462,79 @@ class GlpiWindow(tk.Toplevel):
 
     def _rebuild_file_checks(self, files: list[dict[str, Any]]) -> None:
         """Чекбокс на каждый файл: в описание GLPI часто притаскивает логотип
-        из подписи, и решать, слать его в чат или нет, должен оператор."""
+        из подписи, и решать, слать его в чат или нет, должен оператор.
+
+        Мелочь (по умолчанию мельче 40 КБ) снимается сама — это почти всегда
+        подписи, иконки и стрелочки. Вес подписан у каждого файла, а снятый
+        чекбокс остаётся рабочим: включить обратно можно одним кликом.
+        """
         for child in self.files_frame.winfo_children():
             child.destroy()
         self.file_vars = []
+        self._current_files = files
+        self._files_touched = False
         if not files:
             self.files_note.config(text="файлов нет")
             return
+        floor = int(getattr(self.cfg, "attachment_min_kb", 0) or 0) * 1024
+        hidden = 0
         for item in files[:8]:
-            var = tk.BooleanVar(value=True)
+            size = int(item.get("size_bytes") or 0)
+            small = bool(floor) and bool(size) and size < floor
+            var = tk.BooleanVar(value=not small)
             title = str(item.get("name") or "файл")
-            if len(title) > 34:
-                title = title[:31] + "…"
+            if len(title) > 30:
+                title = title[:27] + "…"
             if item.get("size"):
-                title += f" ({item['size']})"
+                title += f" · {item['size']}"
             tk.Checkbutton(self.files_frame, text=("🖼 " if item.get("is_image") else "📎 ") + title,
                            variable=var, bg="#ffffff", fg="#374151",
                            activebackground="#ffffff",
+                           command=self._mark_files_touched,
                            font=("Segoe UI", 9)).pack(anchor="w")
             self.file_vars.append((item, var))
+            hidden += 1 if small else 0
         more = len(files) - 8
-        self.files_note.config(text=(f"+{more} не показаны" if more > 0 else
-                                     f"всего {len(files)}"))
+        note = f"+{more} не показаны" if more > 0 else f"всего {len(files)}"
+        if hidden:
+            note += f" · снято мелких: {hidden} (до {floor // 1024} КБ)"
+        self.files_note.config(text=note)
+        # запись могла прийти из кэша без весов — домерим и пересоберём
+        self._ensure_file_sizes(files)
+
+
+    def _mark_files_touched(self) -> None:
+        """Оператор тронул галочки руками — фоном их уже не переставляем."""
+        self._files_touched = True
+
+    def _ensure_file_sizes(self, files: list[dict[str, Any]]) -> None:
+        """Домерить вес там, где карточка пришла без него, и пересобрать галочки.
+
+        Заявка вполне могла попасть в окно из кэша, минуя `_load_detail`, и
+        тогда фильтру не на что было бы опереться.
+        """
+        missing = [f for f in files if not f.get("size_bytes")]
+        if not missing or getattr(self, "_sizes_busy", False):
+            return
+        self._sizes_busy = True
+        client = self.bridge.client
+
+        def work() -> None:
+            try:
+                client.fill_sizes(missing)
+            except Exception:
+                LOGGER.warning("не удалось померить вложения", exc_info=True)
+            self._sizes_busy = False
+            self._ui(self._rerun_file_checks)
+
+        threading.Thread(target=work, daemon=True, name="glpi-file-sizes").start()
+
+    def _rerun_file_checks(self) -> None:
+        """Перерисовать галочки уже с весами — если человек в них не лазил."""
+        if getattr(self, "_files_touched", False):
+            return
+        self._rebuild_file_checks(list(getattr(self, "_current_files", []) or []))
+
 
     def _load_detail(self, ticket_id: int) -> None:
         """Карточка заявки дотягивается отдельно: список без неё читается за
@@ -491,6 +542,10 @@ class GlpiWindow(tk.Toplevel):
         def work() -> None:
             try:
                 record = self.bridge.client.get_ticket(ticket_id)
+                # у вставленных в описание картинок веса в карточке нет —
+                # добиваем его здесь, в фоне: вслепую фильтровать нельзя
+                if getattr(record, "attachments", None):
+                    self.bridge.client.fill_sizes(record.attachments)
             except Exception as exc:
                 self._ui(lambda: self.status_var.set(f"GLPI: #{ticket_id} — {exc}"))
                 return
@@ -668,12 +723,15 @@ class GlpiWindow(tk.Toplevel):
                 # без подписи
                 ok, info = self.bridge.bitrix.send(text)
                 sent, failed = (0, [])
+                self._skipped_names = []
                 if ok and wanted:
                     sent, failed = self._send_attachments(ticket, wanted)
-                if sent or failed:
+                if sent or failed or self._skipped_names:
                     note[0] = f"вложений отправлено {sent}"
                     if failed:
                         note[0] += f", не ушло {len(failed)}"
+                    if self._skipped_names:
+                        note[0] += f", мелочь отложена: {len(self._skipped_names)}"
                 if ok and failed:
                     # файлы не легли — вторым сообщением уходят ссылки, чтобы
                     # исполнитель не остался с заявкой без вложений
@@ -700,15 +758,31 @@ class GlpiWindow(tk.Toplevel):
             return 0, []
         self._ui(lambda: self.status_var.set(
             f"#{ticket.ticket_id}: пересылаю вложения ({len(files)})…"))
-        sent, failed = 0, []
+        # порог проверяется ещё раз здесь: галочка могла простоять включённой,
+        # пока вес картинки не был известен (карточка догружается фоном)
+        floor = int(getattr(self.cfg, "attachment_min_kb", 0) or 0) * 1024
+        touched = bool(getattr(self, "_files_touched", False))
+        self._skipped_names = []
+        sent, failed, skipped = 0, [], []
         for item in files:
             name = str(item.get("name") or f"document_{item.get('doc_id')}")
             try:
-                blob, real_name = self.bridge.client.download_document(item["href"])
+                blob = item.get("_blob")
+                if blob:
+                    # размер такой картинки мерили в фоне — тело лежит прямо
+                    # в пункте, второй раз тащить его из GLPI незачем
+                    real_name = str(item.get("real_name") or name)
+                else:
+                    blob, real_name = self.bridge.client.download_document(item["href"])
             except Exception as exc:
                 LOGGER.warning("GLPI: вложение %s не скачан: %s", name, exc)
                 failed.append({"name": name, "reason": str(exc),
                                "href": str(item.get("href") or "")})
+                continue
+            if floor and not touched and len(blob) < floor:
+                skipped.append(name)
+                self._skipped_names = list(skipped)
+                item["size_bytes"] = len(blob)
                 continue
             ok, info = self.bridge.bitrix.send_file(
                 blob, real_name or name,
@@ -718,6 +792,11 @@ class GlpiWindow(tk.Toplevel):
             else:
                 failed.append({"name": name, "reason": str(info),
                                "href": str(item.get("href") or "")})
+        if skipped:
+            LOGGER.info("Bitrix24: мелочь отложена: %s", ", ".join(skipped))
+            self._ui(lambda: self.status_var.set(
+                f"#{ticket.ticket_id}: отложено мелких файлов: {len(skipped)} — "
+                f"{', '.join(skipped)}; включи галочку, если они нужны"))
         if failed:
             LOGGER.warning("Bitrix24: не все вложения ушли: %s",
                            "; ".join(f"{f['name']}: {f['reason']}" for f in failed))
